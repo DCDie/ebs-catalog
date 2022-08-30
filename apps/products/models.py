@@ -115,7 +115,12 @@ class Shop(models.Model):
     title = models.CharField(
         max_length=155
     )
-    description = models.TextField()
+    description = models.TextField(
+        null=True
+    )
+    shop_detail = models.JSONField(
+        null=True
+    )
     attachment = models.ManyToManyField(
         'Attachment',
         related_name='shop_attachment',
