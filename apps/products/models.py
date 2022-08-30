@@ -3,6 +3,15 @@ from pathlib import Path
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 
+__all__ = [
+    'Comment',
+    'Category',
+    'ProductShop',
+    'Product',
+    'Shop',
+    'Attachment'
+]
+
 
 class Category(models.Model):
     title = models.CharField(
