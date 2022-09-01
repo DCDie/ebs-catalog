@@ -24,7 +24,8 @@ class Category(models.Model):
         blank=True
     )
     created_at = models.DateTimeField(
-        auto_now_add=True
+        auto_now_add=True,
+        blank=True
     )
     attachment = models.ManyToManyField(
         'Attachment',
@@ -49,7 +50,10 @@ class Product(models.Model):
         on_delete=models.CASCADE,
     )
     description = models.TextField()
-    specification = models.JSONField()
+    specification = models.JSONField(
+        blank=True,
+        null=True
+    )
     price = models.DecimalField(
         max_digits=9,
         decimal_places=2
@@ -92,7 +96,9 @@ class Comment(models.Model):
         null=True
     )
     email = models.EmailField()
-    username = models.CharField(max_length=50)
+    username = models.CharField(
+        max_length=50
+    )
     rating = models.IntegerField(
         default=0,
         blank=True,
@@ -116,10 +122,12 @@ class Shop(models.Model):
         max_length=155
     )
     description = models.TextField(
-        null=True
+        null=True,
+        blank=True
     )
     shop_detail = models.JSONField(
-        null=True
+        null=True,
+        blank=True
     )
     attachment = models.ManyToManyField(
         'Attachment',
@@ -139,7 +147,10 @@ class ProductShop(models.Model):
     title = models.CharField(
         max_length=155
     )
-    description = models.TextField()
+    description = models.TextField(
+        null=True,
+        blank=True
+    )
     price = models.DecimalField(
         max_digits=9,
         decimal_places=2
