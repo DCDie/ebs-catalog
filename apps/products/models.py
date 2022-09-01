@@ -27,6 +27,10 @@ class Category(models.Model):
         auto_now_add=True,
         blank=True
     )
+    language = models.JSONField(
+        blank=True,
+        null=True
+    )
     attachment = models.ManyToManyField(
         'Attachment',
         related_name='category_attachment',
@@ -57,6 +61,10 @@ class Product(models.Model):
     price = models.DecimalField(
         max_digits=9,
         decimal_places=2
+    )
+    language = models.JSONField(
+        blank=True,
+        null=True
     )
     rating = models.IntegerField(
         default=0,
@@ -99,6 +107,10 @@ class Comment(models.Model):
     username = models.CharField(
         max_length=50
     )
+    language = models.JSONField(
+        blank=True,
+        null=True
+    )
     rating = models.IntegerField(
         default=0,
         blank=True,
@@ -128,6 +140,10 @@ class Shop(models.Model):
     shop_detail = models.JSONField(
         null=True,
         blank=True
+    )
+    language = models.JSONField(
+        blank=True,
+        null=True
     )
     attachment = models.ManyToManyField(
         'Attachment',
@@ -166,6 +182,10 @@ class ProductShop(models.Model):
         Shop,
         on_delete=models.CASCADE
     )
+    language = models.JSONField(
+        blank=True,
+        null=True
+    )
     product = models.ForeignKey(
         Product,
         on_delete=models.CASCADE
@@ -177,6 +197,22 @@ class ProductShop(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Brand(models.Model):
+    title = models.CharField(
+        max_length=155,
+    )
+    parent = models.ForeignKey(
+        'self',
+        blank=True,
+        null=True,
+        on_delete=models.CASCADE
+    )
+    language = models.JSONField(
+        blank=True,
+        null=True
+    )
 
 
 class Attachment(models.Model):
@@ -192,6 +228,10 @@ class Attachment(models.Model):
         null=True
     )
     file_size = models.IntegerField(
+        blank=True,
+        null=True
+    )
+    language = models.JSONField(
         blank=True,
         null=True
     )
