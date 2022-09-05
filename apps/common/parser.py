@@ -15,7 +15,7 @@ class Parsing:
     }
 
     def __init__(self):
-        self.category = {}
+        self.category = []
         self.table_goods = []
         self.page = 1
         self.link = None
@@ -29,17 +29,23 @@ class Parsing:
 
         response = requests.get(url, headers=self.headers)
         soup = BeautifulSoup(response.text, 'html.parser')
-        categories = soup.select('.uk-position-top-left > .uk-nav.tm-mobile-menu-nav > .blue')
-        for main_category in categories:
-            if main_category.get('href') is None:
-                continue
-            else:
-                dictionary = {
-                    'category_link': main_category.get('href')
-                }
-                self.category[main_category.text] = dictionary
+        main_categories = soup.select('.first-level')
+        for main_category in main_categories:
+            main_category_name = main_category.select('a')[0].text
+            subcategories = main_category.select('.uk-position-top-left > .uk-nav.tm-mobile-menu-nav > .blue')
+            for subcategory in subcategories:
+                subcategory_link = subcategory.get('href')
+                if not subcategory_link:
+                    continue
+                else:
+                    dictionary = {
+                        f'{subcategory.text}': {
+                            'category_link': subcategory_link
+                        }
+                    }
+                    self.category.append({f'{main_category_name}': [dictionary]})
         with open('good_category.json', 'w+', encoding='utf-8') as fp:
-            fp.write(json.dumps(self.category))
+            fp.write(json.dumps(self.category).replace(r'\n', ''))
             self.logging('File good_category.json - saved')
 
     def goods_details(self):
@@ -109,5 +115,5 @@ class Parsing:
 
 if __name__ == '__main__':
     parsing = Parsing()
-    # parsing.get_category_link()
-    parsing.goods_details()
+    parsing.get_category_link()
+    # parsing.goods_details()
