@@ -1,5 +1,6 @@
 from pathlib import Path
 
+from auditlog.registry import auditlog
 from django.contrib.auth import get_user_model
 from django.core.validators import (
     MaxValueValidator,
@@ -255,3 +256,11 @@ class Attachment(BaseModel):
         self.file_size = self.file_url.size
         self.extension = Path(self.file_url.name).suffix
         super(Attachment, self).save(force_insert, force_update, using, update_fields)
+
+
+# Register models to auditlog
+auditlog.register(Brand)
+auditlog.register(ProductShop)
+auditlog.register(Shop)
+auditlog.register(Product)
+auditlog.register(Category)

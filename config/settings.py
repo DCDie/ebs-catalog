@@ -14,8 +14,10 @@ DEBUG = os.getenv('DEBUG')
 ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
+    # Jazzmin
     'jazzmin',
 
+    # Django apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -23,13 +25,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # Third-party apps
     'drf_yasg',
     'rest_framework',
+    'auditlog',
     'django_json_widget',
 
+    # Project apps
     'apps.common',
     'apps.products',
-
 ]
 
 MIDDLEWARE = [
@@ -40,6 +44,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'auditlog.middleware.AuditlogMiddleware',
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -106,11 +111,12 @@ JAZZMIN_SETTINGS = {
         "auth.user": "fas fa-user",
         "auth.Group": "fas fa-users",
         "products.Category": "fas fa-list-ol",
-        "products.Product": "fas fa-list-ol",
-        "products.Comment": "fas fa-envelope",
+        "products.Product": "fa fa-phone",
+        "products.Comment": "fas fa-comment-dots",
         "products.Shop": "fas fa-city",
-        "products.ProductShop": "fas fa-list-ol",
+        "products.ProductShop": "fas fa-shopping-cart",
         "products.Brand": "fas fa-list-ol",
         "products.Attachment": "fas fa-file-alt",
+        "auditlog.LogEntry": "fas fa-clipboard-list",
     },
 }
