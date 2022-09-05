@@ -223,7 +223,7 @@ class Brand(BaseModel):
     )
 
 
-class Attachment(models.Model):
+class Attachment(BaseModel):
     title = models.CharField(
         max_length=75,
     )
@@ -260,3 +260,7 @@ class Attachment(models.Model):
 
 # Register models to auditlog
 auditlog.register(Brand)
+auditlog.register(ProductShop)
+auditlog.register(Shop)
+auditlog.register(Product)
+auditlog.register(Category)
