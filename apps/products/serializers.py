@@ -6,7 +6,8 @@ from apps.products.models import (
     Shop,
     Attachment,
     ProductShop,
-    Product
+    Product,
+    Brand
 )
 
 __all__ = [
@@ -15,7 +16,8 @@ __all__ = [
     'ShopSerializer',
     'ProductSerializer',
     'AttachmentSerializer',
-    'ProductShopSerializer'
+    'ProductShopSerializer',
+    'BrandSerializer',
 ]
 
 
@@ -52,4 +54,10 @@ class ProductShopSerializer(ModelSerializer):
 class ProductSerializer(ModelSerializer):
     class Meta:
         model = Product
+        fields = '__all__'
+
+
+class BrandSerializer(ModelSerializer):
+    class Meta:
+        model = Brand
         fields = '__all__'
