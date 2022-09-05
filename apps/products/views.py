@@ -1,4 +1,7 @@
-from rest_framework.viewsets import ModelViewSet, GenericViewSet
+from rest_framework.viewsets import (
+    ModelViewSet,
+    GenericViewSet
+)
 
 from apps.products.models import (
     Category,
@@ -6,7 +9,8 @@ from apps.products.models import (
     ProductShop,
     Product,
     Comment,
-    Attachment
+    Attachment,
+    Brand
 )
 from apps.products.serializers import (
     ProductShopSerializer,
@@ -15,6 +19,7 @@ from apps.products.serializers import (
     ProductSerializer,
     CommentSerializer,
     CategorySerializer,
+    BrandSerializer,
 )
 
 __all__ = [
@@ -23,7 +28,8 @@ __all__ = [
     'AttachmentViewSet',
     'ShopViewSet',
     'ProductViewSet',
-    'ProductShopViewSet'
+    'ProductShopViewSet',
+    'BrandViewSet',
 ]
 
 
@@ -73,3 +79,11 @@ class CommentViewSet(
 ):
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
+
+
+class BrandViewSet(
+    ModelViewSet,
+    GenericViewSet
+):
+    queryset = Brand.objects.all()
+    serializer_class = BrandSerializer

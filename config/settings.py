@@ -1,6 +1,6 @@
 import os
-
 from pathlib import Path
+
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -25,6 +25,7 @@ INSTALLED_APPS = [
 
     'drf_yasg',
     'rest_framework',
+    'django_json_widget',
 
     'apps.common',
     'apps.products',
@@ -61,7 +62,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -72,7 +72,6 @@ DATABASES = {
         'PORT': os.getenv('PORT'),
     }
 }
-
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -89,7 +88,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
@@ -98,8 +96,21 @@ USE_I18N = True
 
 USE_TZ = True
 
-
 STATIC_URL = 'static/'
 
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+JAZZMIN_SETTINGS = {
+    "icons": {
+        "auth": "fas fa-users-cog",
+        "auth.user": "fas fa-user",
+        "auth.Group": "fas fa-users",
+        "products.Category": "fas fa-list-ol",
+        "products.Product": "fas fa-list-ol",
+        "products.Comment": "fas fa-envelope",
+        "products.Shop": "fas fa-city",
+        "products.ProductShop": "fas fa-list-ol",
+        "products.Brand": "fas fa-list-ol",
+        "products.Attachment": "fas fa-file-alt",
+    },
+}

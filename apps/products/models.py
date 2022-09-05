@@ -1,7 +1,13 @@
 from pathlib import Path
 
-from django.core.validators import MaxValueValidator, MinValueValidator
+from django.contrib.auth import get_user_model
+from django.core.validators import (
+    MaxValueValidator,
+    MinValueValidator
+)
 from django.db import models
+
+from apps.common.models import BaseModel
 
 __all__ = [
     'Comment',
@@ -9,11 +15,14 @@ __all__ = [
     'ProductShop',
     'Product',
     'Shop',
-    'Attachment'
+    'Attachment',
+    'Brand',
 ]
 
+User = get_user_model()
 
-class Category(models.Model):
+
+class Category(BaseModel):
     title = models.CharField(
         max_length=155
     )
@@ -21,10 +30,6 @@ class Category(models.Model):
         'self',
         on_delete=models.SET_NULL,
         null=True,
-        blank=True
-    )
-    created_at = models.DateTimeField(
-        auto_now_add=True,
         blank=True
     )
     language = models.JSONField(
@@ -45,7 +50,7 @@ class Category(models.Model):
         return self.title
 
 
-class Product(models.Model):
+class Product(BaseModel):
     title = models.CharField(
         max_length=155
     )
@@ -89,7 +94,7 @@ class Product(models.Model):
         return self.title
 
 
-class Comment(models.Model):
+class Comment(BaseModel):
     text = models.TextField()
     product = models.ForeignKey(
         Product,
@@ -103,9 +108,11 @@ class Comment(models.Model):
         blank=True,
         null=True
     )
-    email = models.EmailField()
-    username = models.CharField(
-        max_length=50
+    user = models.ForeignKey(
+        to=User,
+        null=True,
+        blank=True,
+        on_delete=models.CASCADE
     )
     language = models.JSONField(
         blank=True,
@@ -129,7 +136,7 @@ class Comment(models.Model):
         return f'{self.id}'
 
 
-class Shop(models.Model):
+class Shop(BaseModel):
     title = models.CharField(
         max_length=155
     )
@@ -159,7 +166,7 @@ class Shop(models.Model):
         return self.title
 
 
-class ProductShop(models.Model):
+class ProductShop(BaseModel):
     title = models.CharField(
         max_length=155
     )
@@ -199,7 +206,7 @@ class ProductShop(models.Model):
         return self.title
 
 
-class Brand(models.Model):
+class Brand(BaseModel):
     title = models.CharField(
         max_length=155,
     )
@@ -215,7 +222,7 @@ class Brand(models.Model):
     )
 
 
-class Attachment(models.Model):
+class Attachment(BaseModel):
     title = models.CharField(
         max_length=75,
     )
