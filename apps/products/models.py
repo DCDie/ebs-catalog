@@ -222,6 +222,9 @@ class Brand(BaseModel):
         null=True
     )
 
+    def __str__(self):
+        return self.title
+
 
 class Attachment(BaseModel):
     title = models.CharField(
