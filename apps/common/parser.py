@@ -41,18 +41,15 @@ class Parsing:
         for category in categories:
             category_name = category.select('a')[0].text.replace('\n', '')
             subcategories = category.select('.uk-position-top-left > .uk-nav.tm-mobile-menu-nav > .blue')
-            self.categories[category_name] = []
+            self.categories[category_name] = {}
             for subcategory in subcategories:
                 subcategory_link = subcategory.get('href')
 
                 # If category exists write
                 if subcategory_link:
-                    dictionary = {
-                        f'{subcategory.text}': {
-                            'category_link': subcategory_link
-                        }
+                    self.categories[category_name][subcategory.text] = {
+                        'category_link': subcategory_link
                     }
-                    self.categories[category_name].append(dictionary)
         with open('categories.json', 'w+', encoding='utf-8') as fp:
             fp.write(json.dumps(self.categories))
             self.logging(
