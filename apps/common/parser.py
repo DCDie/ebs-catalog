@@ -1,6 +1,5 @@
 import json
 import time
-from json import JSONDecodeError
 
 import requests
 from bs4 import BeautifulSoup
@@ -52,25 +51,30 @@ class Parsing:
         with open("categories.json", "rb") as read_file:
             categories = json.load(read_file)
             for category, category_data in categories.items():
-                page = 1
+                data = {}
+
                 for subcategory in category_data:
-                    # Start timer
-                    start = time.process_time()
+                    data[subcategory] = []
 
-                    link = category_data[subcategory]
+                    page = 1
+                    while True:
+                        # Start timer
+                        start = time.process_time()
+                        link = category_data[subcategory]
 
-                    # Request method to goods
-                    response = requests.get(
-                        f'{link}?page={page}',
-                        headers=self.headers,
-                        allow_redirects=False
-                    )
+                        # Request method to goods
+                        response = requests.get(
+                            f'{link}?page={page}',
+                            headers=self.headers,
+                            allow_redirects=False
+                        )
 
-                    soup = BeautifulSoup(response.text, 'html.parser')
-                    goods = soup.select('.product-card > div > .grid-item')
+                        soup = BeautifulSoup(response.text, 'html.parser')
+                        goods = soup.select('.product-card > div > .grid-item')
 
-                    if goods:
-                        # Get goods values
+                        if not bool(goods):
+                            break
+                            # Get goods values
                         for good in goods:
                             price = 0
                             if price := good.select_one('.grid-price-cart > .grid-price > .price'):
@@ -89,51 +93,16 @@ class Parsing:
                                 'price': price,
                                 'available': bool(good.attrs.get('data-stock'))
                             }
-
-                            # Save goods data in new variable if category is changed
-                            if self.category_name == category:
-                                self.table_goods.append({subcategory: dictionary})
-                            else:
-                                self.table_goods.clear()
-                                self.table_goods.append({subcategory: dictionary})
-
-                    # Check goods category and save it file
-                    if self.category_name == category:
-                        # If goods json is already saved and has data
-                        try:
-                            with open(f'items_{self.category_name}.json') as fp:
-                                old_table_goods = json.load(fp)
-                            old_table_goods.extend(self.table_goods)
-                            with open(f'items_{self.category_name}.json', 'w+',
-                                      encoding='utf-8') as fp:
-                                fp.write(json.dumps(old_table_goods).replace(r'\n', ''))
-                        # If goods json isn't created or it's empty
-                        except (JSONDecodeError, FileNotFoundError):
-                            with open(f'items_{self.category_name}.json', 'w+',
-                                      encoding='utf-8') as fp:
-                                fp.write(json.dumps(self.table_goods).replace(r'\n', ''))
-                        finally:
-                            self.category_name = category
-                            self.logging(
-                                message='Added goods card',
-                                data=f'Status code: {response.status_code} '
-                                     f'| Page: {page} | URL: {response.url}',
-                                execution_time=time.process_time() - start
-                            )
-                            page += 1
-                    # Save goods data to new json if category is changed
-                    else:
-                        with open(f'items_{category}.json', 'w+',
-                                  encoding='utf-8') as fp:
-                            fp.write(json.dumps(self.table_goods).replace(r'\n', ''))
-                            self.category_name = category
-                            self.logging(
-                                message='Added goods card',
-                                data=f'Status code: {response.status_code} '
-                                     f'| Page: {page} | URL: {response.url}',
-                                execution_time=time.process_time() - start
-                            )
-                            page += 1
+                        data[subcategory].append(dictionary)
+                        self.logging(
+                            message=f'Added {subcategory}',
+                            data=f'Status code: {response.status_code} '
+                                 f'| Page: {page} | URL: {response.url}',
+                            execution_time=time.process_time() - start
+                        )
+                        page += 1
+                with open(f'items_{category}.json', 'w+', encoding='utf-8') as fp:
+                    fp.write(json.dumps(data))
 
 
 def main():
