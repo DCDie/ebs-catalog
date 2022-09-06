@@ -1,5 +1,4 @@
 import json
-import copy
 import time
 from json import JSONDecodeError
 
@@ -9,8 +8,8 @@ from fake_useragent import UserAgent
 
 
 class Parsing:
-    ua = UserAgent()
-    agent = ua.random
+    user = UserAgent()
+    agent = user.random
 
     headers = {
         'User-Agent': agent,
@@ -26,41 +25,38 @@ class Parsing:
         self.dictionary_data = None
         self.dictionary_row_data = []
 
+        self.categories = {}
+
     @staticmethod
     def logging(message, data=None, execution_time=None):
         print(f"{message} | Data: {data} | Time: {execution_time} sec.")
 
-    def get_category_link(self):
+    def get_categories(self):
         start = time.process_time()
         url = 'https://enter.online/'
 
         response = requests.get(url, headers=self.headers)
         soup = BeautifulSoup(response.text, 'html.parser')
-        main_categories = soup.select('.first-level > .first-level')
-        for main_category in main_categories:
-            main_category_name = main_category.select('a')[0].text
-            subcategories = main_category.select('.uk-position-top-left > .uk-nav.tm-mobile-menu-nav > .blue')
+        categories = soup.select('.first-level > .first-level')
+        for category in categories:
+            category_name = category.select('a')[0].text.replace('\n', '')
+            subcategories = category.select('.uk-position-top-left > .uk-nav.tm-mobile-menu-nav > .blue')
+            self.categories[category_name] = []
             for subcategory in subcategories:
                 subcategory_link = subcategory.get('href')
 
-                # Check if subcategory is valid
-                if not subcategory_link:
-                    continue
-                else:
+                # If category exists write
+                if subcategory_link:
                     dictionary = {
                         f'{subcategory.text}': {
                             'category_link': subcategory_link
                         }
                     }
-                    self.dictionary_row_data.append(dictionary)
-                    self.dictionary_data = copy.deepcopy(self.dictionary_row_data)
-
-            self.category[main_category_name] = self.dictionary_data
-            self.dictionary_row_data.clear()
-        with open('good_category.json', 'w+', encoding='utf-8') as fp:
-            fp.write(json.dumps(self.category).replace(r'\n', ''))
+                    self.categories[category_name].append(dictionary)
+        with open('categories.json', 'w+', encoding='utf-8') as fp:
+            fp.write(json.dumps(self.categories))
             self.logging(
-                message='File good_category.json - saved',
+                message='File categories.json - saved',
                 execution_time=time.process_time() - start
             )
 
@@ -173,7 +169,7 @@ class Parsing:
 
 def main():
     parsing = Parsing()
-    parsing.get_category_link()
+    parsing.get_categories()
     parsing.goods_details()
 
 
