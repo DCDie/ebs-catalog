@@ -222,6 +222,10 @@ class Brand(BaseModel):
         null=True
     )
 
+    class Meta:
+        verbose_name = 'Brand'
+        verbose_name_plural = 'Brands'
+
     def __str__(self):
         return self.title
 
