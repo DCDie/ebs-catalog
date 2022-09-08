@@ -13,11 +13,12 @@ from apps.common.models import BaseModel
 __all__ = [
     'Comment',
     'Category',
-    'ProductShop',
+    'ShopProduct',
     'Product',
     'Shop',
     'Attachment',
     'Brand',
+    'ShopCategory'
 ]
 
 User = get_user_model()
@@ -28,7 +29,7 @@ class Category(BaseModel):
         max_length=155
     )
     parent = models.ForeignKey(
-        'self',
+        to='self',
         on_delete=models.SET_NULL,
         null=True,
         blank=True
@@ -56,7 +57,7 @@ class Product(BaseModel):
         max_length=155
     )
     category = models.ForeignKey(
-        Category,
+        to=Category,
         on_delete=models.CASCADE,
     )
     description = models.TextField()
@@ -86,6 +87,11 @@ class Product(BaseModel):
         related_name='product_attachment',
         blank=True
     )
+    verified = models.BooleanField(
+        blank=True,
+        null=True,
+        default=False
+    )
 
     class Meta:
         verbose_name = 'Product'
@@ -98,13 +104,13 @@ class Product(BaseModel):
 class Comment(BaseModel):
     text = models.TextField()
     product = models.ForeignKey(
-        Product,
+        to=Product,
         on_delete=models.CASCADE,
         blank=True,
         null=True
     )
     shop = models.ForeignKey(
-        'Shop',
+        to='Shop',
         on_delete=models.SET_NULL,
         blank=True,
         null=True
@@ -167,7 +173,7 @@ class Shop(BaseModel):
         return self.title
 
 
-class ProductShop(BaseModel):
+class ShopProduct(BaseModel):
     title = models.CharField(
         max_length=155
     )
@@ -187,7 +193,7 @@ class ProductShop(BaseModel):
         related_name='product_shop_attachment'
     )
     shop = models.ForeignKey(
-        Shop,
+        to=Shop,
         on_delete=models.CASCADE
     )
     language = models.JSONField(
@@ -195,8 +201,19 @@ class ProductShop(BaseModel):
         null=True
     )
     product = models.ForeignKey(
-        Product,
-        on_delete=models.CASCADE
+        to=Product,
+        on_delete=models.CASCADE,
+        blank=True,
+        null=True
+    )
+    shop_category = models.ForeignKey(
+        to='ShopCategory',
+        on_delete=models.CASCADE,
+    )
+    verified = models.BooleanField(
+        blank=True,
+        null=True,
+        default=False
     )
 
     class Meta:
@@ -212,7 +229,7 @@ class Brand(BaseModel):
         max_length=155,
     )
     parent = models.ForeignKey(
-        'self',
+        to='self',
         blank=True,
         null=True,
         on_delete=models.CASCADE
@@ -222,8 +239,42 @@ class Brand(BaseModel):
         null=True
     )
 
+    class Meta:
+        verbose_name = 'Brand'
+        verbose_name_plural = 'Brands'
+
     def __str__(self):
         return self.title
+
+
+class ShopCategory(BaseModel):
+    name = models.CharField(
+        max_length=155
+    )
+    shop = models.ForeignKey(
+        to=Shop,
+        on_delete=models.CASCADE
+    )
+    category = models.ForeignKey(
+        to=Category,
+        on_delete=models.CASCADE,
+        blank=True,
+        null=True
+    )
+    parent = models.ForeignKey(
+        to='self',
+        on_delete=models.CASCADE,
+        blank=True,
+        null=True
+    )
+
+    class Meta:
+        verbose_name = 'Shop category'
+        verbose_name_plural = 'Shop categories'
+        unique_together = ['shop', 'name']
+
+    def __str__(self):
+        return self.name
 
 
 class Attachment(BaseModel):
@@ -263,7 +314,7 @@ class Attachment(BaseModel):
 
 # Register models to auditlog
 auditlog.register(Brand)
-auditlog.register(ProductShop)
+auditlog.register(ShopProduct)
 auditlog.register(Shop)
 auditlog.register(Product)
 auditlog.register(Category)
