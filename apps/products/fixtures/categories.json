@@ -958,66 +958,6 @@
     },
     "children": [
       {
-        "Capacitatea de răcire 7000 BTU/ 20m\u00b2": {
-          "languages": {
-            "ro": {
-              "title": "Test"
-            },
-            "ru": {
-              "title": "Тест"
-            }
-          }
-        }
-      },
-      {
-        "Capacitatea de răcire 9000 BTU/ 30m\u00b2": {
-          "languages": {
-            "ro": {
-              "title": "Test"
-            },
-            "ru": {
-              "title": "Тест"
-            }
-          }
-        }
-      },
-      {
-        "Capacitatea de răcire 12000 BTU/ 40m\u00b2": {
-          "languages": {
-            "ro": {
-              "title": "Test"
-            },
-            "ru": {
-              "title": "Тест"
-            }
-          }
-        }
-      },
-      {
-        "Capacitatea de răcire 18000 BTU/ 50m\u00b2": {
-          "languages": {
-            "ro": {
-              "title": "Test"
-            },
-            "ru": {
-              "title": "Тест"
-            }
-          }
-        }
-      },
-      {
-        "Capacitatea de răcire 24000 BTU/ 55-70m\u00b2": {
-          "languages": {
-            "ro": {
-              "title": "Test"
-            },
-            "ru": {
-              "title": "Тест"
-            }
-          }
-        }
-      },
-      {
         "Umidificatoare de aer": {
           "languages": {
             "ro": {
@@ -1354,66 +1294,6 @@
         }
       },
       {
-        "Samsung": {
-          "languages": {
-            "ro": {
-              "title": "Test"
-            },
-            "ru": {
-              "title": "Тест"
-            }
-          }
-        }
-      },
-      {
-        "Hisense": {
-          "languages": {
-            "ro": {
-              "title": "Test"
-            },
-            "ru": {
-              "title": "Тест"
-            }
-          }
-        }
-      },
-      {
-        "Sony": {
-          "languages": {
-            "ro": {
-              "title": "Test"
-            },
-            "ru": {
-              "title": "Тест"
-            }
-          }
-        }
-      },
-      {
-        "LG": {
-          "languages": {
-            "ro": {
-              "title": "Test"
-            },
-            "ru": {
-              "title": "Тест"
-            }
-          }
-        }
-      },
-      {
-        "TCL": {
-          "languages": {
-            "ro": {
-              "title": "Test"
-            },
-            "ru": {
-              "title": "Тест"
-            }
-          }
-        }
-      },
-      {
         "Media playere": {
           "languages": {
             "ro": {
@@ -1461,138 +1341,6 @@
       }
     },
     "children": [
-      {
-        "Apple iPhone 13": {
-          "languages": {
-            "ro": {
-              "title": "Test"
-            },
-            "ru": {
-              "title": "Тест"
-            }
-          }
-        }
-      },
-      {
-        "Samsung Galaxy S22": {
-          "languages": {
-            "ro": {
-              "title": "Test"
-            },
-            "ru": {
-              "title": "Тест"
-            }
-          }
-        }
-      },
-      {
-        "Apple": {
-          "languages": {
-            "ro": {
-              "title": "Test"
-            },
-            "ru": {
-              "title": "Тест"
-            }
-          }
-        }
-      },
-      {
-        "Samsung": {
-          "languages": {
-            "ro": {
-              "title": "Test"
-            },
-            "ru": {
-              "title": "Тест"
-            }
-          }
-        }
-      },
-      {
-        "Xiaomi": {
-          "languages": {
-            "ro": {
-              "title": "Test"
-            },
-            "ru": {
-              "title": "Тест"
-            }
-          }
-        }
-      },
-      {
-        "OnePlus": {
-          "languages": {
-            "ro": {
-              "title": "Test"
-            },
-            "ru": {
-              "title": "Тест"
-            }
-          }
-        }
-      },
-      {
-        "Realme": {
-          "languages": {
-            "ro": {
-              "title": "Test"
-            },
-            "ru": {
-              "title": "Тест"
-            }
-          }
-        }
-      },
-      {
-        "Oppo": {
-          "languages": {
-            "ro": {
-              "title": "Test"
-            },
-            "ru": {
-              "title": "Тест"
-            }
-          }
-        }
-      },
-      {
-        "Huawei": {
-          "languages": {
-            "ro": {
-              "title": "Test"
-            },
-            "ru": {
-              "title": "Тест"
-            }
-          }
-        }
-      },
-      {
-        "Poco": {
-          "languages": {
-            "ro": {
-              "title": "Test"
-            },
-            "ru": {
-              "title": "Тест"
-            }
-          }
-        }
-      },
-      {
-        "MacBook": {
-          "languages": {
-            "ro": {
-              "title": "Test"
-            },
-            "ru": {
-              "title": "Тест"
-            }
-          }
-        }
-      },
       {
         "Ultrabook-uri": {
           "languages": {
@@ -1642,43 +1390,7 @@
         }
       },
       {
-        "Apple iPad Air 2022": {
-          "languages": {
-            "ro": {
-              "title": "Test"
-            },
-            "ru": {
-              "title": "Тест"
-            }
-          }
-        }
-      },
-      {
-        "Samsung Galaxy TAB S8": {
-          "languages": {
-            "ro": {
-              "title": "Test"
-            },
-            "ru": {
-              "title": "Тест"
-            }
-          }
-        }
-      },
-      {
-        "iPad": {
-          "languages": {
-            "ro": {
-              "title": "Test"
-            },
-            "ru": {
-              "title": "Тест"
-            }
-          }
-        }
-      },
-      {
-        "Tablete Android": {
+        "Tablete": {
           "languages": {
             "ro": {
               "title": "Test"
@@ -1714,19 +1426,7 @@
         }
       },
       {
-        "Telefoane DECT": {
-          "languages": {
-            "ro": {
-              "title": "Test"
-            },
-            "ru": {
-              "title": "Тест"
-            }
-          }
-        }
-      },
-      {
-        "Telefoane CORDER": {
+        "Telefoane staționare": {
           "languages": {
             "ro": {
               "title": "Test"
@@ -2962,18 +2662,6 @@
         }
       },
       {
-        "Sony PlayStation 5": {
-          "languages": {
-            "ro": {
-              "title": "Test"
-            },
-            "ru": {
-              "title": "Тест"
-            }
-          }
-        }
-      },
-      {
         "Console": {
           "languages": {
             "ro": {
@@ -2999,18 +2687,6 @@
       },
       {
         "Jocuri": {
-          "languages": {
-            "ro": {
-              "title": "Test"
-            },
-            "ru": {
-              "title": "Тест"
-            }
-          }
-        }
-      },
-      {
-        "Xbox Series X și Series S": {
           "languages": {
             "ro": {
               "title": "Test"
@@ -3176,66 +2852,6 @@
             }
           }
         }
-      },
-      {
-        "Harman Kardon": {
-          "languages": {
-            "ro": {
-              "title": "Test"
-            },
-            "ru": {
-              "title": "Тест"
-            }
-          }
-        }
-      },
-      {
-        "House of Marley": {
-          "languages": {
-            "ro": {
-              "title": "Test"
-            },
-            "ru": {
-              "title": "Тест"
-            }
-          }
-        }
-      },
-      {
-        "JBL": {
-          "languages": {
-            "ro": {
-              "title": "Test"
-            },
-            "ru": {
-              "title": "Тест"
-            }
-          }
-        }
-      },
-      {
-        "SkullCandy": {
-          "languages": {
-            "ro": {
-              "title": "Test"
-            },
-            "ru": {
-              "title": "Тест"
-            }
-          }
-        }
-      },
-      {
-        "JAM": {
-          "languages": {
-            "ro": {
-              "title": "Test"
-            },
-            "ru": {
-              "title": "Тест"
-            }
-          }
-        }
       }
     ]
   },
@@ -3249,18 +2865,6 @@
       }
     },
     "children": [
-      {
-        "Xiaomi Mi Band 7": {
-          "languages": {
-            "ro": {
-              "title": "Test"
-            },
-            "ru": {
-              "title": "Тест"
-            }
-          }
-        }
-      },
       {
         "Smartwatch-uri": {
           "languages": {
@@ -3299,18 +2903,6 @@
       },
       {
         "Accesorii": {
-          "languages": {
-            "ro": {
-              "title": "Test"
-            },
-            "ru": {
-              "title": "Тест"
-            }
-          }
-        }
-      },
-      {
-        "Noile Apple Watch": {
           "languages": {
             "ro": {
               "title": "Test"
