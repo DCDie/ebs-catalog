@@ -41,7 +41,7 @@ class EnterParser:
                 if subcategory_link:
                     categories_data[category_name][subcategory.text] = subcategory_link
         with open('categories.json', 'w+', encoding='utf-8') as fp:
-            fp.write(json.dumps(categories_data))
+            fp.write(json.dumps(categories_data, ensure_ascii=False))
             self.logging(
                 message='File categories.json - saved',
                 execution_time=time.process_time() - start
@@ -107,4 +107,4 @@ class EnterParser:
                             data=f'Status code: {response.status_code} | Page: {page} | URL: {response.url}'
                         )
                     with open(f'items_{category}.json', 'w+', encoding='utf-8') as fp:
-                        fp.write(json.dumps(data))
+                        fp.write(json.dumps(data, ensure_ascii=False))
