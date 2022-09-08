@@ -5,11 +5,12 @@ from django_json_widget.widgets import JSONEditorWidget
 from apps.products.models import (
     Shop,
     Product,
-    ProductShop,
+    ShopProduct,
     Attachment,
     Category,
     Comment,
     Brand,
+    ShopCategory,
 )
 
 
@@ -48,12 +49,14 @@ class ProductAdmin(admin.ModelAdmin):
         'category',
         'price',
         'rating',
+        'verified',
         'created_at',
         'modified_at'
     )
     list_filter = (
         'category',
         'rating',
+        'verified'
     )
     search_fields = (
         'title',
@@ -68,6 +71,7 @@ class ProductAdmin(admin.ModelAdmin):
         'price',
         'rating',
         'attachments',
+        'verified',
         'created_at',
         'modified_at'
     )
@@ -80,7 +84,7 @@ class ProductAdmin(admin.ModelAdmin):
     )
 
 
-@admin.register(ProductShop)
+@admin.register(ShopProduct)
 class ProductShopAdmin(admin.ModelAdmin):
     list_display = (
         'id',
@@ -89,10 +93,15 @@ class ProductShopAdmin(admin.ModelAdmin):
         'available',
         'shop',
         'product',
+        'shop_category',
+        'verified',
         'created_at',
         'modified_at'
     )
-    list_filter = ('available',)
+    list_filter = (
+        'available',
+        'verified'
+    )
     search_fields = (
         'title',
         'description'
@@ -106,6 +115,8 @@ class ProductShopAdmin(admin.ModelAdmin):
         'shop',
         'language',
         'product',
+        'shop_category',
+        'verified',
         'created_at',
         'modified_at'
     )
@@ -238,6 +249,32 @@ class BrandAdmin(admin.ModelAdmin):
     formfield_overrides = {
         JSONField: {'widget': JSONEditorWidget},
     }
+    readonly_fields = (
+        'created_at',
+        'modified_at'
+    )
+
+
+@admin.register(ShopCategory)
+class ShopCategoryAdmin(admin.ModelAdmin):
+    list_display = (
+        'id',
+        'name',
+        'shop',
+        'category',
+        'parent',
+        'created_at',
+        'modified_at'
+    )
+    search_fields = ('name',)
+    fields = (
+        'name',
+        'shop',
+        'category',
+        'parent',
+        'created_at',
+        'modified_at'
+    )
     readonly_fields = (
         'created_at',
         'modified_at'
