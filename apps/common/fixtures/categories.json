@@ -1,545 +1,5292 @@
 {
-  "Electrocasnice": [
-    "Frigidere",
-    "Mașini de spălat rufe",
-    "Mașini de spălat rufe cu uscător",
-    "Mașini de uscat rufe",
-    "Congelatoare",
-    "Aragaze",
-    "Mașini de spălat vase",
-    "Hote",
-    "Cuptoare cu microunde",
-    "Cuptoare electrice",
-    "Lăzi frigorifice",
-    "Plite de masă",
-    "Accesorii pentru mașini de spălat și uscat rufe",
-    "Uscătoare de fructe și legume",
-    "Aparate de vidat",
-    "Blendere",
-    "Multicooker",
-    "Râșnițe",
-    "Ceainice electrice",
-    "Aparatele de cafea",
-    "Feliatoare",
-    "Accesorii pentru multicookere",
-    "Mixere de bucătărie",
-    "Mașini de tocat carne",
-    "Procesoare și roboți de bucătărie",
-    "Grătare electrice",
-    "Cântare de bucătărie",
-    "Prăjitoare de pâine (toaster)",
-    "Mașini de copt pâine",
-    "ThermoPot",
-    "Prăjitoare de sandwich-uri & waffe",
-    "Storcătoare de fructe & legume",
-    "Filtre de apă",
-    "Aspiratoare cu sac",
-    "Aspiratoare cu container",
-    "Aspiratoare robot",
-    "Aspiratoare verticale",
-    "Accesorii pentru aspiratoare",
-    "Fiare de călcat",
-    "Stații de călcat",
-    "Vaporizatoare",
-    "Coșuri pentru rufe",
-    "Uscătoare de rufe",
-    "Mese de călcat",
-    "Containere izotermice",
-    "Genți frigorifice",
-    "Genți termice",
-    "Aparate de curățat scame",
-    "Mașini de cusut",
-    "Generatoare de aburi",
-    "Frigidere încorporabile",
-    "Plite încorporabile",
-    "Cuptoare incorporabile",
-    "Mașini de spălat vase încorporabile",
-    "Hote încorporabile",
-    "Cuptoare cu microunde încorporabile",
-    "Detergenți",
-    "Balsamuri",
-    "Soluții de curățare",
-    "Apă distilată",
-    "Cafea boabe",
-    "Cafea măcinată",
-    "Cafea capsule",
-    "Infuzoare",
-    "Tigăi",
-    "Cratițe",
-    "Polonice",
-    "Capace",
-    "Containere alimentare",
-    "Teluri",
-    "Ibrice",
-    "Cuțite",
-    "Răzători",
-    "Clești",
-    "Spatule",
-    "Pensule culinare",
-    "Căni și cești",
-    "Pahare"
-  ],
-  "Climatizare": [
-    "Capacitatea de răcire 7000 BTU/ 20m\u00b2",
-    "Capacitatea de răcire 9000 BTU/ 30m\u00b2",
-    "Capacitatea de răcire 12000 BTU/ 40m\u00b2",
-    "Capacitatea de răcire 18000 BTU/ 50m\u00b2",
-    "Capacitatea de răcire 24000 BTU/ 55-70m\u00b2",
-    "Umidificatoare de aer",
-    "Purificatoare de aer",
-    "Dezumidificatoare",
-    "Boilere cu acumulare",
-    "Încălzitoare de apă instant",
-    "Încălzitoare cu ventilator",
-    "Încălzitoare infraroșii",
-    "Calorifere electrice cu ulei",
-    "Convectoare",
-    "Șeminee electrice",
-    "Ventilatoare de masă",
-    "Ventilatoare de podea",
-    "Ventilatoare Turn",
-    "Ventilatoare portabile"
-  ],
-  "Televizoare": [
-    "TV 8K",
-    "TV 4K",
-    "TV QNED",
-    "TV NanoCell",
-    "TV QLED",
-    "TV OLED",
-    "Smart TV",
-    "Android TV",
-    "24\" - 32\" (61 - 81 cm)",
-    "40\" - 49\" (101 - 124 cm)",
-    "50\" - 60\" (127 - 147 cm)",
-    "65\" - 75\" (165 - 190 cm)",
-    "82\" - 86\" (208 - 218 cm)",
-    "Soundbar",
-    "Sisteme audio 2.0",
-    "Sisteme audio 2.1",
-    "Sisteme audio 3.1",
-    "Sisteme audio 5.1",
-    "Samsung",
-    "Hisense",
-    "Sony",
-    "LG",
-    "TCL",
-    "Media playere",
-    "Suporturi TV",
-    "Cinematograf online",
-    "500 lei",
-    "1000 lei",
-    "2000 lei"
-  ],
-  "Telefoane, Laptopuri și Tablete": [
-    "Apple iPhone 13",
-    "Samsung Galaxy S22",
-    "Până la 5000 lei",
-    "Până la 10000 lei",
-    "De la 10000 lei",
-    "Apple",
-    "Samsung",
-    "Xiaomi",
-    "OnePlus",
-    "Realme",
-    "Oppo",
-    "Huawei",
-    "Poco",
-    "MacBook",
-    "Ultrabook-uri",
-    "Laptopuri gaming",
-    "Laptopuri business",
-    "Laptopuri personale",
-    "Apple iPad Air 2022",
-    "Samsung Galaxy TAB S8",
-    "iPad",
-    "Tablete Android",
-    "Cărți electronice",
-    "Tablete grafice",
-    "Telefoane DECT",
-    "Telefoane CORDER",
-    "Sisteme de operare",
-    "Antivirus",
-    "Suite Office",
-    "HDD extern",
-    "Memorii USB",
-    "Încărcătoare",
-    "Mouse-uri",
-    "Căști",
-    "Huse",
-    "Suporturi de răcire (coolere)",
-    "Сăști",
-    "Cartele de memorie",
-    "Baterii externe",
-    "Stilusuri pentru tablete",
-    "500 lei",
-    "1000 lei",
-    "2000 lei",
-    "Folii protecție din sticlă",
-    "Selfie stick-uri",
-    "Сăşti",
-    "Acumulatoare externe",
-    "Adaptoare",
-    "Cabluri GSM",
-    "Genți pentru laptop",
-    "Rucsacuri"
-  ],
-  "Îngrijire personală și sănătate": [
-    "Uscătoare de păr",
-    "Perii rotative",
-    "Ondulatoare",
-    "Plăci de îndreptat părul",
-    "Aparate de ras",
-    "Trimmer facial",
-    "Trimmere de nas şi urechi",
-    "Aparate de tuns",
-    "Epilatoare",
-    "Aparate de masaj",
-    "Periuțe de dinți electrice",
-    "Cântare de podea",
-    "Aparate de îngrijire facială",
-    "Oglinzi",
-    "Manichiură și pedichiură",
-    "Vibratoare",
-    "Vibrostimulatoare",
-    "Jucării Anale",
-    "Bile Vaginale",
-    "Dildo-uri",
-    "Seturi jucării pentru adulți",
-    "Lubrifianți",
-    "Masturbatoare",
-    "Lenjerie sexy",
-    "Inele pentru penis",
-    "Accesorii BDSM",
-    "500 lei",
-    "1000 lei",
-    "2000 lei"
-  ],
-  "PC și periferice": [
-    "Home and Office PC",
-    "Gaming PC",
-    "Mini PC",
-    "All-in-One PC",
-    "Monitoare",
-    "Tastaturi",
-    "Mouse-uri",
-    "Mousepad",
-    "Microfoane",
-    "Camere web",
-    "Memorii USB",
-    "HDD extern",
-    "UPS",
-    "Suporturi pentru monitoare",
-    "Carcase pentru unități de stocare",
-    "Dispozitive de stocare HDD",
-    "Dispozitive de stocare SSD",
-    "Procesoare",
-    "Plăci video",
-    "Plăci de bază",
-    "Memorie operativă",
-    "Surse de alimentare",
-    "Coolere",
-    "Carcase",
-    "Pastă termoconductoare",
-    "Switch",
-    "Routere Wireless",
-    "Wireless access point",
-    "Adaptoare LAN",
-    "NAS",
-    "Extendere",
-    "Ecrane de proiecție",
-    "Fundaluri foto",
-    "Table interactive",
-    "Imprimante",
-    "Multifuncționale",
-    "Proiectoare",
-    "Imprimante 3D",
-    "Accesorii pentru imprimare 3D",
-    "Sisteme de operare",
-    "Antivirus",
-    "Suite Office",
-    "Cinematograf online"
-  ],
-  "For Gamers": [
-    "Unitate PC",
-    "Monitoare",
-    "Tastaturi ",
-    "Mouse-uri",
-    "Mousepad-uri",
-    "Căști",
-    "Controller",
-    "Scaune",
-    "Sony PlayStation 5",
-    "Console",
-    "Accesorii",
-    "Jocuri",
-    "Xbox Series X și Series S",
-    "500 lei",
-    "1000 lei",
-    "2000 lei"
-  ],
-  "Audio": [
-    " Wireless",
-    "Cu fir",
-    "Sport",
-    "Gaming",
-    "Cu microfon",
-    "Boxe portabile",
-    "Boxe smart",
-    "Boxe pentru Party",
-    "Soundbar",
-    "Sisteme audio 2.0",
-    "Sisteme audio 2.1",
-    "Sisteme audio 5.1",
-    "Harman Kardon",
-    "House of Marley",
-    "JBL",
-    "SkullCandy",
-    "JAM",
-    "500 lei",
-    "1000 lei",
-    "2000 lei"
-  ],
-  "Gadgeturi, Foto și Turism": [
-    "Xiaomi Mi Band 7",
-    "Smartwatch-uri",
-    "Brățări fitness",
-    "Ceasuri smart pentru copii",
-    "Accesorii",
-    "Noile Apple Watch",
-    "Dispozitive de testare",
-    "Smart Trackers",
-    "Huse pentru smart trackere",
-    "Light Control",
-    "Media playere",
-    "Senzori smart",
-    "Lămpi",
-    "Benzi LED",
-    "Lămpi circulare",
-    "Becuri",
-    "Lanterne",
-    "Lămpi anti insecte",
-    "Camere de supraveghere",
-    "Camere video",
-    "Camere foto",
-    "Camere action",
-    "Obiective foto",
-    "Accesorii foto și video",
-    "Accesorii pentru camerе action",
-    "Drone",
-    "Ochelari VR",
-    "Accesorii AR",
-    "Telescoape",
-    "Microscoape",
-    "Binocluri",
-    "Lunete",
-    "Narghilele electronice",
-    "IQOS",
-    "Lil",
-    "500 lei",
-    "1000 lei",
-    "2000 lei",
-    "Genți pentru călătorii",
-    "Rucsacuri"
-  ],
-  "Construcție și reparații": [
-    "Mașini de găurit si inșurubat",
-    "Mașini de înfiletat și desfiletat",
-    "Ciocane rotopercutoare",
-    "Ciocane demolatoare",
-    "Polizoare unghiulare",
-    "Foarfece electric pentru metal",
-    "Fierăstraie pentru decupat",
-    "Fierăstraie circulare",
-    "Fierăstraie pentru tăieri înclinate",
-    "Fierăstraie cu sabie",
-    "Agitatoare (mixere)",
-    "Freze",
-    "Aspiratoare industriale și sisteme de aspirare",
-    "Rindele",
-    "Suflante cu aer cald",
-    "Aerografe",
-    "Mașini de lustruit",
-    "Aparate de spălat cu presiune",
-    "Mașini de șlefuit",
-    "Mașini de tăiat gresie și faianțănew",
-    "Aparate de sudat",
-    "Betoniere",
-    "Scări",
-    "Roabe",
-    "Seturi șurubelnițe",
-    "Seturi chei",
-    "Seturi scule",
-    "Toolboxes",
-    "Ciocane",
-    "Topoare",
-    "Dreptare",
-    "Fierăstraie manualenew",
-    "Freze manualenew"
-  ],
-  "Casă și grădină": [
-    "Pentru Copii",
-    "Jacuzzi",
-    "Piscine cu perete rigid",
-    "Piscine cu cadru",
-    "Accesorii pentru piscine",
-    "Electrice",
-    "Cu acumulator",
-    "Pe benzină",
-    "Robot",
-    "Tocătoare de grădină",
-    "Fierăstraie cu lanț",
-    "Suflante pentru frunze",
-    "Pulverizatoare",
-    "Motocultoare",
-    "Mașini de tuns gard viu",
-    "Motoburghie (foreze)",
-    "Despicatoare de lemnenew",
-    "Fotolii de birou",
-    "Mese de birou",
-    "Mese de bucătărie",
-    "Scaune de bucătărie",
-    "Taburete",
-    "Fotolii pentru living",
-    "Canapele pentru living",
-    "Măsuțe de cafea",
-    "Cuiere pentru haine",
-    "Saltele ortopedice",
-    "Leagăne de grădină",
-    "Scaune și fotolii de grădină",
-    "Mese de grădină",
-    "Umbrele de grădină",
-    "Seturi mobilă grădină",
-    "Brazi de crăciun",
-    "Jucarii de brad",
-    "Focuri de artificii",
-    "Ghirlande LED",
-    "Motopompe",
-    "Pompe submersibile",
-    "Pompe de suprăfață",
-    "Filtrarea piscinelor",
-    "Scări",
-    "Iluminare",
-    "Generatoare de clor",
-    "Covorașe sub piscină",
-    "Acoperire pentru piscine",
-    "Pompe",
-    "Zdrobitoare pentru strugurinew",
-    "Teascuri pentru strugurinew",
-    "Căzi pentru vinnew",
-    "Butoaie pentru vinnew"
-  ],
-  "Produse Auto": [
-    "Pentru autoturisme",
-    "Pentru camioane",
-    "Pentru camionete",
-    "Industriale",
-    "Agricole",
-    "Pentru SUV-uri (Off Road)",
-    "De iarnă",
-    "De vară",
-    "All Season",
-    "Uleiuri de motor",
-    "Uleiuri de transmisie",
-    "Lichid de frână",
-    "Antigel",
-    "Polaritatea inversă ",
-    "Polaritatea directă",
-    "Covorașe auto",
-    "Paravânturi auto",
-    "Ștergătoare de parbriz",
-    "Stingătoare",
-    "Cricuri auto",
-    "Compresoare auto",
-    "Încărcătoare și redresoare auto",
-    "Invertoare de tensiunenew",
-    "Mașini de spălat cu presiune",
-    "Frigidere auto",
-    "Camere Auto",
-    "Căști Handsfree",
-    "FM modulatoare",
-    "Cabluri și adaptoare GSM",
-    " Cartele de memorie",
-    "Suporturi auto",
-    "Playere auto"
-  ],
-  "Copii și bebeluși": [
-    "Mașinuțe",
-    "Figurine",
-    "Jucării antistres",
-    "Constructori",
-    "Jucării pentru bebeluși",
-    "Jucării interactive",
-    "Jucării electrice",
-    "Elicoptere şi Avioane",
-    "Puzzle",
-    "Roboți",
-    "Jocuri de masă",
-    "Tobogane",
-    "Trambuline",
-    "Căsuțe pentru copii",
-    "Balansoare",
-    "Biciclete",
-    "Biciclete fără pedale",
-    "Triciclete",
-    "Trotinete pentru copii",
-    "Motociclete pentru copii",
-    "Tolocare",
-    "Saltele pentru copii",
-    "Perne pentru bebeluși",
-    "Lenjerie de pat pentru copii",
-    "Babynest",
-    "Scutece pentru copii",
-    "Șervețele umede bebelușinew",
-    "Genți pentru mămici",
-    "Tablouri pe numere",
-    "Ghiozdane pentru școală",
-    "Ghiozdane pentru fete",
-    "Ghiozdane pentru băieți"
-  ],
-  "Sport și Agrement": [
-    "Biciclete",
-    "Biciclete pentru copii",
-    "Triciclete",
-    "Trotinete pentru copii",
-    "Role",
-    "Trotinete",
-    "Hoverboard-uri",
-    "Motociclete pentru copii",
-    "Pentru Copii",
-    "Piscine cu cadru",
-    "Piscine cu perete rigid",
-    "Jacuzzi",
-    "Filtrarea piscinelor",
-    "Scări",
-    "Iluminare",
-    "Generatoare de clor",
-    "Covorașe sub piscină",
-    "Acoperire pentru piscine",
-    "Pompe",
-    "Benzi de alergat",
-    "Biciclete eliptice",
-    "Bicicletе fitness",
-    "Steppere",
-    "Aparate de vâslit",
-    "Proteine",
-    "Vitamine și minerale",
-    "Aminoacizi",
-    "Arzătoare de grăsime",
-    "Creatină",
-    "Energizante",
-    "Băuturi izotonice",
-    "Gainere",
-    "Condroprotectoare",
-    "Antioxidanți",
-    "Batoane proteice",
-    "Complexe preantrenament",
-    "Stimulatoare de testosteron",
-    "Bărci gonflabile",
-    "Saltele și paturi gonflabile",
-    "Corturi",
-    "Saci de dormit",
-    "Accesorii pentru înot",
-    "Genți pentru călătorii"
-  ]
+  "Electrocasnice": {
+    "ro": {
+      "title": "Electrocasnice"
+    },
+    "ru": {
+      "title": "Бытовая техника"
+    },
+    "children": [
+      {
+        "Frigidere": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Mașini de spălat rufe": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Mașini de spălat rufe cu uscător": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Mașini de uscat rufe": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Congelatoare": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Aragaze": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Mașini de spălat vase": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Hote": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Cuptoare cu microunde": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Cuptoare electrice": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Lăzi frigorifice": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Plite de masă": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Accesorii pentru mașini de spălat și uscat rufe": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Uscătoare de fructe și legume": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Aparate de vidat": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Blendere": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Multicooker": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Râșnițe": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Ceainice electrice": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Aparatele de cafea": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Feliatoare": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Accesorii pentru multicookere": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Mixere de bucătărie": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Mașini de tocat carne": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Procesoare și roboți de bucătărie": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Grătare electrice": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Cântare de bucătărie": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Prăjitoare de pâine (toaster)": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Mașini de copt pâine": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "ThermoPot": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Prăjitoare de sandwich-uri & waffe": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Storcătoare de fructe & legume": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Filtre de apă": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Aspiratoare cu sac": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Aspiratoare cu container": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Aspiratoare robot": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Aspiratoare verticale": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Accesorii pentru aspiratoare": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Fiare de călcat": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Stații de călcat": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Vaporizatoare": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Coșuri pentru rufe": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Uscătoare de rufe": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Mese de călcat": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Containere izotermice": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Genți frigorifice": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Genți termice": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Aparate de curățat scame": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Mașini de cusut": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Generatoare de aburi": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Frigidere încorporabile": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Plite încorporabile": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Cuptoare incorporabile": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Mașini de spălat vase încorporabile": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Hote încorporabile": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Cuptoare cu microunde încorporabile": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Detergenți": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Balsamuri": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Soluții de curățare": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Apă distilată": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Cafea boabe": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Cafea măcinată": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Cafea capsule": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Infuzoare": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Tigăi": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Cratițe": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Polonice": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Capace": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Containere alimentare": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Teluri": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Ibrice": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Cuțite": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Răzători": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Clești": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Spatule": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Pensule culinare": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Căni și cești": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Pahare": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      }
+    ]
+  },
+  "Climatizare": {
+    "ro": {
+      "title": "Climatizare"
+    },
+    "ru": {
+      "title": "Климатическая техника"
+    },
+    "children": [
+      {
+        "Capacitatea de răcire 7000 BTU/ 20m\u00b2": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Capacitatea de răcire 9000 BTU/ 30m\u00b2": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Capacitatea de răcire 12000 BTU/ 40m\u00b2": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Capacitatea de răcire 18000 BTU/ 50m\u00b2": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Capacitatea de răcire 24000 BTU/ 55-70m\u00b2": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Umidificatoare de aer": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Purificatoare de aer": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Dezumidificatoare": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Boilere cu acumulare": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Încălzitoare de apă instant": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Încălzitoare cu ventilator": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Încălzitoare infraroșii": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Calorifere electrice cu ulei": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Convectoare": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Șeminee electrice": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Ventilatoare de masă": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Ventilatoare de podea": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Ventilatoare Turn": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Ventilatoare portabile": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      }
+    ]
+  },
+  "Televizoare": {
+    "ro": {
+      "title": "Televizoare"
+    },
+    "ru": {
+      "title": "Телевизоры"
+    },
+    "children": [
+      {
+        "TV 8K": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "TV 4K": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "TV QNED": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "TV NanoCell": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "TV QLED": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "TV OLED": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Smart TV": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Android TV": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "24\" - 32\" (61 - 81 cm)": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "40\" - 49\" (101 - 124 cm)": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "50\" - 60\" (127 - 147 cm)": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "65\" - 75\" (165 - 190 cm)": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "82\" - 86\" (208 - 218 cm)": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Soundbar": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Sisteme audio 2.0": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Sisteme audio 2.1": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Sisteme audio 3.1": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Sisteme audio 5.1": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Samsung": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Hisense": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Sony": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "LG": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "TCL": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Media playere": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Suporturi TV": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Cinematograf online": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "500 lei": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "1000 lei": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "2000 lei": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      }
+    ]
+  },
+  "Telefoane, Laptopuri și Tablete": {
+    "ro": {
+      "title": "Telefoane, Laptopuri și Tablete"
+    },
+    "ru": {
+      "title": "Телефоны, Ноутбуки и Планшеты"
+    },
+    "children": [
+      {
+        "Apple iPhone 13": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Samsung Galaxy S22": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Până la 5000 lei": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Până la 10000 lei": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "De la 10000 lei": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Apple": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Samsung": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Xiaomi": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "OnePlus": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Realme": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Oppo": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Huawei": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Poco": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "MacBook": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Ultrabook-uri": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Laptopuri gaming": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Laptopuri business": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Laptopuri personale": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Apple iPad Air 2022": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Samsung Galaxy TAB S8": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "iPad": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Tablete Android": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Cărți electronice": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Tablete grafice": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Telefoane DECT": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Telefoane CORDER": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Sisteme de operare": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Antivirus": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Suite Office": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "HDD extern": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Memorii USB": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Încărcătoare": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Mouse-uri": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Căști": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Huse": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Suporturi de răcire (coolere)": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Сăști": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Cartele de memorie": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Baterii externe": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Stilusuri pentru tablete": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "500 lei": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "1000 lei": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "2000 lei": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Folii protecție din sticlă": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Selfie stick-uri": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Сăşti": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Acumulatoare externe": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Adaptoare": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Cabluri GSM": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Genți pentru laptop": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Rucsacuri": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      }
+    ]
+  },
+  "Îngrijire personală și sănătate": {
+    "ro": {
+      "title": "Îngrijire personală și sănătate"
+    },
+    "ru": {
+      "title": "Красота и здоровье"
+    },
+    "children": [
+      {
+        "Uscătoare de păr": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Perii rotative": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Ondulatoare": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Plăci de îndreptat părul": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Aparate de ras": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Trimmer facial": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Trimmere de nas şi urechi": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Aparate de tuns": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Epilatoare": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Aparate de masaj": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Periuțe de dinți electrice": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Cântare de podea": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Aparate de îngrijire facială": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Oglinzi": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Manichiură și pedichiură": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Vibratoare": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Vibrostimulatoare": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Jucării Anale": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Bile Vaginale": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Dildo-uri": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Seturi jucării pentru adulți": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Lubrifianți": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Masturbatoare": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Lenjerie sexy": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Inele pentru penis": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Accesorii BDSM": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "500 lei": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "1000 lei": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "2000 lei": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      }
+    ]
+  },
+  "PC și periferice": {
+    "ro": {
+      "title": "PC și periferice"
+    },
+    "ru": {
+      "title": "Компьютеры и Периферия"
+    },
+    "children": [
+      {
+        "Home and Office PC": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Gaming PC": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Mini PC": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "All-in-One PC": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Monitoare": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Tastaturi": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Mouse-uri": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Mousepad": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Microfoane": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Camere web": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Memorii USB": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "HDD extern": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "UPS": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Suporturi pentru monitoare": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Carcase pentru unități de stocare": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Dispozitive de stocare HDD": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Dispozitive de stocare SSD": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Procesoare": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Plăci video": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Plăci de bază": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Memorie operativă": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Surse de alimentare": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Coolere": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Carcase": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Pastă termoconductoare": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Switch": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Routere Wireless": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Wireless access point": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Adaptoare LAN": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "NAS": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Extendere": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Ecrane de proiecție": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Fundaluri foto": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Table interactive": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Imprimante": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Multifuncționale": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Proiectoare": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Imprimante 3D": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Accesorii pentru imprimare 3D": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Sisteme de operare": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Antivirus": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Suite Office": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Cinematograf online": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      }
+    ]
+  },
+  "For Gamers": {
+    "ro": {
+      "title": "For Gamers"
+    },
+    "ru": {
+      "title": "Для Геймеров"
+    },
+    "children": [
+      {
+        "Unitate PC": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Monitoare": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Tastaturi ": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Mouse-uri": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Mousepad-uri": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Căști": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Controller": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Scaune": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Sony PlayStation 5": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Console": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Accesorii": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Jocuri": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Xbox Series X și Series S": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "500 lei": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "1000 lei": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "2000 lei": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      }
+    ]
+  },
+  "Audio": {
+    "ro": {
+      "title": "Audio"
+    },
+    "ru": {
+      "title": "Аудиотехника"
+    },
+    "children": [
+      {
+        " Wireless": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Cu fir": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Sport": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Gaming": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Cu microfon": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Boxe portabile": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Boxe smart": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Boxe pentru Party": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Soundbar": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Sisteme audio 2.0": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Sisteme audio 2.1": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Sisteme audio 5.1": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Harman Kardon": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "House of Marley": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "JBL": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "SkullCandy": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "JAM": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "500 lei": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "1000 lei": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "2000 lei": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      }
+    ]
+  },
+  "Gadgeturi, Foto și Turism": {
+    "ro": {
+      "title": "Gadgeturi, Foto și Turism"
+    },
+    "ru": {
+      "title": "Гаджеты, Фото и Туризм"
+    },
+    "children": [
+      {
+        "Xiaomi Mi Band 7": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Smartwatch-uri": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Brățări fitness": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Ceasuri smart pentru copii": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Accesorii": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Noile Apple Watch": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Dispozitive de testare": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Smart Trackers": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Huse pentru smart trackere": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Light Control": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Media playere": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Senzori smart": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Lămpi": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Benzi LED": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Lămpi circulare": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Becuri": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Lanterne": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Lămpi anti insecte": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Camere de supraveghere": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Camere video": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Camere foto": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Camere action": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Obiective foto": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Accesorii foto și video": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Accesorii pentru camerе action": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Drone": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Ochelari VR": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Accesorii AR": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Telescoape": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Microscoape": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Binocluri": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Lunete": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Narghilele electronice": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "IQOS": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Lil": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "500 lei": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "1000 lei": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "2000 lei": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Genți pentru călătorii": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Rucsacuri": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      }
+    ]
+  },
+  "Construcție și reparații": {
+    "ro": {
+      "title": "Construcție și reparații"
+    },
+    "ru": {
+      "title": "Строительство и ремонт"
+    },
+    "children": [
+      {
+        "Mașini de găurit si inșurubat": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Mașini de înfiletat și desfiletat": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Ciocane rotopercutoare": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Ciocane demolatoare": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Polizoare unghiulare": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Foarfece electric pentru metal": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Fierăstraie pentru decupat": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Fierăstraie circulare": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Fierăstraie pentru tăieri înclinate": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Fierăstraie cu sabie": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Agitatoare (mixere)": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Freze": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Aspiratoare industriale și sisteme de aspirare": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Rindele": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Suflante cu aer cald": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Aerografe": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Mașini de lustruit": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Aparate de spălat cu presiune": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Mașini de șlefuit": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Mașini de tăiat gresie și faianțănew": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Aparate de sudat": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Betoniere": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Scări": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Roabe": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Seturi șurubelnițe": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Seturi chei": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Seturi scule": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Toolboxes": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Ciocane": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Topoare": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Dreptare": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Fierăstraie manualenew": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Freze manualenew": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      }
+    ]
+  },
+  "Casă și grădină": {
+    "ro": {
+      "title": "Casă și grădină"
+    },
+    "ru": {
+      "title": "Дом и сад"
+    },
+    "children": [
+      {
+        "Pentru Copii": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Jacuzzi": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Piscine cu perete rigid": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Piscine cu cadru": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Accesorii pentru piscine": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Electrice": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Cu acumulator": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Pe benzină": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Robot": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Tocătoare de grădină": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Fierăstraie cu lanț": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Suflante pentru frunze": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Pulverizatoare": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Motocultoare": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Mașini de tuns gard viu": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Motoburghie (foreze)": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Despicatoare de lemnenew": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Fotolii de birou": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Mese de birou": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Mese de bucătărie": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Scaune de bucătărie": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Taburete": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Fotolii pentru living": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Canapele pentru living": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Măsuțe de cafea": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Cuiere pentru haine": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Saltele ortopedice": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Leagăne de grădină": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Scaune și fotolii de grădină": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Mese de grădină": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Umbrele de grădină": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Seturi mobilă grădină": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Brazi de crăciun": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Jucarii de brad": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Focuri de artificii": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Ghirlande LED": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Motopompe": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Pompe submersibile": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Pompe de suprăfață": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Filtrarea piscinelor": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Scări": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Iluminare": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Generatoare de clor": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Covorașe sub piscină": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Acoperire pentru piscine": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Pompe": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Zdrobitoare pentru strugurinew": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Teascuri pentru strugurinew": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Căzi pentru vinnew": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Butoaie pentru vinnew": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      }
+    ]
+  },
+  "Produse Auto": {
+    "ro": {
+      "title": "Produse Auto"
+    },
+    "ru": {
+      "title": "Автотовары"
+    },
+    "children": [
+      {
+        "Pentru autoturisme": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Pentru camioane": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Pentru camionete": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Industriale": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Agricole": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Pentru SUV-uri (Off Road)": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "De iarnă": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "De vară": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "All Season": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Uleiuri de motor": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Uleiuri de transmisie": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Lichid de frână": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Antigel": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Polaritatea inversă ": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Polaritatea directă": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Covorașe auto": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Paravânturi auto": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Ștergătoare de parbriz": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Stingătoare": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Cricuri auto": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Compresoare auto": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Încărcătoare și redresoare auto": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Invertoare de tensiunenew": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Mașini de spălat cu presiune": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Frigidere auto": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Camere Auto": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Căști Handsfree": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "FM modulatoare": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Cabluri și adaptoare GSM": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        " Cartele de memorie": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Suporturi auto": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Playere auto": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      }
+    ]
+  },
+  "Copii și bebeluși": {
+    "ro": {
+      "title": "Copii și bebeluși"
+    },
+    "ru": {
+      "title": "Дети и младенцы"
+    },
+    "children": [
+      {
+        "Mașinuțe": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Figurine": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Jucării antistres": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Constructori": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Jucării pentru bebeluși": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Jucării interactive": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Jucării electrice": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Elicoptere şi Avioane": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Puzzle": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Roboți": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Jocuri de masă": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Tobogane": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Trambuline": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Căsuțe pentru copii": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Balansoare": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Biciclete": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Biciclete fără pedale": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Triciclete": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Trotinete pentru copii": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Motociclete pentru copii": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Tolocare": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Saltele pentru copii": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Perne pentru bebeluși": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Lenjerie de pat pentru copii": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Babynest": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Scutece pentru copii": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Șervețele umede bebelușinew": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Genți pentru mămici": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Tablouri pe numere": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Ghiozdane pentru școală": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Ghiozdane pentru fete": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Ghiozdane pentru băieți": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      }
+    ]
+  },
+  "Sport și Agrement": {
+    "ro": {
+      "title": "Sport și Agrement"
+    },
+    "ru": {
+      "title": "Спорт и Отдых"
+    },
+    "children": [
+      {
+        "Biciclete": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Biciclete pentru copii": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Triciclete": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Trotinete pentru copii": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Role": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Trotinete": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Hoverboard-uri": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Motociclete pentru copii": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Pentru Copii": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Piscine cu cadru": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Piscine cu perete rigid": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Jacuzzi": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Filtrarea piscinelor": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Scări": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Iluminare": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Generatoare de clor": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Covorașe sub piscină": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Acoperire pentru piscine": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Pompe": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Benzi de alergat": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Biciclete eliptice": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Bicicletе fitness": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Steppere": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Aparate de vâslit": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Proteine": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Vitamine și minerale": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Aminoacizi": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Arzătoare de grăsime": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Creatină": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Energizante": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Băuturi izotonice": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Gainere": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Condroprotectoare": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Antioxidanți": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Batoane proteice": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Complexe preantrenament": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Stimulatoare de testosteron": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Bărci gonflabile": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Saltele și paturi gonflabile": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Corturi": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Saci de dormit": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Accesorii pentru înot": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      },
+      {
+        "Genți pentru călătorii": {
+          "ro": {
+            "title": "Frigidere"
+          },
+          "ru": {
+            "title": "Холодильники"
+          }
+        }
+      }
+    ]
+  }
 }
