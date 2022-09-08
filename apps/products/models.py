@@ -32,7 +32,8 @@ class Category(BaseModel):
         to='self',
         on_delete=models.SET_NULL,
         null=True,
-        blank=True
+        blank=True,
+        related_name='children'
     )
     languages = models.JSONField(
         blank=True,
@@ -232,7 +233,8 @@ class Brand(BaseModel):
         to='self',
         blank=True,
         null=True,
-        on_delete=models.CASCADE
+        on_delete=models.CASCADE,
+        related_name='children'
     )
     languages = models.JSONField(
         blank=True,
@@ -265,7 +267,8 @@ class ShopCategory(BaseModel):
         to='self',
         on_delete=models.CASCADE,
         blank=True,
-        null=True
+        null=True,
+        related_name='children'
     )
 
     class Meta:

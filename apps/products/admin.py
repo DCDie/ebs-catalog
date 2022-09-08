@@ -202,7 +202,7 @@ class CategoryAdmin(admin.ModelAdmin):
         'attachment',
         'languages',
         'created_at',
-        'modified_at'
+        'modified_at',
     )
     formfield_overrides = {
         JSONField: {'widget': JSONEditorWidget},
