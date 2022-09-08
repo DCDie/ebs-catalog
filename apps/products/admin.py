@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.db.models import JSONField
+from django.utils.translation import gettext_lazy as _
 from django_json_widget.widgets import JSONEditorWidget
 
 from apps.products.models import (
@@ -12,6 +13,19 @@ from apps.products.models import (
     Brand,
     ShopCategory,
 )
+
+
+class CategoryParentListFilter(admin.SimpleListFilter):
+    title = _('Category')
+    parameter_name = 'parent_id'
+
+    def lookups(self, request, model_admin):
+        return [(category.pk, str(category)) for category in Category.objects.filter(parent__isnull=True)]
+
+    def queryset(self, request, queryset):
+        if self.value():
+            return queryset.filter(parent_id=int(self.value()))
+        return queryset.all()
 
 
 @admin.register(Shop)
@@ -27,7 +41,7 @@ class ShopAdmin(admin.ModelAdmin):
         'title',
         'description',
         'shop_detail',
-        'language',
+        'languages',
         'attachment',
         'created_at',
         'modified_at'
@@ -67,7 +81,7 @@ class ProductAdmin(admin.ModelAdmin):
         'description',
         'category',
         'specification',
-        'language',
+        'languages',
         'price',
         'rating',
         'attachments',
@@ -113,7 +127,7 @@ class ProductShopAdmin(admin.ModelAdmin):
         'available',
         'attachment',
         'shop',
-        'language',
+        'languages',
         'product',
         'shop_category',
         'verified',
@@ -150,7 +164,7 @@ class AttachmentAdmin(admin.ModelAdmin):
         'file_url',
         'extension',
         'file_size',
-        'language',
+        'languages',
         'created_at',
         'modified_at'
     )
@@ -175,11 +189,14 @@ class CategoryAdmin(admin.ModelAdmin):
     search_fields = (
         'title',
     )
+    list_filter = (
+        CategoryParentListFilter,
+    )
     fields = (
         'title',
         'parent',
         'attachment',
-        'language',
+        'languages',
         'created_at',
         'modified_at'
     )
@@ -188,7 +205,13 @@ class CategoryAdmin(admin.ModelAdmin):
     }
     readonly_fields = (
         'created_at',
-        'modified_at'
+        'modified_at',
+    )
+    list_select_related = (
+        'parent',
+    )
+    ordering = (
+        'title',
     )
 
 
@@ -214,7 +237,7 @@ class CommentAdmin(admin.ModelAdmin):
         'product',
         'shop',
         'user',
-        'language',
+        'languages',
         'rating',
         'created_at',
         'modified_at'

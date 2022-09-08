@@ -34,7 +34,7 @@ class Category(BaseModel):
         null=True,
         blank=True
     )
-    language = models.JSONField(
+    languages = models.JSONField(
         blank=True,
         null=True
     )
@@ -69,7 +69,7 @@ class Product(BaseModel):
         max_digits=9,
         decimal_places=2
     )
-    language = models.JSONField(
+    languages = models.JSONField(
         blank=True,
         null=True
     )
@@ -121,7 +121,7 @@ class Comment(BaseModel):
         blank=True,
         on_delete=models.CASCADE
     )
-    language = models.JSONField(
+    languages = models.JSONField(
         blank=True,
         null=True
     )
@@ -155,7 +155,7 @@ class Shop(BaseModel):
         null=True,
         blank=True
     )
-    language = models.JSONField(
+    languages = models.JSONField(
         blank=True,
         null=True
     )
@@ -196,7 +196,7 @@ class ShopProduct(BaseModel):
         to=Shop,
         on_delete=models.CASCADE
     )
-    language = models.JSONField(
+    languages = models.JSONField(
         blank=True,
         null=True
     )
@@ -234,7 +234,7 @@ class Brand(BaseModel):
         null=True,
         on_delete=models.CASCADE
     )
-    language = models.JSONField(
+    languages = models.JSONField(
         blank=True,
         null=True
     )
@@ -293,7 +293,7 @@ class Attachment(BaseModel):
         blank=True,
         null=True
     )
-    language = models.JSONField(
+    languages = models.JSONField(
         blank=True,
         null=True
     )
