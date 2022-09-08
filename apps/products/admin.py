@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.db.models import JSONField
+from django.utils.translation import gettext_lazy as _
 from django_json_widget.widgets import JSONEditorWidget
 
 from apps.products.models import (
@@ -12,6 +13,19 @@ from apps.products.models import (
     Brand,
     ShopCategory,
 )
+
+
+class CategoryParentListFilter(admin.SimpleListFilter):
+    title = _('Category')
+    parameter_name = 'parent_id'
+
+    def lookups(self, request, model_admin):
+        return [(category.pk, str(category)) for category in Category.objects.filter(parent__isnull=True)]
+
+    def queryset(self, request, queryset):
+        if self.value():
+            return queryset.filter(parent_id=int(self.value()))
+        return queryset.all()
 
 
 @admin.register(Shop)
@@ -175,6 +189,9 @@ class CategoryAdmin(admin.ModelAdmin):
     search_fields = (
         'title',
     )
+    list_filter = (
+        CategoryParentListFilter,
+    )
     fields = (
         'title',
         'parent',
@@ -188,7 +205,13 @@ class CategoryAdmin(admin.ModelAdmin):
     }
     readonly_fields = (
         'created_at',
-        'modified_at'
+        'modified_at',
+    )
+    list_select_related = (
+        'parent',
+    )
+    ordering = (
+        'title',
     )
 
 
