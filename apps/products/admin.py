@@ -41,7 +41,7 @@ class ShopAdmin(admin.ModelAdmin):
         'title',
         'description',
         'shop_detail',
-        'language',
+        'languages',
         'attachment',
         'created_at',
         'modified_at'
@@ -81,7 +81,7 @@ class ProductAdmin(admin.ModelAdmin):
         'description',
         'category',
         'specification',
-        'language',
+        'languages',
         'price',
         'rating',
         'attachments',
@@ -127,7 +127,7 @@ class ProductShopAdmin(admin.ModelAdmin):
         'available',
         'attachment',
         'shop',
-        'language',
+        'languages',
         'product',
         'shop_category',
         'verified',
@@ -164,7 +164,7 @@ class AttachmentAdmin(admin.ModelAdmin):
         'file_url',
         'extension',
         'file_size',
-        'language',
+        'languages',
         'created_at',
         'modified_at'
     )
@@ -196,7 +196,7 @@ class CategoryAdmin(admin.ModelAdmin):
         'title',
         'parent',
         'attachment',
-        'language',
+        'languages',
         'created_at',
         'modified_at'
     )
@@ -237,7 +237,7 @@ class CommentAdmin(admin.ModelAdmin):
         'product',
         'shop',
         'user',
-        'language',
+        'languages',
         'rating',
         'created_at',
         'modified_at'
