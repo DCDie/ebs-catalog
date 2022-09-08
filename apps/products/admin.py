@@ -186,6 +186,10 @@ class CategoryAdmin(admin.ModelAdmin):
         'created_at',
         'modified_at'
     )
+    list_display_links = (
+        'id',
+        'title',
+    )
     search_fields = (
         'title',
     )
