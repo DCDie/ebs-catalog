@@ -6,7 +6,7 @@ from rest_framework.viewsets import (
 from apps.products.models import (
     Category,
     Shop,
-    ProductShop,
+    ShopProduct,
     Product,
     Comment,
     Attachment,
@@ -53,7 +53,7 @@ class ProductShopViewSet(
     ModelViewSet,
     GenericViewSet
 ):
-    queryset = ProductShop.objects.all()
+    queryset = ShopProduct.objects.all()
     serializer_class = ProductShopSerializer
 
 
