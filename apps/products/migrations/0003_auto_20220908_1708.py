@@ -8,7 +8,7 @@ from django.db import migrations
 def create_default_categories(apps, schema_editor):
     Category = apps.get_model('products', 'Category')
     child_objects = []
-    f = open('apps/common/fixtures/categories.json', encoding='utf-8')
+    f = open('apps/products/fixtures/categories.json', encoding='utf-8')
     data = json.load(f)
     for key, value in data.items():
         parent = Category.objects.create(title=key, languages=value.get('languages', {}))
