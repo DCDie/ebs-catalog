@@ -18,7 +18,8 @@ class EnterParser:
     def __init__(self):
         self.table_goods = []
         self.category_name = str
-        self.path = pathlib.Path(__file__).parent.resolve()
+        self.path = 'media/enter'
+        pathlib.Path(self.path).mkdir(parents=True, exist_ok=True)
 
     @staticmethod
     def logging(message, data=None, execution_time=None):
@@ -42,7 +43,7 @@ class EnterParser:
                 # If category exists write
                 if subcategory_link:
                     categories_data[category_name][subcategory.text] = subcategory_link
-        with open(f'{self.path}/json_data/enter_categories.json', 'w+', encoding='utf-8') as fp:
+        with open(f'{self.path}/enter_categories.json', 'w+', encoding='utf-8') as fp:
             fp.write(json.dumps(categories_data, ensure_ascii=False))
             self.logging(
                 message='File: enter_categories.json - saved',
@@ -50,7 +51,7 @@ class EnterParser:
             )
 
     def get_products(self) -> None:
-        with open(f"{self.path}/json_data/enter_categories.json", "rb") as read_file:
+        with open(f"{self.path}/enter_categories.json", "rb") as read_file:
             categories = json.load(read_file)
             for category, category_data in categories.items():
                 data = {}
@@ -108,5 +109,5 @@ class EnterParser:
                             message=f'Exception {e}',
                             data=f'Status code: {response.status_code} | Page: {page} | URL: {response.url}'
                         )
-                    with open(f'{self.path}/json_data/enter_items_{category}.json', 'w+', encoding='utf-8') as fp:
+                    with open(f'{self.path}/enter_items_{category}.json', 'w+', encoding='utf-8') as fp:
                         fp.write(json.dumps(data, ensure_ascii=False))
