@@ -7,7 +7,6 @@ from django.core.validators import (
     MinValueValidator
 )
 from django.db import models
-from bulk_update_or_create import BulkUpdateOrCreateQuerySet
 
 from apps.common.models import BaseModel
 
@@ -176,8 +175,6 @@ class Shop(BaseModel):
 
 
 class ShopProduct(BaseModel):
-    objects = BulkUpdateOrCreateQuerySet.as_manager()
-
     title = models.CharField(
         max_length=155
     )
@@ -326,8 +323,8 @@ class Attachment(BaseModel):
 
 
 # Register models to auditlog
-# auditlog.register(Brand)
-# auditlog.register(ShopProduct)
-# auditlog.register(Shop)
-# auditlog.register(Product)
-# auditlog.register(Category)
+auditlog.register(Brand)
+auditlog.register(ShopProduct)
+auditlog.register(Shop)
+auditlog.register(Product)
+auditlog.register(Category)

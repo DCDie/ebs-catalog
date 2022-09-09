@@ -97,17 +97,6 @@ python-versions = "*"
 python-dateutil = ">=2.7.0"
 
 [[package]]
-name = "django-bulk-update-or-create"
-version = "0.3.0"
-description = "bulk_update_or_create for Django model managers"
-category = "main"
-optional = false
-python-versions = ">=3.6"
-
-[package.dependencies]
-Django = ">=2.2"
-
-[[package]]
 name = "django-debug-toolbar"
 version = "3.6.0"
 description = "A configurable set of panels that display various debug information about the current request/response."
@@ -394,7 +383,7 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "634ab8acc3a0c239e86e1c7b2920cc340b83cccc11bfb6d979ce470fefb50490"
+content-hash = "e2d44c241540b6656843a297210c3027f7482fca3b29534d038324224f8818b1"
 
 [metadata.files]
 asgiref = [
@@ -428,10 +417,6 @@ Django = [
 django-auditlog = [
     {file = "django-auditlog-2.1.1.tar.gz", hash = "sha256:bd58cc84b67e31b24344ab3532cdd2c2c8ea22b60713a626807e10969f9ea074"},
     {file = "django_auditlog-2.1.1-py3-none-any.whl", hash = "sha256:c12d43259264b35731a86b6cfbdccad25947a4c6bb5da2d3a68982ddbe26d90f"},
-]
-django-bulk-update-or-create = [
-    {file = "django-bulk-update-or-create-0.3.0.tar.gz", hash = "sha256:1cb7bdf93a7264799c275b26595c1a5060f3091dfd3709e743d710a9758bf9ea"},
-    {file = "django_bulk_update_or_create-0.3.0-py3-none-any.whl", hash = "sha256:c251375e0331d469c2e9b2320e3b3d0f6a1658289ed97520ef230fa096ded645"},
 ]
 django-debug-toolbar = [
     {file = "django-debug-toolbar-3.6.0.tar.gz", hash = "sha256:95fc2fd29c56cc86678aae9f6919ececefe892f2a78c4004b193a223a8380c3d"},
