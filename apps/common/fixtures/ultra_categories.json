@@ -1,0 +1,1802 @@
+{
+  "Smartphone-uri și gadget-uri": {
+    "languages": {
+      "ro": {
+        "title": "Smartphone-uri și gadget-uri"
+      },
+      "ru": {
+        "title": "Смартфоны и Гаджеты"
+      }
+    },
+    "children": [
+      {
+        "Telefoane mobile": {
+          "lanuages": {
+            "ro": {
+              "title": "Telefoane mobile"
+            },
+            "ru": {
+              "title": "Мобильные телефоны"
+            }
+          },
+          "children": [
+            {
+              "Smartphone-uri": {
+                "lanuages": {
+                  "ro": {
+                    "title": "Smartphone-uri"
+                  },
+                  "ru": {
+                    "title": "Смартфоны"
+                  }
+                }
+              }
+            },
+            {
+              "Telefoane Celulare": {
+                "lanuages": {
+                  "ro": {
+                    "title": "Telefoane Celulare"
+                  },
+                  "ru": {
+                    "title": "Кнопочные телефоны"
+                  }
+                }
+              }
+            },
+            {
+              "Walkie Talkie": {
+                "lanuages": {
+                  "ro": {
+                    "title": "Walkie Talkie"
+                  },
+                  "ru": {
+                    "title": "Рации"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Tablete și ebook readere": {
+          "lanuages": {
+            "ro": {
+              "title": "Tablete și ebook readere"
+            },
+            "ru": {
+              "title": "Планшеты и электронные книги"
+            }
+          },
+          "children": [
+            {
+              "Tablete": {
+                "lanuages": {
+                  "ro": {
+                    "title": "Tablete"
+                  },
+                  "ru": {
+                    "title": "Планшеты"
+                  }
+                }
+              }
+            },
+            {
+              "Cărți electronice": {
+                "lanuages": {
+                  "ro": {
+                    "title": "Cărți electronice"
+                  },
+                  "ru": {
+                    "title": "Электронные книги"
+                  }
+                }
+              }
+            },
+            {
+              "Tablete Grafice": {
+                "lanuages": {
+                  "ro": {
+                    "title": "Tablete Grafice"
+                  },
+                  "ru": {
+                    "title": "Графические планшеты"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Tehnologie portabilă": {
+          "lanuages": {
+            "ro": {
+              "title": "Tehnologie portabilă"
+            },
+            "ru": {
+              "title": "Носимая электроника"
+            }
+          },
+          "children": [
+            {
+              "Ceasuri inteligente și trackere de activitate": {
+                "lanuages": {
+                  "ro": {
+                    "title": "Ceasuri inteligente și trackere de activitate"
+                  },
+                  "ru": {
+                    "title": "Смарт-часы и трекеры активности"
+                  }
+                }
+              }
+            },
+            {
+              "Căști Realitate Virtuală pentru Smartphone": {
+                "lanuages": {
+                  "ro": {
+                    "title": "Căști Realitate Virtuală pentru Smartphone"
+                  },
+                  "ru": {
+                    "title": "Гарнитуры виртуальной реальности для смартфонов"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Electronice auto si GPS": {
+          "lanuages": {
+            "ro": {
+              "title": "Electronice auto si GPS"
+            },
+            "ru": {
+              "title": "Авто-электроника и GPS"
+            }
+          },
+          "children": [
+            {
+              "Camere Auto DVR": {
+                "lanuages": {
+                  "ro": {
+                    "title": "Camere Auto DVR"
+                  },
+                  "ru": {
+                    "title": "Автомобильные видеорегистраторы"
+                  }
+                }
+              }
+            },
+            {
+              "Modulatoare FM": {
+                "lanuages": {
+                  "ro": {
+                    "title": "Modulatoare FM"
+                  },
+                  "ru": {
+                    "title": "FM-трансмиттеры"
+                  }
+                }
+              }
+            },
+            {
+              "Suporturi Auto": {
+                "lanuages": {
+                  "ro": {
+                    "title": "Suporturi Auto"
+                  },
+                  "ru": {
+                    "title": "Автомобильные держатели"
+                  }
+                }
+              }
+            },
+            {
+              "Boxe Auto și Amplificatoare": {
+                "lanuages": {
+                  "ro": {
+                    "title": "Boxe Auto și Amplificatoare"
+                  },
+                  "ru": {
+                    "title": "Автомобильная акустика"
+                  }
+                }
+              }
+            },
+            {
+              "Redresoare Auto": {
+                "lanuages": {
+                  "ro": {
+                    "title": "Redresoare Auto"
+                  },
+                  "ru": {
+                    "title": "Автомобильные инверторы"
+                  }
+                }
+              }
+            },
+            {
+              "Accesorii Auto": {
+                "lanuages": {
+                  "ro": {
+                    "title": "Accesorii Auto"
+                  },
+                  "ru": {
+                    "title": "Аксессуары для автомобиля"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Accesorii telefoane mobile": {
+          "lanuages": {
+            "ro": {
+              "title": "Accesorii telefoane mobile"
+            },
+            "ru": {
+              "title": "Аксессуары для телефонов"
+            }
+          },
+          "children": [
+            {
+              "Carcase și huse pentru telefoane mobile": {
+                "lanuages": {
+                  "ro": {
+                    "title": "Carcase și huse pentru telefoane mobile"
+                  },
+                  "ru": {
+                    "title": "Чехлы и покрытия для мобильных телефонов"
+                  }
+                }
+              }
+            },
+            {
+              "Huse pentru tablete": {
+                "lanuages": {
+                  "ro": {
+                    "title": "Huse pentru tablete"
+                  },
+                  "ru": {
+                    "title": "Чехлы для планшетов"
+                  }
+                }
+              }
+            },
+            {
+              "Încărcătoare de telefon mobil": {
+                "lanuages": {
+                  "ro": {
+                    "title": "Încărcătoare de telefon mobil"
+                  },
+                  "ru": {
+                    "title": "Зарядные устройства для мобильных телефонов"
+                  }
+                }
+              }
+            },
+            {
+              "Acumulatori externi": {
+                "lanuages": {
+                  "ro": {
+                    "title": "Acumulatori externi"
+                  },
+                  "ru": {
+                    "title": "Портативные аккумуляторы"
+                  }
+                }
+              }
+            },
+            {
+              "Cabluri și adaptoare USB / Lightning": {
+                "lanuages": {
+                  "ro": {
+                    "title": "Cabluri și adaptoare USB / Lightning"
+                  },
+                  "ru": {
+                    "title": "Кабели и адаптеры USB/Lightning"
+                  }
+                }
+              }
+            },
+            {
+              "Pelicule de protecție": {
+                "lanuages": {
+                  "ro": {
+                    "title": "Pelicule de protecție"
+                  },
+                  "ru": {
+                    "title": "Защитные пленки"
+                  }
+                }
+              }
+            },
+            {
+              "Selfie Stick-uri": {
+                "lanuages": {
+                  "ro": {
+                    "title": "Selfie Stick-uri"
+                  },
+                  "ru": {
+                    "title": "Моноподы и пульты для селфи"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "TV, Audio-Video, HI-FI": {
+    "languages": {
+      "ro": {
+        "title": "TV, Audio-Video, HI-FI"
+      },
+      "ru": {
+        "title": "Телевизоры, Аудио, Hi-Fi"
+      }
+    },
+    "children": [
+      {
+        "Televizeare și suporturi TV": {
+          "language": {
+            "ro": {
+              "title": "Televizeare și suporturi TV"
+            },
+            "ru": {
+              "title": "Телевизоры и Кронштейны"
+            }
+          },
+          "children": [
+            {
+              "Televizoare": {
+                "langauge": {
+                  "ro": {
+                    "title": "Televizoare"
+                  },
+                  "ru": {
+                    "title": "Телевизоры"
+                  }
+                }
+              }
+            },
+            {
+              "TV-Boxuriși Media playere": {
+                "langauge": {
+                  "ro": {
+                    "title": "TV-Boxuriși Media playere"
+                  },
+                  "ru": {
+                    "title": "Приставки и Медиаплееры"
+                  }
+                }
+              }
+            },
+            {
+              "Suporturi TV": {
+                "langauge": {
+                  "ro": {
+                    "title": "Suporturi TV"
+                  },
+                  "ru": {
+                    "title": "Кронштейны для телевизоров"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Audio": {
+          "language": {
+            "ro": {
+              "title": "Audio"
+            },
+            "ru": {
+              "title": "Аудио"
+            }
+          },
+          "children": [
+            {
+              "Căști Audio": {
+                "langauge": {
+                  "ro": {
+                    "title": "Căști Audio"
+                  },
+                  "ru": {
+                    "title": "Наушники"
+                  }
+                }
+              }
+            },
+            {
+              "Boxe Portabile": {
+                "langauge": {
+                  "ro": {
+                    "title": "Boxe Portabile"
+                  },
+                  "ru": {
+                    "title": "Портативные колонки"
+                  }
+                }
+              }
+            },
+            {
+              "Boxe de calculator": {
+                "langauge": {
+                  "ro": {
+                    "title": "Boxe de calculator"
+                  },
+                  "ru": {
+                    "title": "Компьютерные колонки"
+                  }
+                }
+              }
+            },
+            {
+              "Sisteme Audio și Soundbars": {
+                "langauge": {
+                  "ro": {
+                    "title": "Sisteme Audio și Soundbars"
+                  },
+                  "ru": {
+                    "title": "Аудио системы и саундбары"
+                  }
+                }
+              }
+            },
+            {
+              "Microfoane": {
+                "langauge": {
+                  "ro": {
+                    "title": "Microfoane"
+                  },
+                  "ru": {
+                    "title": "Микрофоны"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Aparate foto și video": {
+          "language": {
+            "ro": {
+              "title": "Aparate foto și video"
+            },
+            "ru": {
+              "title": "Фото- и Видеокамеры"
+            }
+          },
+          "children": [
+            {
+              "Camere video": {
+                "langauge": {
+                  "ro": {
+                    "title": "Camere video"
+                  },
+                  "ru": {
+                    "title": "Видеокамеры"
+                  }
+                }
+              }
+            },
+            {
+              "Camere Foto": {
+                "langauge": {
+                  "ro": {
+                    "title": "Camere Foto"
+                  },
+                  "ru": {
+                    "title": "Фотокамеры"
+                  }
+                }
+              }
+            },
+            {
+              "Obiective Foto & Video": {
+                "langauge": {
+                  "ro": {
+                    "title": "Obiective Foto & Video"
+                  },
+                  "ru": {
+                    "title": "Объективы"
+                  }
+                }
+              }
+            },
+            {
+              "Blițuri Foto": {
+                "langauge": {
+                  "ro": {
+                    "title": "Blițuri Foto"
+                  },
+                  "ru": {
+                    "title": "Фотовспышки"
+                  }
+                }
+              }
+            },
+            {
+              "Trepiede și Monopiede": {
+                "langauge": {
+                  "ro": {
+                    "title": "Trepiede și Monopiede"
+                  },
+                  "ru": {
+                    "title": "Штативы и моноподы"
+                  }
+                }
+              }
+            },
+            {
+              "Genți și Huse pentru camere foto": {
+                "langauge": {
+                  "ro": {
+                    "title": "Genți și Huse pentru camere foto"
+                  },
+                  "ru": {
+                    "title": "Сумки и чехлы для фотокамер"
+                  }
+                }
+              }
+            },
+            {
+              "Acumulatori Foto & Video": {
+                "langauge": {
+                  "ro": {
+                    "title": "Acumulatori Foto & Video"
+                  },
+                  "ru": {
+                    "title": "Аккумуляторы для фото- и видеотехники"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Videoproiectoare & Accesorii": {
+          "language": {
+            "ro": {
+              "title": "Videoproiectoare & Accesorii"
+            },
+            "ru": {
+              "title": "Проекторы и Оборудование для презентаций"
+            }
+          },
+          "children": [
+            {
+              "Proiectoare": {
+                "langauge": {
+                  "ro": {
+                    "title": "Proiectoare"
+                  },
+                  "ru": {
+                    "title": "Проекторы"
+                  }
+                }
+              }
+            },
+            {
+              "Suporturi pentru proiector": {
+                "langauge": {
+                  "ro": {
+                    "title": "Suporturi pentru proiector"
+                  },
+                  "ru": {
+                    "title": "Крепления для проектора"
+                  }
+                }
+              }
+            },
+            {
+              "Ecrane de protecție": {
+                "langauge": {
+                  "ro": {
+                    "title": "Ecrane de protecție"
+                  },
+                  "ru": {
+                    "title": "Проекционные экраны"
+                  }
+                }
+              }
+            },
+            {
+              "Tablă electronică": {
+                "langauge": {
+                  "ro": {
+                    "title": "Tablă electronică"
+                  },
+                  "ru": {
+                    "title": "Электронная доска"
+                  }
+                }
+              }
+            },
+            {
+              "Prezentator": {
+                "langauge": {
+                  "ro": {
+                    "title": "Prezentator"
+                  },
+                  "ru": {
+                    "title": "Презентатор"
+                  }
+                }
+              }
+            },
+            {
+              "Echipamenteși accesorii de prezentare": {
+                "langauge": {
+                  "ro": {
+                    "title": "Echipamente și accesorii de prezentare"
+                  },
+                  "ru": {
+                    "title": "Презентационное оборудование и аксессуары"
+                  }
+                }
+              }
+            },
+            {
+              "Accesorii pentru proiectoare": {
+                "langauge": {
+                  "ro": {
+                    "title": "Accesorii pentru proiectoare"
+                  },
+                  "ru": {
+                    "title": "Аксессуары для проекторов"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Accesorii electronice": {
+          "language": {
+            "ro": {
+              "title": "Accesorii electronice"
+            },
+            "ru": {
+              "title": "Аксессуары для Электроники"
+            }
+          },
+          "children": [
+            {
+              "Cabluri și adaptoare audio": {
+                "langauge": {
+                  "ro": {
+                    "title": "Cabluri și adaptoare audio"
+                  },
+                  "ru": {
+                    "title": "Аудиокабели и адаптеры"
+                  }
+                }
+              }
+            },
+            {
+              "Baterii": {
+                "langauge": {
+                  "ro": {
+                    "title": "Baterii"
+                  },
+                  "ru": {
+                    "title": "Батарейки"
+                  }
+                }
+              }
+            },
+            {
+              "Încărcătoare acumulatori": {
+                "langauge": {
+                  "ro": {
+                    "title": "Încărcătoare acumulatori"
+                  },
+                  "ru": {
+                    "title": "Зарядные устройства для аккумуляторов"
+                  }
+                }
+              }
+            },
+            {
+              "Accesorii de curățare": {
+                "langauge": {
+                  "ro": {
+                    "title": "Accesorii de curățare"
+                  },
+                  "ru": {
+                    "title": "Чистящие принадлежности"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "Electrocasnice  Bucătărie": {
+    "languages": {
+      "ro": {
+        "title": "Electrocasnice  Bucătărie"
+      },
+      "ru": {
+        "title": "Бытовая техника"
+      }
+    },
+    "children": [
+      {
+        "Aparate de bucătărie mari": {
+          "langauge": {
+            "ro": {
+              "title": "Aparate de bucătărie mari"
+            },
+            "ru": {
+              "title": "Крупная техника для кухни"
+            }
+          },
+          "children": [
+            {
+              "Frigidere": {
+                "langauge": {
+                  "ro": {
+                    "title": "Frigidere"
+                  },
+                  "ru": {
+                    "title": "Холодильники"
+                  }
+                }
+              }
+            },
+            {
+              "Congelatoare": {
+                "langauge": {
+                  "ro": {
+                    "title": "Congelatoare"
+                  },
+                  "ru": {
+                    "title": "Морозильные камеры"
+                  }
+                }
+              }
+            },
+            {
+              "Mașinide Spălat Vase": {
+                "langauge": {
+                  "ro": {
+                    "title": "Mașinide Spălat Vase"
+                  },
+                  "ru": {
+                    "title": "Посудомоечные машины"
+                  }
+                }
+              }
+            },
+            {
+              "Cuptoare": {
+                "langauge": {
+                  "ro": {
+                    "title": "Cuptoare"
+                  },
+                  "ru": {
+                    "title": "Встраиваемые духовые шкафы"
+                  }
+                }
+              }
+            },
+            {
+              "Plite": {
+                "langauge": {
+                  "ro": {
+                    "title": "Plite"
+                  },
+                  "ru": {
+                    "title": "Варочные панели"
+                  }
+                }
+              }
+            },
+            {
+              "Aragaz": {
+                "langauge": {
+                  "ro": {
+                    "title": "Aragaz"
+                  },
+                  "ru": {
+                    "title": "Кухонные плиты"
+                  }
+                }
+              },
+              "Hote": {
+                "langauge": {
+                  "ro": {
+                    "title": "Hote"
+                  },
+                  "ru": {
+                    "title": "Вытяжки"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Vase de bucătărie": {
+          "langauge": {
+            "ro": {
+              "title": "Vase de bucătărie"
+            },
+            "ru": {
+              "title": "Кухонная посуда"
+            }
+          },
+          "children": [
+            {
+              "Termosuri și căni termos": {
+                "langauge": {
+                  "ro": {
+                    "title": "Termosuri și căni termos"
+                  },
+                  "ru": {
+                    "title": "Термосы и термокружки"
+                  }
+                }
+              }
+            },
+            {
+              "Presă franceză": {
+                "langauge": {
+                  "ro": {
+                    "title": "Presă franceză"
+                  },
+                  "ru": {
+                    "title": "Френч-пресс"
+                  }
+                }
+              }
+            },
+            {
+              "Espressoare pentru aragaz": {
+                "langauge": {
+                  "ro": {
+                    "title": "Espressoare pentru aragaz"
+                  },
+                  "ru": {
+                    "title": "Гейзерные кофеварки"
+                  }
+                }
+              }
+            },
+            {
+              "Ceainice": {
+                "langauge": {
+                  "ro": {
+                    "title": "Ceainice"
+                  },
+                  "ru": {
+                    "title": "Чайники"
+                  }
+                }
+              }
+            },
+            {
+              "Vase pentru gătit": {
+                "langauge": {
+                  "ro": {
+                    "title": "Vase pentru gătit"
+                  },
+                  "ru": {
+                    "title": "Кастрюли и Сковородки"
+                  }
+                }
+              }
+            },
+            {
+              "Capac din sticla": {
+                "langauge": {
+                  "ro": {
+                    "title": "Capac din sticla"
+                  },
+                  "ru": {
+                    "title": "Стеклянные Крышки"
+                  }
+                }
+              }
+            },
+            {
+              "Forme prăjituri": {
+                "langauge": {
+                  "ro": {
+                    "title": "Forme prăjituri"
+                  },
+                  "ru": {
+                    "title": "Для выпечки"
+                  }
+                }
+              }
+            },
+            {
+              "Cutii Alimentare": {
+                "langauge": {
+                  "ro": {
+                    "title": "Cutii Alimentare"
+                  },
+                  "ru": {
+                    "title": "Пищевые контейнеры"
+                  }
+                }
+              }
+            },
+            {
+              "Ustensile de bucătărie": {
+                "langauge": {
+                  "ro": {
+                    "title": "Ustensile de bucătărie"
+                  },
+                  "ru": {
+                    "title": "Кухонная утварь"
+                  }
+                }
+              }
+            },
+            {
+              "Cuțite și seturi de cuțite": {
+                "langauge": {
+                  "ro": {
+                    "title": "Cuțite și seturi de cuțite"
+                  },
+                  "ru": {
+                    "title": "Ножи и Наборы ножей"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Aparate de bucătărie mici": {
+          "langauge": {
+            "ro": {
+              "title": "Aparate de bucătărie mici"
+            },
+            "ru": {
+              "title": "Мелкая техника для кухни"
+            }
+          },
+          "children": [
+            {
+              "Espressoare_Automate": {
+                "langauge": {
+                  "ro": {
+                    "title": "Espressoare Automate"
+                  },
+                  "ru": {
+                    "title": "Кофемашины"
+                  }
+                }
+              }
+            },
+            {
+              "Cafetiereși Espressoare manuale": {
+                "langauge": {
+                  "ro": {
+                    "title": "Cafetiere și Espressoare manuale"
+                  },
+                  "ru": {
+                    "title": "Кофеварки"
+                  }
+                }
+              }
+            },
+            {
+              "Râșnițede cafea": {
+                "langauge": {
+                  "ro": {
+                    "title": "Râșnițe de cafea"
+                  },
+                  "ru": {
+                    "title": "Кофемолки"
+                  }
+                }
+              }
+            },
+            {
+              "Fierbători electrice": {
+                "langauge": {
+                  "ro": {
+                    "title": "Fierbători electrice"
+                  },
+                  "ru": {
+                    "title": "Чайники электрические"
+                  }
+                }
+              }
+            },
+            {
+              "Boilere pentru băuturifierbinți": {
+                "langauge": {
+                  "ro": {
+                    "title": "Boilere pentru băuturi fierbinți"
+                  },
+                  "ru": {
+                    "title": "Термопот"
+                  }
+                }
+              }
+            },
+            {
+              "Cuptoare cu microunde": {
+                "langauge": {
+                  "ro": {
+                    "title": "Cuptoare_cu_microunde"
+                  },
+                  "ru": {
+                    "title": "Микроволновые печи"
+                  }
+                }
+              }
+            },
+            {
+              "Cuptoare Electrice": {
+                "langauge": {
+                  "ro": {
+                    "title": "Cuptoare_Electrice"
+                  },
+                  "ru": {
+                    "title": "Электропечь"
+                  }
+                }
+              }
+            },
+            {
+              "Plite electrice": {
+                "langauge": {
+                  "ro": {
+                    "title": "Plite_electrice"
+                  },
+                  "ru": {
+                    "title": "Мини плиты"
+                  }
+                }
+              }
+            },
+            {
+              "Grătare electrice": {
+                "langauge": {
+                  "ro": {
+                    "title": "Grătare electrice"
+                  },
+                  "ru": {
+                    "title": "Электрические грили"
+                  }
+                }
+              }
+            },
+            {
+              "Aparate pentru Sandwich și Waffe": {
+                "langauge": {
+                  "ro": {
+                    "title": "Aparate_pentru_Sandwich și Waffe"
+                  },
+                  "ru": {
+                    "title": "Сэндвичницы"
+                  }
+                }
+              }
+            },
+            {
+              "Prăjitoarede pâine": {
+                "langauge": {
+                  "ro": {
+                    "title": "Prăjitoare de pâine"
+                  },
+                  "ru": {
+                    "title": "Тостеры"
+                  }
+                }
+              }
+            },
+            {
+              "Mașinide pâine": {
+                "langauge": {
+                  "ro": {
+                    "title": "Mașini de pâine"
+                  },
+                  "ru": {
+                    "title": "Хлебопечки"
+                  }
+                }
+              }
+            },
+            {
+              "Multicookere": {
+                "langauge": {
+                  "ro": {
+                    "title": "Multicookere"
+                  },
+                  "ru": {
+                    "title": "Мультиварки"
+                  }
+                }
+              }
+            },
+            {
+              "Friteuze": {
+                "langauge": {
+                  "ro": {
+                    "title": "Friteuze"
+                  },
+                  "ru": {
+                    "title": "Фритюрницы"
+                  }
+                }
+              }
+            },
+            {
+              "Deshidratoare Alimente": {
+                "langauge": {
+                  "ro": {
+                    "title": "Deshidratoare Alimente"
+                  },
+                  "ru": {
+                    "title": "Сушилки для фруктов"
+                  }
+                }
+              }
+            },
+            {
+              "Storcătoare": {
+                "langauge": {
+                  "ro": {
+                    "title": "Storcătoare"
+                  },
+                  "ru": {
+                    "title": "Соковыжималки"
+                  }
+                }
+              }
+            },
+            {
+              "Blendere": {
+                "langauge": {
+                  "ro": {
+                    "title": "Blendere"
+                  },
+                  "ru": {
+                    "title": "Блендеры"
+                  }
+                }
+              }
+            },
+            {
+              "Mixere": {
+                "langauge": {
+                  "ro": {
+                    "title": "Mixere"
+                  },
+                  "ru": {
+                    "title": "Миксеры"
+                  }
+                }
+              }
+            },
+            {
+              "Roboțide bucătărie": {
+                "langauge": {
+                  "ro": {
+                    "title": "Roboți de bucătărie"
+                  },
+                  "ru": {
+                    "title": "Кухонные комбайны"
+                  }
+                }
+              }
+            },
+            {
+              "Mașinide tocat": {
+                "langauge": {
+                  "ro": {
+                    "title": "Mașini de tocat"
+                  },
+                  "ru": {
+                    "title": "Мясорубки"
+                  }
+                }
+              }
+            },
+            {
+              "Feliatoare": {
+                "langauge": {
+                  "ro": {
+                    "title": "Feliatoare"
+                  },
+                  "ru": {
+                    "title": "Ломтерезки"
+                  }
+                }
+              }
+            },
+            {
+              "Cântarede bucătărie": {
+                "langauge": {
+                  "ro": {
+                    "title": "Cântare de bucătărie"
+                  },
+                  "ru": {
+                    "title": "Кухонные весы"
+                  }
+                }
+              }
+            },
+            {
+              "Genți frigorifice": {
+                "langauge": {
+                  "ro": {
+                    "title": "Genți frigorifice"
+                  },
+                  "ru": {
+                    "title": "Сумка холодильник"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "Electrocasnice": {
+    "languages": {
+      "ro": {
+        "title": "Electrocasnice"
+      },
+      "ru": {
+        "title": "Бытовая техника"
+      }
+    },
+    "children": [
+      {
+        "Climatizare": {
+          "langauge": {
+            "ro": {
+              "title": "Climatizare"
+            },
+            "ru": {
+              "title": "Климатическая техника"
+            }
+          },
+          "children": [
+            {
+              "Ventilatoare": {
+                "langauge": {
+                  "ro": {
+                    "title": "Ventilatoare"
+                  },
+                  "ru": {
+                    "title": "Вентиляторы"
+                  }
+                }
+              }
+            },
+            {
+              "Purificatoare şi Umidificatoare de aer": {
+                "langauge": {
+                  "ro": {
+                    "title": "Purificatoare şi Umidificatoare de aer"
+                  },
+                  "ru": {
+                    "title": "Очистители и увлажнители воздуха"
+                  }
+                }
+              }
+            },
+            {
+              "Dezumidificatoare de aer": {
+                "langauge": {
+                  "ro": {
+                    "title": "Dezumidificatoare de aer"
+                  },
+                  "ru": {
+                    "title": "Осушители воздуха"
+                  }
+                }
+              }
+            },
+            {
+              "Aparate încălzire aer": {
+                "langauge": {
+                  "ro": {
+                    "title": "Aparate încălzire aer"
+                  },
+                  "ru": {
+                    "title": "Обогреватели"
+                  }
+                }
+              }
+            },
+            {
+              "Încălzitoare de apă": {
+                "langauge": {
+                  "ro": {
+                    "title": "Încălzitoare de apă"
+                  },
+                  "ru": {
+                    "title": "Водонагреватели"
+                  }
+                }
+              }
+            },
+            {
+              "Aparate de aer condiționat": {
+                "langauge": {
+                  "ro": {
+                    "title": "Aparate de aer condiționat"
+                  },
+                  "ru": {
+                    "title": "Кондиционеры"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Fiare de călcat & îngrijire îmbrăcăminte": {
+          "langauge": {
+            "ro": {
+              "title": "Fiare de călcat & îngrijire îmbrăcăminte"
+            },
+            "ru": {
+              "title": "Техника для ухода за одеждой"
+            }
+          },
+          "children": [
+            {
+              "Fiare de călcat": {
+                "langauge": {
+                  "ro": {
+                    "title": "Fiare de călcat"
+                  },
+                  "ru": {
+                    "title": "Утюги"
+                  }
+                }
+              }
+            },
+            {
+              "Staţiide călcat de înaltă presiune": {
+                "langauge": {
+                  "ro": {
+                    "title": "Staţii de călcat de înaltă presiune"
+                  },
+                  "ru": {
+                    "title": "Парогенераторы"
+                  }
+                }
+              }
+            },
+            {
+              "Aparat de călcat cu abur": {
+                "langauge": {
+                  "ro": {
+                    "title": "Aparat de călcat cu abur"
+                  },
+                  "ru": {
+                    "title": "Отпариватели"
+                  }
+                }
+              }
+            },
+            {
+              "Dulapuri": {
+                "langauge": {
+                  "ro": {
+                    "title": "Dulapuri cu abur pentru haine"
+                  },
+                  "ru": {
+                    "title": "Паровые шкафы для одежды"
+                  }
+                }
+              }
+            },
+            {
+              "Mese de călcat": {
+                "langauge": {
+                  "ro": {
+                    "title": "Mese de călcat"
+                  },
+                  "ru": {
+                    "title": "Гладильные Доски"
+                  }
+                }
+              }
+            },
+            {
+              "Aparat de curățat scame": {
+                "langauge": {
+                  "ro": {
+                    "title": "Aparat de curățat scame"
+                  },
+                  "ru": {
+                    "title": "Машинка для стрижки катышков"
+                  }
+                }
+              }
+            },
+            {
+              "Mașinide cusut": {
+                "langauge": {
+                  "ro": {
+                    "title": "Mașini de cusut"
+                  },
+                  "ru": {
+                    "title": "Швейные машинки"
+                  }
+                }
+              }
+            },
+            {
+              "Accesorii": {
+                "langauge": {
+                  "ro": {
+                    "title": "Accesorii"
+                  },
+                  "ru": {
+                    "title": "Аксессуары для бытовой техники"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Aspiratoare": {
+          "langauge": {
+            "ro": {
+              "title": "Aspiratoare"
+            },
+            "ru": {
+              "title": "Пылесосы"
+            }
+          },
+          "children": [
+            {
+              "Aspiratoare": {
+                "langauge": {
+                  "ro": {
+                    "title": "Aspiratoare"
+                  },
+                  "ru": {
+                    "title": "Пылесосы"
+                  }
+                }
+              }
+            },
+            {
+              "Aparat de curăţare": {
+                "langauge": {
+                  "ro": {
+                    "title": "Aparat de curăţare"
+                  },
+                  "ru": {
+                    "title": "Пароочистители"
+                  }
+                }
+              }
+            },
+            {
+              "Mopuri si Mături Electrice": {
+                "langauge": {
+                  "ro": {
+                    "title": "Mopuri si Mături Electrice"
+                  },
+                  "ru": {
+                    "title": "Инвентарь для уборки"
+                  }
+                }
+              }
+            },
+            {
+              "Stergătoareși Roboti Сurățare Geamuri": {
+                "langauge": {
+                  "ro": {
+                    "title": "Stergătoare și Roboti Сurățare Geamuri"
+                  },
+                  "ru": {
+                    "title": "Стеклоочистители и роботы для мытья окон"
+                  }
+                }
+              }
+            },
+            {
+              "Aparate spalat cu presiune": {
+                "langauge": {
+                  "ro": {
+                    "title": "Aparate spalat cu presiune"
+                  },
+                  "ru": {
+                    "title": "Мойки высокого давления"
+                  }
+                }
+              }
+            },
+            {
+              "Accesorii pentru aspiratoare": {
+                "langauge": {
+                  "ro": {
+                    "title": "Accesorii pentru aspiratoare"
+                  },
+                  "ru": {
+                    "title": "Аксессуары для пылесосов"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Mașinide spălat și uscătoare": {
+          "langauge": {
+            "ro": {
+              "title": "Mașini de spălat și uscătoare"
+            },
+            "ru": {
+              "title": "Стиральные и сушильные машины"
+            }
+          },
+          "children": [
+            {
+              "Mașinide Spălat Rufe": {
+                "langauge": {
+                  "ro": {
+                    "title": "Mașini de Spălat Rufe"
+                  },
+                  "ru": {
+                    "title": "Стиральные машины"
+                  }
+                }
+              }
+            },
+            {
+              "Mașinide spălat cu uscător": {
+                "langauge": {
+                  "ro": {
+                    "title": "Mașini de spălat cu uscător"
+                  },
+                  "ru": {
+                    "title": "Стирально-сушильные машинки"
+                  }
+                }
+              }
+            },
+            {
+              "Uscătoarede rufe": {
+                "langauge": {
+                  "ro": {
+                    "title": "Uscătoare de rufe"
+                  },
+                  "ru": {
+                    "title": "Сушильные машины"
+                  }
+                }
+              }
+            },
+            {
+              "Produse Chimice de Uz Casnic": {
+                "langauge": {
+                  "ro": {
+                    "title": "Produse Chimice de Uz Casnic"
+                  },
+                  "ru": {
+                    "title": "Бытовая Химия"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Iluminat": {
+          "langauge": {
+            "ro": {
+              "title": "Iluminat interior"
+            },
+            "ru": {
+              "title": "Освещение"
+            }
+          },
+          "children": [
+            {
+              "Lămpide birou": {
+                "langauge": {
+                  "ro": {
+                    "title": "Lămpi de birou"
+                  },
+                  "ru": {
+                    "title": "Настольные лампы"
+                  }
+                }
+              }
+            },
+            {
+              "Veioze": {
+                "langauge": {
+                  "ro": {
+                    "title": "Veioze"
+                  },
+                  "ru": {
+                    "title": "Ночники"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Bricolaj": {
+          "langauge": {
+            "ro": {
+              "title": "Bricolaj"
+            },
+            "ru": {
+              "title": "Инструменты для ремонта"
+            }
+          },
+          "children": [
+            {
+              "Meseși Bancuri de Lucru": {
+                "langauge": {
+                  "ro": {
+                    "title": "Mese și Bancuri de Lucru"
+                  },
+                  "ru": {
+                    "title": "Верстаки"
+                  }
+                }
+              }
+            },
+            {
+              "Aparateși mașini grădinărit": {
+                "langauge": {
+                  "ro": {
+                    "title": "Aparate și mașini grădinărit"
+                  },
+                  "ru": {
+                    "title": "Садовая техника"
+                  }
+                }
+              }
+            },
+            {
+              "Scule": {
+                "langauge": {
+                  "ro": {
+                    "title": "Scule Electrice"
+                  },
+                  "ru": {
+                    "title": "Сетевой инструмент"
+                  }
+                }
+              }
+            },
+            {
+              "Acumulatoriși încărcătoare pentru scule electrice": {
+                "langauge": {
+                  "ro": {
+                    "title": "Acumulatori și încărcătoare pentru scule electrice"
+                  },
+                  "ru": {
+                    "title": "Принадлежности для электроинструмента"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "Îngrijire personală": {
+    "languages": {
+      "ro": {
+        "title": "Îngrijire personală"
+      },
+      "ru": {
+        "title": "Красота и Здоровье"
+      }
+    },
+    "children": [
+    ]
+  },
+  "Computere": {
+    "languages": {
+      "ro": {
+        "title": "Computere"
+      },
+      "ru": {
+        "title": "Компьютеры и ноутбуки"
+      }
+    },
+    "children": [
+    ]
+  },
+  "Smart Home": {
+    "languages": {
+      "ro": {
+        "title": "Smart Home"
+      },
+      "ru": {
+        "title": "Умный Дом"
+      }
+    },
+    "children": [
+    ]
+  },
+  "Birotică și rețealistică": {
+    "languages": {
+      "ro": {
+        "title": "Birotică și rețealistică"
+      },
+      "ru": {
+        "title": "Офис и Сеть"
+      }
+    },
+    "children": [
+    ]
+  },
+  "Gaming și divertisment": {
+    "languages": {
+      "ro": {
+        "title": "Gaming și divertisment"
+      },
+      "ru": {
+        "title": "Развлечения и Гейминг"
+      }
+    },
+    "children": [
+    ]
+  },
+  "Agrement și sport": {
+    "languages": {
+      "ro": {
+        "title": "Agrement și sport"
+      },
+      "ru": {
+        "title": "Спорт и отдых"
+      }
+    },
+    "children": [
+    ]
+  },
+  "Lumea copiilor": {
+    "languages": {
+      "ro": {
+        "title": "Lumea copiilor"
+      },
+      "ru": {
+        "title": "Все для детей"
+      }
+    },
+    "children": [
+    ]
+  }
+}
