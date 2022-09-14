@@ -6,18 +6,6 @@ on:
   pull_request:
     branches: [ "master" ]
 
-env:
-  ## Sets environment variable
-  SECRET_KEY: django-insecure-ivvj9!#yngyy+ivx(t&m*a0n@6b*kc38^0v3ew0g06-!x_pwih
-  DEBUG: True
-
-  NAME: ebs-catalog
-  USER: ebs_user
-  PASSWORD: ebs_password
-  HOST: 185.181.231.43
-  PORT: 5432
-
-
 jobs:
   test:
     runs-on: ubuntu-latest
