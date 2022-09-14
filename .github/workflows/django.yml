@@ -64,6 +64,8 @@ jobs:
       #----------------------------------------------
       - name: Write .env
         uses: CallePuzzle/envvar-to-dotenv-action@0.1.0
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
         with:
           variableNames: SECRET_KEY,DEBUG,NAME,USER,PASSWORD,HOST,PORT
           envPath: '.env'
