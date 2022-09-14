@@ -21,13 +21,14 @@ jobs:
         sudo apt install python3-testresources
         python -m pip install --upgrade pip
     - name: Install Poetry
-      run: |
-        pip install poetry==1.2.0
-        poetry config virtualenvs.create false
-        ls
+      uses: snok/install-poetry@v1
+      with:
+        virtualenvs-create: true
+        virtualenvs-in-project: true
+        installer-parallel: true
     - name: Install libraries by poetry
       run: |
-        poetry install
+        poetry install --no-interaction
     - name: Run Tests
       run: |
         python manage.py test
