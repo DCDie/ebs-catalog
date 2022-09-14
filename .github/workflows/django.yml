@@ -6,6 +6,15 @@ on:
   pull_request:
     branches: [ "master" ]
 
+env:
+  SECRET_KEY: "{{ secrets.SECRET_KEY }}"
+  DEBUG: "{{ secrets.DEBUG }}"
+  NAME: "{{ secrets.NAME }}"
+  USER: "{{ secrets.USER }}"
+  PASSWORD: "{{ secrets.PASSWORD }}"
+  HOST: "{{ secrets.HOST }}"
+  PORT: "{{ secrets.PORT }}"
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -50,6 +59,13 @@ jobs:
       #----------------------------------------------
       - name: Install library
         run: poetry install --no-interaction
+      #----------------------------------------------
+      # Load variables from github env to .env
+      #----------------------------------------------
+      - name: Test name
+        uses: CallePuzzle/envvar-to-dotenv-action@0.1.0
+        with:
+          variableNamesByFilter: SECRET_KEY,DEBUG,NAME,USER,PASSWORD,HOST,PORT
       #----------------------------------------------
       #              run test suite
       #----------------------------------------------
