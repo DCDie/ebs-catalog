@@ -12,15 +12,15 @@ REST API for Internet Catalog project.
 
 ```python
 # DJANGO
-SECRET_KEY="django-insecure-ivvj9!#yngyy+ivx(t&m*a0n@6b*kc38^0v3ew0g06-!x_pwih"
+SECRET_KEY=
 DEBUG=True
 
 # DATABASE
-NAME="ebs-catalog"
-USER="ebs_user"
-PASSWORD="ebs_password"
-HOST=185.181.231.43
-PORT=5432
+NAME=
+USER=
+PASSWORD=
+HOST=
+PORT=
 ```
 
 ### 📦️ Commands
