@@ -326,8 +326,9 @@ class Attachment(BaseModel):
 
 
 # Register models to auditlog
-# auditlog.register(Brand)
-# auditlog.register(ShopProduct)
-# auditlog.register(Shop)
-# auditlog.register(Product)
-# auditlog.register(Category)
+auditlog.register(Brand)
+auditlog.register(ShopProduct)
+auditlog.register(Shop)
+auditlog.register(Product)
+auditlog.register(Category)
+auditlog.register(ShopCategory)
