@@ -1,6 +1,6 @@
-# 📱 AEO API
+# 📱 CATALOG API
 
-REST API for AEO project.
+REST API for Internet Catalog project.
 
 ### 📝 Requirements
 
