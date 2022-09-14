@@ -22,7 +22,7 @@ jobs:
         python -m pip install --upgrade pip
     - name: Install Poetry
       run: |
-        pip install poetry
+        pip install poetry==1.2.0
         poetry config virtualenvs.create false
         ls
     - name: Install libraries by poetry
