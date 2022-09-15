@@ -45,6 +45,9 @@ class Category(BaseModel):
         related_name='category_attachment',
         blank=True
     )
+    slug = models.SlugField(
+
+    )
 
     class Meta:
         verbose_name = 'Category'
@@ -94,6 +97,9 @@ class Product(BaseModel):
         null=True,
         default=False
     )
+    slug = models.SlugField(
+
+    )
 
     class Meta:
         verbose_name = 'Product'
@@ -127,6 +133,7 @@ class Comment(BaseModel):
         blank=True,
         null=True
     )
+    slug = models.SlugField()
     rating = models.IntegerField(
         default=0,
         blank=True,
@@ -165,6 +172,9 @@ class Shop(BaseModel):
         'Attachment',
         related_name='shop_attachment',
         blank=True
+    )
+    slug = models.SlugField(
+
     )
 
     class Meta:
@@ -226,6 +236,9 @@ class ShopProduct(BaseModel):
         null=True,
         default=False
     )
+    slug = models.SlugField(
+
+    )
 
     class Meta:
         verbose_name = 'Shop product'
@@ -249,6 +262,9 @@ class Brand(BaseModel):
     languages = models.JSONField(
         blank=True,
         null=True
+    )
+    slug = models.SlugField(
+
     )
 
     class Meta:
@@ -280,6 +296,9 @@ class ShopCategory(BaseModel):
         null=True,
         related_name='children'
     )
+    slug = models.SlugField(
+
+    )
 
     class Meta:
         verbose_name = 'Shop category'
@@ -309,6 +328,9 @@ class Attachment(BaseModel):
     languages = models.JSONField(
         blank=True,
         null=True
+    )
+    slug = models.SlugField(
+
     )
 
     class Meta:
