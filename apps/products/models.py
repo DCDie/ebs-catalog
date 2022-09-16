@@ -45,10 +45,6 @@ class Category(BaseModel):
         related_name='category_attachment',
         blank=True
     )
-    slug = models.SlugField(
-        max_length=40,
-        null=True
-    )
 
     class Meta:
         verbose_name = 'Category'
@@ -98,10 +94,6 @@ class Product(BaseModel):
         null=True,
         default=False
     )
-    slug = models.SlugField(
-        max_length=40,
-        null=True
-    )
 
     class Meta:
         verbose_name = 'Product'
@@ -144,10 +136,6 @@ class Comment(BaseModel):
             MinValueValidator(0)
         ]
     )
-    slug = models.SlugField(
-        max_length=40,
-        null=True
-    )
 
     class Meta:
         verbose_name = 'Comment'
@@ -177,10 +165,6 @@ class Shop(BaseModel):
         'Attachment',
         related_name='shop_attachment',
         blank=True
-    )
-    slug = models.SlugField(
-        max_length=40,
-        null=True
     )
 
     class Meta:
@@ -242,10 +226,6 @@ class ShopProduct(BaseModel):
         null=True,
         default=False
     )
-    slug = models.SlugField(
-        max_length=40,
-        null=True
-    )
 
     class Meta:
         verbose_name = 'Shop product'
@@ -268,10 +248,6 @@ class Brand(BaseModel):
     )
     languages = models.JSONField(
         blank=True,
-        null=True
-    )
-    slug = models.SlugField(
-        max_length=40,
         null=True
     )
 
@@ -304,10 +280,6 @@ class ShopCategory(BaseModel):
         null=True,
         related_name='children'
     )
-    slug = models.SlugField(
-        max_length=40,
-        null=True
-    )
 
     class Meta:
         verbose_name = 'Shop category'
@@ -336,10 +308,6 @@ class Attachment(BaseModel):
     )
     languages = models.JSONField(
         blank=True,
-        null=True
-    )
-    slug = models.SlugField(
-        max_length=40,
         null=True
     )
 
