@@ -110,4 +110,4 @@ class EnterParser:
                             data=f'Status code: {response.status_code} | Page: {page} | URL: {response.url}'
                         )
                     with open(f'{self.path}/enter_items_{category}.json', 'w+', encoding='utf-8') as fp:
-                        fp.write(json.dumps(data, ensure_ascii=False))
+                        fp.write(json.dumps(data, indent=5, ensure_ascii=False))

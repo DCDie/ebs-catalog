@@ -72,6 +72,7 @@ class InsertDataBase:
                                 ))
                                 for object_id, category_id, shop_id in shop_category_queryset:
                                     price = ''.join((category_data.get('price')).split()[:-1])
+
                                     data.append(
                                         ShopProduct(
                                             title=category_data.get('title'),
@@ -83,10 +84,13 @@ class InsertDataBase:
                                             category_id=category_id
                                         )
                                     )
-                        ShopProduct.objects.bulk_update_or_create(
+                        ShopProduct.objects.bulk_create(
                             objs=data,
-                            update_fields=['available', 'price'],
-                            match_field=['title']
+                            ignore_conflicts=True
+                        )
+                        ShopProduct.objects.bulk_update(
+                            objs=data,
+                            fields=['available', 'price'],
                         )
                         self.logging(
                             message='New file data - added',
