@@ -57,6 +57,66 @@
           }
         }
       },
+        {
+        "Aragaze": {
+          "languages": {
+            "ro": {
+              "title": "Aragaze"
+            },
+            "ru": {
+              "title": "Плиты"
+            }
+          }
+        }
+      },
+      {
+        "Mașini de spălat vase": {
+          "languages": {
+            "ro": {
+              "title": "Mașini de spălat vase"
+            },
+            "ru": {
+              "title": "Посудомоечные машины"
+            }
+          }
+        }
+      },
+      {
+        "Hote": {
+          "languages": {
+            "ro": {
+              "title": "Hote"
+            },
+            "ru": {
+              "title": "Вытяжки"
+            }
+          }
+        }
+      },
+      {
+        "Cuptoare cu microunde": {
+          "languages": {
+            "ro": {
+              "title": "Cuptoare cu microunde"
+            },
+            "ru": {
+              "title": "Микроволновые печи"
+            }
+          }
+        }
+      },
+      {
+        "Cuptoare electrice": {
+          "languages": {
+            "ro": {
+              "title": "Cuptoare electrice"
+            },
+            "ru": {
+              "title": "Электрические печи"
+            }
+          }
+        }
+      },
       {
         "Congelatoare": {
           "languages": {
