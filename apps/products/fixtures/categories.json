@@ -57,19 +57,7 @@
           }
         }
       },
-      {
-        "Congelatoare": {
-          "languages": {
-            "ro": {
-              "title": "Congelatoare"
-            },
-            "ru": {
-              "title": "Морозильники"
-            }
-          }
-        }
-      },
-      {
+        {
         "Aragaze": {
           "languages": {
             "ro": {
@@ -125,6 +113,18 @@
             },
             "ru": {
               "title": "Электрические печи"
+            }
+          }
+        }
+      },
+      {
+        "Congelatoare": {
+          "languages": {
+            "ro": {
+              "title": "Congelatoare"
+            },
+            "ru": {
+              "title": "Морозильники"
             }
           }
         }

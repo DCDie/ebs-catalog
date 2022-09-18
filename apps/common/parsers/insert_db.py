@@ -1,6 +1,8 @@
+import datetime
 import json
 import os
 import time
+from typing import Optional
 
 from django.conf import settings
 
@@ -13,11 +15,11 @@ from apps.products.models import (
 
 class InsertDataBase:
 
-    def __init__(self):
+    def __init__(self) -> None:
         self.directory = f'{settings.BASE_DIR}/media'
 
     @staticmethod
-    def logging(message, data=None, execution_time=None):
+    def logging(message: str, data: Optional[str] = None, execution_time: Optional[datetime] = None) -> None:
         print(f"{message} | Data: {data} | Time: {execution_time} sec.")
 
     def add_shop_category(self) -> None:
@@ -50,7 +52,7 @@ class InsertDataBase:
                         execution_time=time.process_time() - start
                     )
 
-    def add_shop_products(self):
+    def add_shop_products(self) -> None:
         for file in os.listdir(self.directory):
             shop_name = os.fsdecode(file)
             for filename in os.listdir(f'{self.directory}/{shop_name}'):
