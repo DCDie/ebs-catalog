@@ -1,6 +1,8 @@
+import datetime
 import json
 import pathlib
 import time
+from typing import Optional
 
 import requests
 from bs4 import BeautifulSoup
@@ -15,14 +17,14 @@ class EnterParser:
         'User-Agent': agent,
     }
 
-    def __init__(self):
+    def __init__(self) -> None:
         self.table_goods = []
         self.category_name = str
         self.path = 'media/enter'
         pathlib.Path(self.path).mkdir(parents=True, exist_ok=True)
 
     @staticmethod
-    def logging(message, data=None, execution_time=None):
+    def logging(message: str, data: Optional[str] = None, execution_time: Optional[datetime] = None) -> None:
         print(f"{message} | Data: {data} | Time: {execution_time} sec.")
 
     def get_categories(self) -> None:
