@@ -43,8 +43,8 @@ class EnterParser:
                 # If category exists write
                 if subcategory_link:
                     categories_data[category_name][subcategory.text] = subcategory_link
-        with open(f'{self.path}/enter_categories.json', 'w+', encoding='utf-8') as fp:
-            fp.write(json.dumps(categories_data, ensure_ascii=False))
+        with open(f'{self.path}/enter_categories.json', 'w+', encoding='utf-8') as read_file:
+            read_file.write(json.dumps(categories_data, ensure_ascii=False))
             self.logging(
                 message='File: enter_categories.json - saved',
                 execution_time=time.process_time() - start
@@ -87,11 +87,9 @@ class EnterParser:
                                     price = discount_price.text
                                 title = good.select_one('div > a > .product-title').text
                                 description = good.select_one('div > a > .product-descr').text
-                                link = good.select_one('div > a').get('href')
 
                                 # Save goods data in dict
                                 dictionary = {
-                                    'link': link,
                                     'title': title,
                                     'description': description,
                                     'price': price,
@@ -104,9 +102,9 @@ class EnterParser:
                                 execution_time=time.process_time() - start
                             )
                             page += 1
-                    except Exception as e:
+                    except Exception as ex:
                         self.logging(
-                            message=f'Exception {e}',
+                            message=f'Exception {ex}',
                             data=f'Status code: {response.status_code} | Page: {page} | URL: {response.url}'
                         )
                     with open(f'{self.path}/enter_items_{category}.json', 'w+', encoding='utf-8') as fp:
