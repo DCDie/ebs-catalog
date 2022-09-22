@@ -1,14 +1,9 @@
-from io import BytesIO
-from tempfile import TemporaryFile
-from unicodedata import category
-
 from django.core.files import File
 from django.test import TestCase
 
-# Create your tests here.
 from rest_framework.status import HTTP_200_OK, HTTP_204_NO_CONTENT
 
-from apps.products.models import Attachment, Brand, Product, Category, Shop, User, Comment, ShopCategory, ShopProduct
+from apps.products.models import Attachment, Brand, Product, Category, Shop, Comment, ShopCategory, ShopProduct
 
 
 class TaskApiTestCAse(TestCase):
@@ -16,24 +11,7 @@ class TaskApiTestCAse(TestCase):
     def test_get_attachments_list(self):
         response = self.client.get('/attachments/')
         self.assertEqual(HTTP_200_OK, response.status_code)
-    #
-    # def test_retrieve_attachments(self):
-    #     attachment = Attachment.objects.create(
-    #         title='Test',
-    #         file_url=File(open("apps\enter\enter_categories.json", 'rb'))
-    #     )
-    #     response = self.client.get(f'/attachments/{attachment.id}/')
-    #     self.assertEqual(HTTP_200_OK, response.status_code)
 
-    # def test_attachment_update(self):
-    #     attachment = Attachment.objects.create(title='Test',
-    #                                            file_url=File(open("apps\products\\fixtures\categories.json", 'rb')))
-    #     data = {
-    #         'title': "gsfgfdg",
-    #     }
-    #     response = self.client.patch(f'/attachments/{attachment.id}/', data=data)
-    #     self.assertEqual(HTTP_200_OK, response.status_code)
-    ##################### BRANDS #####################################################
     def test_get_brands_list(self):
         response = self.client.get('/brands/')
         self.assertEqual(HTTP_200_OK, response.status_code)
@@ -42,7 +20,6 @@ class TaskApiTestCAse(TestCase):
         brand = Brand.objects.create(title='Test', languages='Test')
         response = self.client.get(f'/brands/{brand.id}/')
         self.assertEqual(HTTP_200_OK, response.status_code)
-
 
     def test_create_brands(self):
         data = {
@@ -72,7 +49,6 @@ class TaskApiTestCAse(TestCase):
         response = self.client.patch(f'/brands/{brand.id}/', content_type='application/json', data=data)
         self.assertEqual(response.status_code, HTTP_200_OK)
 
-    ####################################### CATEGORY ######################
     def test_get_category_list(self):
         response = self.client.get('/categories/')
         self.assertEqual(HTTP_200_OK, response.status_code)
@@ -113,8 +89,6 @@ class TaskApiTestCAse(TestCase):
         category = Category.objects.create(title='Test', languages='Test')
         response = self.client.delete(f'/categories/{category.id}/')
         self.assertEqual(HTTP_204_NO_CONTENT, response.status_code)
-
-    ##########################PRODUCTS################################
 
     def test_get_products_list(self):
         response = self.client.get('/products/')
@@ -181,8 +155,6 @@ class TaskApiTestCAse(TestCase):
                                          specification='Test', languages='Test')
         response = self.client.delete(f'/products/{product.id}/')
         self.assertEqual(HTTP_204_NO_CONTENT, response.status_code)
-
-    ##################COMMENTS#############################
 
     def test_get_comment_list(self):
         response = self.client.get('/comments/')
@@ -260,7 +232,6 @@ class TaskApiTestCAse(TestCase):
         response = self.client.delete(f'/comments/{comment.id}/', content_type='application/json')
         self.assertEqual(HTTP_204_NO_CONTENT, response.status_code)
 
-    ##################################SHOP#########################
     def test_shop_list(self):
         response = self.client.get('/shops/')
         self.assertEqual(HTTP_200_OK, response.status_code)
@@ -303,7 +274,6 @@ class TaskApiTestCAse(TestCase):
         response = self.client.delete(f'/shops/{shop.id}/', content_type='application/json')
         self.assertEqual(HTTP_204_NO_CONTENT, response.status_code)
 
-    ##########################SHOP_PRODUCTS##############################
     def test_shop_products_list(self):
         response = self.client.get('/shop_products/')
         self.assertEqual(HTTP_200_OK, response.status_code)
@@ -320,8 +290,7 @@ class TaskApiTestCAse(TestCase):
         shop = Shop.objects.create(title='Test')
         shop_category = ShopCategory.objects.create(name='name',
                                                     shop=shop)
-        # f = open("media\enter\enter_categories.json", 'rb')
-        # file = BytesIO(f.read())
+
         attachment = Attachment.objects.create(title='Test', extension='.pdf',
                                                file_url=File(open("media\enter\enter_categories.json", 'rb')))
         data = {
@@ -349,8 +318,7 @@ class TaskApiTestCAse(TestCase):
         shop = Shop.objects.create(title='Test')
         shop_category = ShopCategory.objects.create(name='name',
                                                     shop=shop)
-        # f = open("media\enter\enter_categories.json", 'rb')
-        # file = BytesIO(f.read())
+
         attachment = Attachment.objects.create(title='Test', extension='.pdf',
                                                file_url=File(open("media\enter\enter_categories.json", 'rb')))
         shop_product = ShopProduct.objects.create(title='Test', price=7, available=True,
@@ -381,8 +349,7 @@ class TaskApiTestCAse(TestCase):
         shop = Shop.objects.create(title='Test')
         shop_category = ShopCategory.objects.create(name='name',
                                                     shop=shop)
-        # f = open("media\enter\enter_categories.json", 'rb')
-        # file = BytesIO(f.read())
+
         attachment = Attachment.objects.create(title='Test', extension='.pdf',
                                                file_url=File(open("media\enter\enter_categories.json", 'rb')))
         shop_product = ShopProduct.objects.create(title='Test', price=7, available=True,
