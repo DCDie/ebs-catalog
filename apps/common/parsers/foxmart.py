@@ -1,11 +1,12 @@
+import datetime
 import json
 import pathlib
 import time
+from typing import Optional
 
 import requests
-from bs4 import BeautifulSoup as BS
+from bs4 import BeautifulSoup
 from fake_useragent import UserAgent
-from rest_framework.status import is_success
 
 
 class FoxmartParser:
@@ -16,19 +17,19 @@ class FoxmartParser:
         'User-Agent': agent,
     }
 
-    def __init__(self):
+    def __init__(self) -> None:
         self.path = 'media/foxmart'
         pathlib.Path(self.path).mkdir(parents=True, exist_ok=True)
 
     @staticmethod
-    def logging(message, data=None, execution_time=None):
+    def logging(message: str, data: Optional[str] = None, execution_time: Optional[datetime] = None) -> None:
         print(f"{message} | Data: {data} | Time: {execution_time} sec.")
 
     def get_categories(self) -> None:
         start = time.process_time()
         url = "https://www.foxmart.md/"
-        r = requests.get(url=url, headers=self.headers)
-        html = BS(r.content, 'html.parser')
+        response = requests.get(url=url, headers=self.headers)
+        html = BeautifulSoup(response.text, 'html.parser')
         categories_data = []
         for el in html.select('.uk-parent'):
             for category in el.select('a'):
@@ -41,56 +42,51 @@ class FoxmartParser:
                     }
                     categories_data.append(obj)
 
-        with open(f"{self.path}/foxmart_categories_.json", "w", encoding='utf-8') as file:
+        with open(f"{self.path}/foxmart_categories.json", "w", encoding='utf-8') as file:
             file.write(json.dumps(categories_data, indent=4, ensure_ascii=False))
             self.logging(
-                message='File:foxmart_categoryes_json - was saved',
+                message='File:foxmart_categories.json - was saved',
                 execution_time=time.process_time() - start
             )
 
-    def get_all_products(self) -> None:
-        agent = UserAgent().random
-        with open(f"{self.path}/foxmart_categories_.json", "rb") as read_file:
-            data = json.load(read_file)
-            data_all = {}
-        for subcategory in data:
+    def get_products(self) -> None:
+        with open(f"{self.path}/foxmart_categories.json", "rb") as read_file:
+            categories = json.load(read_file)
+            data = {}
+        for subcategory in categories:
             subcategory_id = subcategory.get('id')
             category = subcategory.get('title')
             page = 1
-            data_all[category] = []
+            data[category] = []
             while True:
                 start = time.process_time()
-                url = f"https://www.foxmart.md/api/client/products/catalog" \
-                      f"?items=15&page={page}&category={subcategory_id}&sort=popularity&order=desc"
-                r = requests.get(url=url, headers={'User-Agent': agent})
-                if not is_success(r.status_code):
+                url = f"https://www.foxmart.md/api/client/products/catalog?items=15&" \
+                      f"page={page}&category={subcategory_id}&sort=popularity&order=desc"
+                response = requests.get(url=url, headers=self.headers)
+                if not response.ok:
                     break
-                products_dict = json.loads(r.content.decode())
+                products_dict = json.loads(response.content.decode())
                 products = products_dict.get('products')
 
                 for product in products:
                     title = product.get('product')
-                    shortDescription = product.get('shortDescription')
+                    description = product.get('shortDescription')
                     price = product.get('price')
-                    inStock = product.get('inStock')
-                    amount = product.get('amount')
+                    in_stock = product.get('inStock')
 
                     dictionary = {
                         'title': title,
-                        'Description': shortDescription,
+                        'description': description,
                         'price': price,
-                        'available': inStock,
-                        'amount': amount
-
+                        'available': in_stock
                     }
 
-                    data_all[category].append(dictionary)
-                    self.logging(
-                        message='Added subcategory',
-                        data=f'| Page: {page}',
-                        execution_time=time.process_time() - start
-                    )
+                    data[category].append(dictionary)
+                self.logging(
+                    message=f'Added subcategory',
+                    data=f'| Page: {page}',
+                    execution_time=time.process_time() - start
+                )
                 page += 1
-
-                with open(f'{self.path}foxmart_items_{category}.json', 'w+', encoding='utf-8') as file:
-                    file.write(json.dumps(data_all, indent=5, ensure_ascii=False))
+                with open(f'{self.path}/foxmart_items_{category}.json', 'w+', encoding='utf-8') as file:
+                    file.write(json.dumps(data, indent=5, ensure_ascii=False))
