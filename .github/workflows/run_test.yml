@@ -1,10 +1,14 @@
-name: test
+name: Django tests
 
 on:
   push:
-    branches: [ "master" ]
+    branches:
+      - master
+      - development
   pull_request:
-    branches: [ "master" ]
+    branches:
+      - master
+      - development
 
 env:
   SECRET_KEY: "{{ secrets.SECRET_KEY }}"
