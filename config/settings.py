@@ -1,3 +1,4 @@
+from pprint import pprint
 from pathlib import Path
 
 from dotenv import dotenv_values
@@ -79,6 +80,8 @@ DATABASES = {
         'PORT': config.get('PORT'),
     }
 }
+
+pprint(DATABASES)
 
 AUTH_PASSWORD_VALIDATORS = [
     {
