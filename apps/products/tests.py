@@ -7,7 +7,7 @@ from rest_framework.status import HTTP_200_OK, HTTP_204_NO_CONTENT
 from apps.products.models import Attachment, Brand, Product, Category, Shop, Comment, ShopCategory, ShopProduct
 
 
-class TaskApiTestCAse(TestCase):
+class TaskApiTestCase(TestCase):
 
     def test_get_attachments_list(self):
         response = self.client.get('/attachments/')
@@ -295,7 +295,7 @@ class TaskApiTestCAse(TestCase):
         attachment = Attachment.objects.create(
             title='Test',
             extension='.pdf',
-            file_url=File(open(Path("apps\\products\\fixtures\\categories.json").as_posix(), 'rb'))
+            file_url=File(open(Path("apps\\products\\fixtures\\test.pdf").as_posix(), 'rb'))
         )
         data = {
             "title": "string",
@@ -326,7 +326,7 @@ class TaskApiTestCAse(TestCase):
         attachment = Attachment.objects.create(
             title='Test',
             extension='.pdf',
-            file_url=File(open((Path("apps\\products\\fixtures\\categories.json")).as_posix(), 'rb'))
+            file_url=File(open((Path("apps\\products\\fixtures\\test.pdf")).as_posix(), 'rb'))
         )
         shop_product = ShopProduct.objects.create(title='Test', price=7, available=True,
                                                   shop=shop, shop_category=shop_category)
@@ -360,7 +360,7 @@ class TaskApiTestCAse(TestCase):
         attachment = Attachment.objects.create(
             title='Test',
             extension='.pdf',
-            file_url=File(open(Path("apps\\products\\fixtures\\categories.json").as_posix(), 'rb'))
+            file_url=File(open(Path("apps\\products\\fixtures\\test.pdf").as_posix(), 'rb'))
         )
         shop_product = ShopProduct.objects.create(title='Test', price=7, available=True,
                                                   shop=shop, shop_category=shop_category)
