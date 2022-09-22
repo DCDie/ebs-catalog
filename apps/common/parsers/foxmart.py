@@ -35,7 +35,7 @@ class FoxmartParser:
                 subcategory = category.attrs
                 if subcategory.get('href').split('/')[-1]:
                     obj = {
-                        f'title': category.text,
+                        'title': category.text,
                         'url': subcategory.get('href'),
                         'id': subcategory.get('href').split('/')[-1]
                     }
@@ -60,7 +60,8 @@ class FoxmartParser:
             data_all[category] = []
             while True:
                 start = time.process_time()
-                url = f"https://www.foxmart.md/api/client/products/catalog?items=15&page={page}&category={subcategory_id}&sort=popularity&order=desc"
+                url = f"https://www.foxmart.md/api/client/products/catalog" \
+                      f"?items=15&page={page}&category={subcategory_id}&sort=popularity&order=desc"
                 r = requests.get(url=url, headers={'User-Agent': agent})
                 if not is_success(r.status_code):
                     break
@@ -85,7 +86,7 @@ class FoxmartParser:
 
                     data_all[category].append(dictionary)
                     self.logging(
-                        message=f'Added subcategory',
+                        message='Added subcategory',
                         data=f'| Page: {page}',
                         execution_time=time.process_time() - start
                     )
