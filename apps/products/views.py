@@ -87,3 +87,8 @@ class BrandViewSet(
 ):
     queryset = Brand.objects.all()
     serializer_class = BrandSerializer
+
+    # def test_comments_retriew(self):
+    #     comment = Comment.objects.create()
+    #     response = self.client.get(f'/products/{product.id}/')
+    #     self.assertEqual(HTTP_200_OK, response.status_code)
