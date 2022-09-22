@@ -1,5 +1,6 @@
 from pathlib import Path
 
+import requests
 from django.core.files import File
 from django.test import TestCase
 from rest_framework.status import HTTP_200_OK, HTTP_204_NO_CONTENT
@@ -8,6 +9,11 @@ from apps.products.models import Attachment, Brand, Product, Category, Shop, Com
 
 
 class TaskApiTestCase(TestCase):
+    @classmethod
+    def setUpTestData(cls):
+        URL = "https://www.orimi.com/pdf-test.pdf"
+        response = requests.get(URL)
+        open(Path("apps\\products\\fixtures\\test.pdf").as_posix(), "wb").write(response.content)
 
     def test_get_attachments_list(self):
         response = self.client.get('/attachments/')
