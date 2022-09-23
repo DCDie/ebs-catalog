@@ -11,13 +11,13 @@ on:
       - development
 
 env:
-  SECRET_KEY: "{{ secrets.SECRET_KEY }}"
-  DEBUG: "{{ secrets.DEBUG }}"
-  NAME: "{{ secrets.NAME }}"
-  USER: "{{ secrets.USER }}"
-  PASSWORD: "{{ secrets.PASSWORD }}"
-  HOST: "{{ secrets.HOST }}"
-  PORT: "{{ secrets.PORT }}"
+  SECRET_KEY: ${{ secrets.SECRET_KEY }}
+  DEBUG: ${{ secrets.DEBUG }}
+  NAME: ${{ secrets.NAME }}
+  USER: ${{ secrets.USER }}
+  PASSWORD: ${{ secrets.PASSWORD }}
+  HOST: ${{ secrets.HOST }}
+  PORT: ${{ secrets.PORT }}
 
 jobs:
   test:
