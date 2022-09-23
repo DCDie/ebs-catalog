@@ -22,6 +22,8 @@ django-bulk-update-or-create = "^0.3.0"
 urllib3 = "^1.26.12"
 chardet = "^5.0.0"
 coverage = "^6.4.4"
+django-extensions = "^3.2.1"
+python-slugify = "^6.1.2"
 
 
 [build-system]

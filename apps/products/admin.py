@@ -60,7 +60,6 @@ class ProductAdmin(admin.ModelAdmin):
     list_display = (
         'id',
         'title',
-        'category',
         'price',
         'rating',
         'verified',
@@ -101,7 +100,7 @@ class ProductAdmin(admin.ModelAdmin):
 @admin.register(ShopProduct)
 class ProductShopAdmin(admin.ModelAdmin):
     list_display = (
-        'id',
+        'pk',
         'title',
         'price',
         'available',

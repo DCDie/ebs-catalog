@@ -1,12 +1,14 @@
 from pathlib import Path
 
 from auditlog.registry import auditlog
+from bulk_update_or_create import BulkUpdateOrCreateQuerySet
 from django.contrib.auth import get_user_model
 from django.core.validators import (
     MaxValueValidator,
     MinValueValidator
 )
 from django.db import models
+from django_extensions.db.fields import AutoSlugField
 
 from apps.common.models import BaseModel
 
@@ -57,10 +59,7 @@ class Product(BaseModel):
     title = models.CharField(
         max_length=155
     )
-    category = models.ForeignKey(
-        to=Category,
-        on_delete=models.CASCADE,
-    )
+    category = models.ManyToManyField(Category)
     description = models.TextField()
     specification = models.JSONField(
         blank=True,
@@ -175,6 +174,13 @@ class Shop(BaseModel):
 
 
 class ShopProduct(BaseModel):
+    objects = BulkUpdateOrCreateQuerySet.as_manager()
+
+    label = AutoSlugField(
+        primary_key=True,
+        populate_from=('shop__title', 'title'),
+        allow_duplicates=True
+    )
     title = models.CharField(
         max_length=155
     )
@@ -211,13 +217,7 @@ class ShopProduct(BaseModel):
         to='ShopCategory',
         on_delete=models.CASCADE,
     )
-    category = models.ForeignKey(
-        to=Category,
-        on_delete=models.CASCADE,
-        related_name='product_shop',
-        null=True,
-        blank=True
-    )
+    category = models.ManyToManyField(Category)
     verified = models.BooleanField(
         blank=True,
         null=True,
