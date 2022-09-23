@@ -203,6 +203,17 @@ optional = false
 python-versions = "*"
 
 [[package]]
+name = "Faker"
+version = "14.2.1"
+description = "Faker is a Python package that generates fake data for you."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+python-dateutil = ">=2.4"
+
+[[package]]
 name = "future"
 version = "0.18.2"
 description = "Clean single-source support for Python 3 and 2"
@@ -413,7 +424,7 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "2ab463bb9945374cddca50e2bb2748b1d96499dbdecfd5d92a3f6cc4ec885b3d"
+content-hash = "099351023186a2ac7a7c0ebafb0bc7ed5d7bac761a8fe0050e3f4077970bca71"
 
 [metadata.files]
 asgiref = [
@@ -529,6 +540,10 @@ drf-yasg = [
 ]
 fake-useragent = [
     {file = "fake-useragent-0.1.11.tar.gz", hash = "sha256:c104998b750eb097eefc28ae28e92d66397598d2cf41a31aa45d5559ef1adf35"},
+]
+Faker = [
+    {file = "Faker-14.2.1-py3-none-any.whl", hash = "sha256:2e28aaea60456857d4ce95dd12aed767769537ad23d13d51a545cd40a654e9d9"},
+    {file = "Faker-14.2.1.tar.gz", hash = "sha256:daad7badb4fd916bd047b28c8459ef4689e4fe6acf61f6dfebee8cc602e4d009"},
 ]
 future = [
     {file = "future-0.18.2.tar.gz", hash = "sha256:b1bead90b70cf6ec3f0710ae53a525360fa360d306a86583adc6bf83a4db537d"},
