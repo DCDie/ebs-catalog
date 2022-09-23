@@ -67,7 +67,7 @@ class ProductAdmin(admin.ModelAdmin):
         'language',
         'price',
         'rating',
-        'attachments',
+        'attachment',
         'created_at',
         'modified_at'
     )
