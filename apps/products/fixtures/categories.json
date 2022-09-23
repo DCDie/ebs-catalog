@@ -1,0 +1,5618 @@
+{
+  "Electrocasnice": {
+    "languages": {
+      "ro": {
+        "title": "Electrocasnice"
+      },
+      "ru": {
+        "title": "Бытовая техника"
+      }
+    },
+    "children": [
+      {
+        "Frigidere": {
+          "languages": {
+            "ro": {
+              "title": "Frigidere"
+            },
+            "ru": {
+              "title": "Холодильники"
+            }
+          }
+        }
+      },
+      {
+        "Mașini de spălat rufe": {
+          "languages": {
+            "ro": {
+              "title": "Mașini de spălat rufe"
+            },
+            "ru": {
+              "title": "Стиральные машины"
+            }
+          }
+        }
+      },
+      {
+        "Mașini de spălat rufe cu uscător": {
+          "languages": {
+            "ro": {
+              "title": "Mașini de spălat rufe cu uscător"
+            },
+            "ru": {
+              "title": "Стиральные машины с сушкой"
+            }
+          }
+        }
+      },
+      {
+        "Mașini de uscat rufe": {
+          "languages": {
+            "ro": {
+              "title": "Mașini de uscat rufe"
+            },
+            "ru": {
+              "title": "Сушильные машины"
+            }
+          }
+        }
+      },
+        {
+        "Aragaze": {
+          "languages": {
+            "ro": {
+              "title": "Aragaze"
+            },
+            "ru": {
+              "title": "Плиты"
+            }
+          }
+        }
+      },
+      {
+        "Mașini de spălat vase": {
+          "languages": {
+            "ro": {
+              "title": "Mașini de spălat vase"
+            },
+            "ru": {
+              "title": "Посудомоечные машины"
+            }
+          }
+        }
+      },
+      {
+        "Hote": {
+          "languages": {
+            "ro": {
+              "title": "Hote"
+            },
+            "ru": {
+              "title": "Вытяжки"
+            }
+          }
+        }
+      },
+      {
+        "Cuptoare cu microunde": {
+          "languages": {
+            "ro": {
+              "title": "Cuptoare cu microunde"
+            },
+            "ru": {
+              "title": "Микроволновые печи"
+            }
+          }
+        }
+      },
+      {
+        "Cuptoare electrice": {
+          "languages": {
+            "ro": {
+              "title": "Cuptoare electrice"
+            },
+            "ru": {
+              "title": "Электрические печи"
+            }
+          }
+        }
+      },
+      {
+        "Congelatoare": {
+          "languages": {
+            "ro": {
+              "title": "Congelatoare"
+            },
+            "ru": {
+              "title": "Морозильники"
+            }
+          }
+        }
+      },
+      {
+        "Lăzi frigorifice": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Plite de masă": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Accesorii pentru mașini de spălat și uscat rufe": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Uscătoare de fructe și legume": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Aparate de vidat": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Blendere": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Multicooker": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Râșnițe": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Ceainice electrice": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Aparatele de cafea": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Feliatoare": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Accesorii pentru multicookere": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Mixere de bucătărie": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Mașini de tocat carne": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Procesoare și roboți de bucătărie": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Grătare electrice": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Cântare de bucătărie": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Prăjitoare de pâine (toaster)": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Mașini de copt pâine": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "ThermoPot": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Prăjitoare de sandwich-uri & waffe": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Storcătoare de fructe & legume": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Filtre de apă": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Aspiratoare cu sac": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Aspiratoare cu container": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Aspiratoare robot": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Aspiratoare verticale": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Accesorii pentru aspiratoare": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Fiare de călcat": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Stații de călcat": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Vaporizatoare": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Coșuri pentru rufe": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Uscătoare de rufe": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Mese de călcat": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Containere izotermice": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Genți frigorifice": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Genți termice": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Aparate de curățat scame": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Mașini de cusut": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Generatoare de aburi": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Test încorporabile": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Plite încorporabile": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Cuptoare incorporabile": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Mașini de spălat vase încorporabile": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Hote încorporabile": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Cuptoare cu microunde încorporabile": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Detergenți": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Balsamuri": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Soluții de curățare": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Apă distilată": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Cafea boabe": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Cafea măcinată": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Cafea capsule": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Infuzoare": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Tigăi": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Cratițe": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Polonice": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Capace": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Containere alimentare": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Teluri": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Ibrice": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Cuțite": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Răzători": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Clești": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Spatule": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Pensule culinare": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Căni și cești": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Pahare": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "Climatizare": {
+    "languages": {
+      "ro": {
+        "title": "Climatizare"
+      },
+      "ru": {
+        "title": "Климатическая техника"
+      }
+    },
+    "children": [
+      {
+        "Umidificatoare de aer": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Purificatoare de aer": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Dezumidificatoare": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Boilere cu acumulare": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Încălzitoare de apă instant": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Încălzitoare cu ventilator": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Încălzitoare infraroșii": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Calorifere electrice cu ulei": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Convectoare": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Șeminee electrice": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Ventilatoare de masă": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Ventilatoare de podea": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Ventilatoare Turn": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Ventilatoare portabile": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "Televizoare": {
+    "languages": {
+      "ro": {
+        "title": "Televizoare"
+      },
+      "ru": {
+        "title": "Телевизоры"
+      }
+    },
+    "children": [
+      {
+        "TV 8K": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "TV 4K": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "TV QNED": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "TV NanoCell": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "TV QLED": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "TV OLED": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Smart TV": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Android TV": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Soundbar": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Sisteme audio 2.0": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Sisteme audio 2.1": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Sisteme audio 3.1": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Sisteme audio 5.1": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Media playere": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Suporturi TV": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Cinematograf online": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "Telefoane, Laptopuri și Tablete": {
+    "languages": {
+      "ro": {
+        "title": "Telefoane, Laptopuri și Tablete"
+      },
+      "ru": {
+        "title": "Телефоны, Ноутбуки и Планшеты"
+      }
+    },
+    "children": [
+      {
+        "Ultrabook-uri": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Laptopuri gaming": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Laptopuri business": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Laptopuri personale": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Tablete": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Cărți electronice": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Tablete grafice": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Telefoane staționare": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Sisteme de operare": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Antivirus": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Suite Office": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "HDD extern": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Memorii USB": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Încărcătoare": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Mouse-uri": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Căști": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Huse": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Suporturi de răcire (coolere)": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Cartele de memorie": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Baterii externe": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Stilusuri pentru tablete": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Folii protecție din sticlă": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Selfie stick-uri": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Сăşti": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Acumulatoare externe": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Adaptoare": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Cabluri GSM": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Genți pentru laptop": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Rucsacuri": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "Îngrijire personală și sănătate": {
+    "languages": {
+      "ro": {
+        "title": "Îngrijire personală și sănătate"
+      },
+      "ru": {
+        "title": "Красота и здоровье"
+      }
+    },
+    "children": [
+      {
+        "Uscătoare de păr": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Perii rotative": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Ondulatoare": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Plăci de îndreptat părul": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Aparate de ras": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Trimmer facial": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Trimmere de nas şi urechi": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Aparate de tuns": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Epilatoare": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Aparate de masaj": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Periuțe de dinți electrice": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Cântare de podea": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Aparate de îngrijire facială": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Oglinzi": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Manichiură și pedichiură": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Vibratoare": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Vibrostimulatoare": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Jucării Anale": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Bile Vaginale": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Dildo-uri": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Seturi jucării pentru adulți": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Lubrifianți": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Masturbatoare": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Lenjerie sexy": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Inele pentru penis": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Accesorii BDSM": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "PC și periferice": {
+    "languages": {
+      "ro": {
+        "title": "PC și periferice"
+      },
+      "ru": {
+        "title": "Компьютеры и Периферия"
+      }
+    },
+    "children": [
+      {
+        "Home and Office PC": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Gaming PC": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Mini PC": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "All-in-One PC": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Monitoare": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Tastaturi": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Mouse-uri": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Mousepad": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Microfoane": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Camere web": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Memorii USB": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "HDD extern": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "UPS": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Suporturi pentru monitoare": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Carcase pentru unități de stocare": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Dispozitive de stocare HDD": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Dispozitive de stocare SSD": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Procesoare": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Plăci video": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Plăci de bază": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Memorie operativă": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Surse de alimentare": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Coolere": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Carcase": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Pastă termoconductoare": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Switch": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Routere Wireless": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Wireless access point": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Adaptoare LAN": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "NAS": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Extendere": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Ecrane de proiecție": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Fundaluri foto": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Table interactive": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Imprimante": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Multifuncționale": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Proiectoare": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Imprimante 3D": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Accesorii pentru imprimare 3D": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Sisteme de operare": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Antivirus": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Suite Office": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Cinematograf online": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "For Gamers": {
+    "languages": {
+      "ro": {
+        "title": "For Gamers"
+      },
+      "ru": {
+        "title": "Для Геймеров"
+      }
+    },
+    "children": [
+      {
+        "Unitate PC": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Monitoare": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Tastaturi ": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Mouse-uri": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Mousepad-uri": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Căști": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Controller": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Scaune": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Console": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Accesorii": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Jocuri": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "Audio": {
+    "languages": {
+      "ro": {
+        "title": "Audio"
+      },
+      "ru": {
+        "title": "Аудиотехника"
+      }
+    },
+    "children": [
+      {
+        " Wireless": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Cu fir": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Sport": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Gaming": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Cu microfon": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Boxe portabile": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Boxe smart": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Boxe pentru Party": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Soundbar": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Sisteme audio 2.0": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Sisteme audio 2.1": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Sisteme audio 5.1": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "Gadgeturi, Foto și Turism": {
+    "languages": {
+      "ro": {
+        "title": "Gadgeturi, Foto și Turism"
+      },
+      "ru": {
+        "title": "Гаджеты, Фото и Туризм"
+      }
+    },
+    "children": [
+      {
+        "Smartwatch-uri": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Brățări fitness": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Ceasuri smart pentru copii": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Accesorii": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Dispozitive de testare": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Smart Trackers": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Huse pentru smart trackere": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Light Control": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Media playere": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Senzori smart": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Lămpi": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Benzi LED": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Lămpi circulare": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Becuri": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Lanterne": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Lămpi anti insecte": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Camere de supraveghere": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Camere video": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Camere foto": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Camere action": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Obiective foto": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Accesorii foto și video": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Accesorii pentru camerе action": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Drone": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Ochelari VR": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Accesorii AR": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Telescoape": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Microscoape": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Binocluri": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Lunete": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Narghilele electronice": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "IQOS": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Lil": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Genți pentru călătorii": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Rucsacuri": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "Construcție și reparații": {
+    "languages": {
+      "ro": {
+        "title": "Construcție și reparații"
+      },
+      "ru": {
+        "title": "Строительство и ремонт"
+      }
+    },
+    "children": [
+      {
+        "Mașini de găurit si inșurubat": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Mașini de înfiletat și desfiletat": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Ciocane rotopercutoare": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Ciocane demolatoare": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Polizoare unghiulare": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Foarfece electric pentru metal": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Fierăstraie pentru decupat": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Fierăstraie circulare": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Fierăstraie pentru tăieri înclinate": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Fierăstraie cu sabie": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Agitatoare (mixere)": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Freze": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Aspiratoare industriale și sisteme de aspirare": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Rindele": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Suflante cu aer cald": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Aerografe": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Mașini de lustruit": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Aparate de spălat cu presiune": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Mașini de șlefuit": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Mașini de tăiat gresie și faianțănew": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Aparate de sudat": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Betoniere": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Scări": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Roabe": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Seturi șurubelnițe": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Seturi chei": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Seturi scule": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Toolboxes": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Ciocane": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Topoare": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Dreptare": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Fierăstraie manualenew": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Freze manualenew": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "Casă și grădină": {
+    "languages": {
+      "ro": {
+        "title": "Casă și grădină"
+      },
+      "ru": {
+        "title": "Дом и сад"
+      }
+    },
+    "children": [
+      {
+        "Pentru Copii": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Jacuzzi": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Piscine cu perete rigid": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Piscine cu cadru": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Accesorii pentru piscine": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Electrice": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Cu acumulator": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Pe benzină": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Robot": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Tocătoare de grădină": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Fierăstraie cu lanț": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Suflante pentru frunze": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Pulverizatoare": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Motocultoare": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Mașini de tuns gard viu": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Motoburghie (foreze)": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Despicatoare de lemnenew": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Fotolii de birou": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Mese de birou": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Mese de bucătărie": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Scaune de bucătărie": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Taburete": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Fotolii pentru living": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Canapele pentru living": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Măsuțe de cafea": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Cuiere pentru haine": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Saltele ortopedice": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Leagăne de grădină": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Scaune și fotolii de grădină": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Mese de grădină": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Umbrele de grădină": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Seturi mobilă grădină": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Brazi de crăciun": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Jucarii de brad": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Focuri de artificii": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Ghirlande LED": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Motopompe": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Pompe submersibile": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Pompe de suprăfață": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Filtrarea piscinelor": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Scări": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Iluminare": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Generatoare de clor": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Covorașe sub piscină": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Acoperire pentru piscine": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Pompe": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Zdrobitoare pentru strugurinew": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Teascuri pentru strugurinew": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Căzi pentru vinnew": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Butoaie pentru vinnew": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "Produse Auto": {
+    "languages": {
+      "ro": {
+        "title": "Produse Auto"
+      },
+      "ru": {
+        "title": "Автотовары"
+      }
+    },
+    "children": [
+      {
+        "Pentru autoturisme": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Pentru camioane": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Pentru camionete": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Industriale": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Agricole": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Pentru SUV-uri (Off Road)": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "De iarnă": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "De vară": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "All Season": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Uleiuri de motor": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Uleiuri de transmisie": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Lichid de frână": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Antigel": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Polaritatea inversă ": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Polaritatea directă": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Covorașe auto": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Paravânturi auto": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Ștergătoare de parbriz": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Stingătoare": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Cricuri auto": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Compresoare auto": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Încărcătoare și redresoare auto": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Invertoare de tensiunenew": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Mașini de spălat cu presiune": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Test auto": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Camere Auto": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Căști Handsfree": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "FM modulatoare": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Cabluri și adaptoare GSM": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        " Cartele de memorie": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Suporturi auto": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Playere auto": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "Copii și bebeluși": {
+    "languages": {
+      "ro": {
+        "title": "Copii și bebeluși"
+      },
+      "ru": {
+        "title": "Дети и младенцы"
+      }
+    },
+    "children": [
+      {
+        "Mașinuțe": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Figurine": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Jucării antistres": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Constructori": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Jucării pentru bebeluși": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Jucării interactive": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Jucării electrice": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Elicoptere şi Avioane": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Puzzle": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Roboți": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Jocuri de masă": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Tobogane": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Trambuline": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Căsuțe pentru copii": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Balansoare": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Biciclete": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Biciclete fără pedale": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Triciclete": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Trotinete pentru copii": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Motociclete pentru copii": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Tolocare": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Saltele pentru copii": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Perne pentru bebeluși": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Lenjerie de pat pentru copii": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Babynest": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Scutece pentru copii": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Șervețele umede bebelușinew": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Genți pentru mămici": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Tablouri pe numere": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Ghiozdane pentru școală": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Ghiozdane pentru fete": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Ghiozdane pentru băieți": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "Sport și Agrement": {
+    "languages": {
+      "ro": {
+        "title": "Sport și Agrement"
+      },
+      "ru": {
+        "title": "Спорт и Отдых"
+      }
+    },
+    "children": [
+      {
+        "Biciclete": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Biciclete pentru copii": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Triciclete": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Trotinete pentru copii": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Role": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Trotinete": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Hoverboard-uri": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Motociclete pentru copii": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Pentru Copii": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Piscine cu cadru": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Piscine cu perete rigid": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Jacuzzi": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Filtrarea piscinelor": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Scări": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Iluminare": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Generatoare de clor": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Covorașe sub piscină": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Acoperire pentru piscine": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Pompe": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Benzi de alergat": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Biciclete eliptice": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Bicicletе fitness": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Steppere": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Aparate de vâslit": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Proteine": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Vitamine și minerale": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Aminoacizi": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Arzătoare de grăsime": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Creatină": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Energizante": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Băuturi izotonice": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Gainere": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Condroprotectoare": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Antioxidanți": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Batoane proteice": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Complexe preantrenament": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Stimulatoare de testosteron": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Bărci gonflabile": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Saltele și paturi gonflabile": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Corturi": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Saci de dormit": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Accesorii pentru înot": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      },
+      {
+        "Genți pentru călătorii": {
+          "languages": {
+            "ro": {
+              "title": "Test"
+            },
+            "ru": {
+              "title": "Тест"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

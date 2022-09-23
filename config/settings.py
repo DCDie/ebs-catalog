@@ -1,21 +1,22 @@
-import os
 from pathlib import Path
 
-from dotenv import load_dotenv
+from dotenv import dotenv_values
 
-load_dotenv()
+config = dotenv_values(".env")
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = config.get('SECRET_KEY')
 
-DEBUG = os.getenv('DEBUG')
+DEBUG = config.get('DEBUG').lower() in ['true', '1']
 
 ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
+    # Jazzmin
     'jazzmin',
 
+    # Django apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -23,16 +24,19 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # Third-party apps
     'drf_yasg',
     'rest_framework',
+    'auditlog',
     'django_json_widget',
 
+    # Project apps
     'apps.common',
     'apps.products',
-
 ]
 
 MIDDLEWARE = [
+    # Django middlewares
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -40,6 +44,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    # Third party middlewares
+    'auditlog.middleware.AuditlogMiddleware',
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -65,11 +72,11 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.getenv('NAME'),
-        'USER': os.getenv('USER'),
-        'PASSWORD': os.getenv('PASSWORD'),
-        'HOST': os.getenv('HOST'),
-        'PORT': os.getenv('PORT'),
+        'NAME': config.get('NAME'),
+        'USER': config.get('USER'),
+        'PASSWORD': config.get('PASSWORD'),
+        'HOST': config.get('HOST'),
+        'PORT': config.get('PORT'),
     }
 }
 
@@ -96,7 +103,11 @@ USE_I18N = True
 
 USE_TZ = True
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATIC_ROOT = Path(BASE_DIR, 'static')
+
+MEDIA_URL = '/media/files/'
+MEDIA_ROOT = Path(BASE_DIR, 'media/files/')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
@@ -105,12 +116,36 @@ JAZZMIN_SETTINGS = {
         "auth": "fas fa-users-cog",
         "auth.user": "fas fa-user",
         "auth.Group": "fas fa-users",
-        "products.Category": "fas fa-list-ol",
-        "products.Product": "fas fa-list-ol",
-        "products.Comment": "fas fa-envelope",
+        "products.Category": "fas fa-list-alt",
+        "products.Product": "fa fa-box",
+        "products.Comment": "fas fa-comment-dots",
         "products.Shop": "fas fa-city",
-        "products.ProductShop": "fas fa-list-ol",
-        "products.Brand": "fas fa-list-ol",
+        "products.ShopProduct": "fas fa-shopping-cart",
+        "products.Brand": "fas fa-copyright",
+        "products.ShopCategory": "fa fa-store",
         "products.Attachment": "fas fa-file-alt",
+        "auditlog.LogEntry": "fas fa-clipboard-list",
     },
 }
+
+if DEBUG:
+    MIDDLEWARE = ['debug_toolbar.middleware.DebugToolbarMiddleware'] + MIDDLEWARE
+    INSTALLED_APPS += ['debug_toolbar']
+
+    INTERNAL_IPS = [
+        '127.0.0.1',
+
+    ]
+
+    DEBUG_TOOLBAR_PANELS = [
+        'debug_toolbar.panels.history.HistoryPanel',
+        'debug_toolbar.panels.timer.TimerPanel',
+        'debug_toolbar.panels.sql.SQLPanel',
+        'debug_toolbar.panels.cache.CachePanel',
+        'debug_toolbar.panels.signals.SignalsPanel',
+        'debug_toolbar.panels.logging.LoggingPanel',
+    ]
+
+    DEBUG_TOOLBAR_CONFIG = {
+        'RENDER_PANELS': False
+    }

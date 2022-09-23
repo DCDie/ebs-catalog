@@ -5,7 +5,7 @@ from apps.products.models import (
     Comment,
     Shop,
     Attachment,
-    ProductShop,
+    ShopProduct,
     Product,
     Brand
 )
@@ -47,7 +47,7 @@ class AttachmentSerializer(ModelSerializer):
 
 class ProductShopSerializer(ModelSerializer):
     class Meta:
-        model = ProductShop
+        model = ShopProduct
         fields = '__all__'
 
 

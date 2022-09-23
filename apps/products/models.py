@@ -1,5 +1,6 @@
 from pathlib import Path
 
+from auditlog.registry import auditlog
 from django.contrib.auth import get_user_model
 from django.core.validators import (
     MaxValueValidator,
@@ -12,11 +13,12 @@ from apps.common.models import BaseModel
 __all__ = [
     'Comment',
     'Category',
-    'ProductShop',
+    'ShopProduct',
     'Product',
     'Shop',
     'Attachment',
     'Brand',
+    'ShopCategory'
 ]
 
 User = get_user_model()
@@ -27,12 +29,13 @@ class Category(BaseModel):
         max_length=155
     )
     parent = models.ForeignKey(
-        'self',
+        to='self',
         on_delete=models.SET_NULL,
         null=True,
-        blank=True
+        blank=True,
+        related_name='children'
     )
-    language = models.JSONField(
+    languages = models.JSONField(
         blank=True,
         null=True
     )
@@ -55,7 +58,7 @@ class Product(BaseModel):
         max_length=155
     )
     category = models.ForeignKey(
-        Category,
+        to=Category,
         on_delete=models.CASCADE,
     )
     description = models.TextField()
@@ -67,7 +70,7 @@ class Product(BaseModel):
         max_digits=9,
         decimal_places=2
     )
-    language = models.JSONField(
+    languages = models.JSONField(
         blank=True,
         null=True
     )
@@ -85,6 +88,11 @@ class Product(BaseModel):
         related_name='product_attachment',
         blank=True
     )
+    verified = models.BooleanField(
+        blank=True,
+        null=True,
+        default=False
+    )
 
     class Meta:
         verbose_name = 'Product'
@@ -97,13 +105,13 @@ class Product(BaseModel):
 class Comment(BaseModel):
     text = models.TextField()
     product = models.ForeignKey(
-        Product,
+        to=Product,
         on_delete=models.CASCADE,
         blank=True,
         null=True
     )
     shop = models.ForeignKey(
-        'Shop',
+        to='Shop',
         on_delete=models.SET_NULL,
         blank=True,
         null=True
@@ -114,7 +122,7 @@ class Comment(BaseModel):
         blank=True,
         on_delete=models.CASCADE
     )
-    language = models.JSONField(
+    languages = models.JSONField(
         blank=True,
         null=True
     )
@@ -148,7 +156,7 @@ class Shop(BaseModel):
         null=True,
         blank=True
     )
-    language = models.JSONField(
+    languages = models.JSONField(
         blank=True,
         null=True
     )
@@ -166,7 +174,7 @@ class Shop(BaseModel):
         return self.title
 
 
-class ProductShop(BaseModel):
+class ShopProduct(BaseModel):
     title = models.CharField(
         max_length=155
     )
@@ -186,16 +194,34 @@ class ProductShop(BaseModel):
         related_name='product_shop_attachment'
     )
     shop = models.ForeignKey(
-        Shop,
+        to=Shop,
         on_delete=models.CASCADE
     )
-    language = models.JSONField(
+    languages = models.JSONField(
         blank=True,
         null=True
     )
     product = models.ForeignKey(
-        Product,
-        on_delete=models.CASCADE
+        to=Product,
+        on_delete=models.CASCADE,
+        blank=True,
+        null=True
+    )
+    shop_category = models.ForeignKey(
+        to='ShopCategory',
+        on_delete=models.CASCADE,
+    )
+    category = models.ForeignKey(
+        to=Category,
+        on_delete=models.CASCADE,
+        related_name='product_shop',
+        null=True,
+        blank=True
+    )
+    verified = models.BooleanField(
+        blank=True,
+        null=True,
+        default=False
     )
 
     class Meta:
@@ -211,15 +237,54 @@ class Brand(BaseModel):
         max_length=155,
     )
     parent = models.ForeignKey(
-        'self',
+        to='self',
         blank=True,
         null=True,
-        on_delete=models.CASCADE
+        on_delete=models.CASCADE,
+        related_name='children'
     )
-    language = models.JSONField(
+    languages = models.JSONField(
         blank=True,
         null=True
     )
+
+    class Meta:
+        verbose_name = 'Brand'
+        verbose_name_plural = 'Brands'
+
+    def __str__(self):
+        return self.title
+
+
+class ShopCategory(BaseModel):
+    name = models.CharField(
+        max_length=155
+    )
+    shop = models.ForeignKey(
+        to=Shop,
+        on_delete=models.CASCADE
+    )
+    category = models.ForeignKey(
+        to=Category,
+        on_delete=models.CASCADE,
+        blank=True,
+        null=True
+    )
+    parent = models.ForeignKey(
+        to='self',
+        on_delete=models.CASCADE,
+        blank=True,
+        null=True,
+        related_name='children'
+    )
+
+    class Meta:
+        verbose_name = 'Shop category'
+        verbose_name_plural = 'Shop categories'
+        unique_together = ['shop', 'name']
+
+    def __str__(self):
+        return self.name
 
 
 class Attachment(BaseModel):
@@ -238,7 +303,7 @@ class Attachment(BaseModel):
         blank=True,
         null=True
     )
-    language = models.JSONField(
+    languages = models.JSONField(
         blank=True,
         null=True
     )
@@ -255,3 +320,12 @@ class Attachment(BaseModel):
         self.file_size = self.file_url.size
         self.extension = Path(self.file_url.name).suffix
         super(Attachment, self).save(force_insert, force_update, using, update_fields)
+
+
+# Register models to auditlog
+auditlog.register(Brand)
+auditlog.register(ShopProduct)
+auditlog.register(Shop)
+auditlog.register(Product)
+auditlog.register(Category)
+auditlog.register(ShopCategory)

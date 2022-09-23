@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.contrib import admin
 from django.urls import (
     path,
@@ -20,6 +21,12 @@ schema_view = get_schema_view(
 # noinspection PyUnresolvedReferences
 urlpatterns = [
     path('', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
-    path('admin/', admin.site.urls),
     path('', include('apps.products.urls')),
+    path('admin/', admin.site.urls),
+
 ]
+
+if settings.DEBUG:
+    urlpatterns = [
+                      path('debug/', include('debug_toolbar.urls')),
+                  ] + urlpatterns
