@@ -32,7 +32,7 @@ class TaskApiTestCase(TestCase):
         data = {
             "title": "tryrghty",
         }
-        response = self.client.post(f'/brands/', content_type='application/json', data=data)
+        response = self.client.post('/brands/', content_type='application/json', data=data)
         self.assertEqual(response.status_code, 201)
 
     def test_update_brands(self):
@@ -135,10 +135,10 @@ class TaskApiTestCase(TestCase):
             "verified": True,
             "category": category.id,
         }
-        response = self.client.post(f'/products/', content_type='application/json', data=data)
+        response = self.client.post('/products/', content_type='application/json', data=data)
         self.assertEqual(response.status_code, 201)
 
-    def test_products_partical_updates(self):
+    def test_products_partial_update(self):
         category = Category.objects.create(title='Test')
         product = Product.objects.create(title='Test', category=category, description='Test', price=10, rating=0,
                                          verified='True',
