@@ -1,4 +1,5 @@
 from pathlib import Path
+from faker import Faker
 
 import requests
 from django.core.files import File
@@ -6,6 +7,8 @@ from django.test import TestCase
 from rest_framework.status import HTTP_200_OK, HTTP_204_NO_CONTENT
 
 from apps.products.models import Attachment, Brand, Product, Category, Shop, Comment, ShopCategory, ShopProduct
+
+fake = Faker()
 
 
 class TaskApiTestCase(TestCase):
@@ -30,7 +33,7 @@ class TaskApiTestCase(TestCase):
 
     def test_create_brands(self):
         data = {
-            "title": "tryrghty",
+            'title': fake.sentence()
         }
         response = self.client.post('/brands/', content_type='application/json', data=data)
         self.assertEqual(response.status_code, 201)
@@ -38,7 +41,7 @@ class TaskApiTestCase(TestCase):
     def test_update_brands(self):
         brand = Brand.objects.create(title='Test', languages='Test')
         data = {
-            "title": "tryrty",
+            "title": fake.sentence(),
         }
         response = self.client.put(f'/brands/{brand.id}/', content_type='application/json', data=data)
         self.assertEqual(response.status_code, HTTP_200_OK)
@@ -51,7 +54,7 @@ class TaskApiTestCase(TestCase):
     def test_partical_update_brands(self):
         brand = Brand.objects.create(title='Test', languages='Test')
         data = {
-            "title": "hdhhdh",
+            "title": fake.sentence()
         }
         response = self.client.patch(f'/brands/{brand.id}/', content_type='application/json', data=data)
         self.assertEqual(response.status_code, HTTP_200_OK)
@@ -63,7 +66,7 @@ class TaskApiTestCase(TestCase):
     def test_get_category_create(self):
         data = {
 
-            "title": "afsff",
+            "title": fake.sentence()
 
         }
         response = self.client.post('/categories/', content_type='application/json', data=data)
@@ -77,7 +80,7 @@ class TaskApiTestCase(TestCase):
     def test_update_category(self):
         category = Category.objects.create(title='Test', languages='Test')
         data = {
-            "title": "tryrty",
+            "title": fake.sentence()
 
         }
         response = self.client.put(f'/categories/{category.id}/', content_type='application/json', data=data)
@@ -86,7 +89,7 @@ class TaskApiTestCase(TestCase):
     def test_partical_update_category(self):
         category = Category.objects.create(title='Test', languages='Test')
         data = {
-            "title": "tryrty",
+            "title": fake.sentence()
 
         }
         response = self.client.patch(f'/categories/{category.id}/', content_type='application/json', data=data)
@@ -110,13 +113,13 @@ class TaskApiTestCase(TestCase):
 
     def test_products_products(self):
         category = Category.objects.create(title='Test')
-        product = Product.objects.create(title='Test', category=category, description='Test', price=10, rating=0,
+        product = Product.objects.create(title='Test', category=category, description='Test', price=10, rating=2,
                                          verified='True',
                                          specification='Test', languages='Test')
         data = {
-            'title': 'sdfsdg',
-            "description": "dgfgfddddd",
-            "price": 10,
+            'title': fake.sentence(),
+            "description": fake.sentence(),
+            "price": fake.random_number(),
             "rating": 5,
             "verified": True,
             "category": category.id,
@@ -128,8 +131,8 @@ class TaskApiTestCase(TestCase):
     def test_create_products(self):
         category = Category.objects.create(title='Test')
         data = {
-            "title": "tryrghty",
-            "description": "dgfgfddddd",
+            "title": fake.sentence(),
+            "description": fake.sentence(),
             "price": 10,
             "rating": 5,
             "verified": True,
@@ -144,9 +147,9 @@ class TaskApiTestCase(TestCase):
                                          verified='True',
                                          specification='Test', languages='Test')
         data = {
-            'title': 'sdfsdg',
-            "description": "dgfgfddddd",
-            "price": 10,
+            'title': fake.sentence(),
+            "description": fake.sentence(),
+            "price": fake.random_number(),
             "rating": 5,
             "verified": True,
             "category": category.id,
@@ -176,7 +179,7 @@ class TaskApiTestCase(TestCase):
 
         data = {
 
-            "text": "afsff",
+            "text": fake.sentence(),
             "rating": 5,
             'product': product.id,
             'shop': shop.id,
@@ -203,7 +206,7 @@ class TaskApiTestCase(TestCase):
         shop = Shop.objects.create(title='Test', description='Test')
         comment = Comment.objects.create(text='Title', rating=0, product=product, shop=shop)
         data = {
-            "text": "afsff",
+            "text": fake.sentence(),
             "rating": 5,
             'product': product.id,
             'shop': shop.id,
@@ -220,7 +223,7 @@ class TaskApiTestCase(TestCase):
         shop = Shop.objects.create(title='Test', description='Test')
         comment = Comment.objects.create(text='Title', rating=0, product=product, shop=shop)
         data = {
-            "text": "afsff",
+            "text": fake.sentence(),
             "rating": 5,
             'product': product.id,
             'shop': shop.id,
@@ -245,8 +248,8 @@ class TaskApiTestCase(TestCase):
 
     def test_shop_create(self):
         data = {
-            "title": "string",
-            "description": "string",
+            "title": fake.sentence(),
+            "description": fake.sentence(),
 
         }
         response = self.client.post('/shops/', content_type='application/json', data=data)
@@ -260,8 +263,8 @@ class TaskApiTestCase(TestCase):
     def test_shop_update(self):
         shop = Shop.objects.create(title='Test', description='Test')
         data = {
-            "title": "string",
-            "description": "string",
+            "title": fake.sentence(),
+            "description": fake.sentence(),
         }
         response = self.client.put(f'/shops/{shop.id}/', content_type='application/json', data=data)
         self.assertEqual(HTTP_200_OK, response.status_code)
@@ -269,8 +272,8 @@ class TaskApiTestCase(TestCase):
     def test_shop__upddate(self):
         shop = Shop.objects.create(title='Test', description='Test')
         data = {
-            "title": "string",
-            "description": "string",
+            "title": fake.sentence(),
+            "description": fake.sentence(),
         }
         response = self.client.patch(f'/shops/{shop.id}/', content_type='application/json', data=data)
         self.assertEqual(HTTP_200_OK, response.status_code)
@@ -304,8 +307,8 @@ class TaskApiTestCase(TestCase):
             file_url=File(open(Path("apps\\products\\fixtures\\test.pdf").as_posix(), 'rb'))
         )
         data = {
-            "title": "string",
-            "price": 4,
+            "title": fake.sentence(),
+            "price": fake.random_number(),
             "available": True,
             "shop": shop.id,
             "product": product.id,
@@ -337,8 +340,8 @@ class TaskApiTestCase(TestCase):
         shop_product = ShopProduct.objects.create(title='Test', price=7, available=True,
                                                   shop=shop, shop_category=shop_category)
         data = {
-            "title": "string",
-            "price": 4,
+            "title": fake.sentence(),
+            "price": fake.random_number(),
             "available": True,
             "shop": shop.id,
             "product": product.id,
@@ -371,8 +374,8 @@ class TaskApiTestCase(TestCase):
         shop_product = ShopProduct.objects.create(title='Test', price=7, available=True,
                                                   shop=shop, shop_category=shop_category)
         data = {
-            "title": "string",
-            "price": 4,
+            "title": fake.sentence(),
+            "price": fake.random_number(),
             "available": True,
             "shop": shop.id,
             "product": product.id,
