@@ -1,0 +1,2 @@
+[run]
+command_line = manage.py test

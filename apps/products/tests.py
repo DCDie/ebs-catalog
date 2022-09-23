@@ -310,7 +310,7 @@ class TaskApiTestCase(TestCase):
             "shop": shop.id,
             "product": product.id,
             "shop_category": shop_category.id,
-            "attachment": [attachment.id],
+            "attachments": [attachment.id],
 
         }
         response = self.client.post('/shop_products/', content_type='application/json', data=data)
@@ -343,7 +343,7 @@ class TaskApiTestCase(TestCase):
             "shop": shop.id,
             "product": product.id,
             "shop_category": shop_category.id,
-            "attachment": [attachment.id],
+            "attachments": [attachment.id],
 
         }
 
