@@ -6,7 +6,8 @@ from django.core.files import File
 from django.test import TestCase
 from rest_framework.status import (
     HTTP_200_OK,
-    HTTP_204_NO_CONTENT)
+    HTTP_204_NO_CONTENT
+)
 
 from apps.products.models import (
     Attachment,
@@ -76,9 +77,7 @@ class TaskApiTestCase(TestCase):
 
     def test_get_category_create(self):
         data = {
-
             "title": fake.sentence()
-
         }
         response = self.client.post('/categories/', content_type='application/json', data=data)
         self.assertEqual(response.status_code, 201)
@@ -92,7 +91,6 @@ class TaskApiTestCase(TestCase):
         category = Category.objects.create(title=fake.sentence())
         data = {
             "title": fake.sentence()
-
         }
         response = self.client.put(f'/categories/{category.id}/', content_type='application/json', data=data)
         self.assertEqual(response.status_code, HTTP_200_OK)
@@ -101,7 +99,6 @@ class TaskApiTestCase(TestCase):
         category = Category.objects.create(title=fake.sentence())
         data = {
             "title": fake.sentence()
-
         }
         response = self.client.patch(f'/categories/{category.id}/', content_type='application/json', data=data)
         self.assertEqual(response.status_code, HTTP_200_OK)
@@ -182,7 +179,6 @@ class TaskApiTestCase(TestCase):
             "rating": 5,
             "verified": True,
             "category": category.id,
-
         }
         response = self.client.patch(f'/products/{product.id}/', content_type='application/json', data=data)
         self.assertEqual(response.status_code, HTTP_200_OK)
@@ -222,12 +218,10 @@ class TaskApiTestCase(TestCase):
         )
 
         data = {
-
             "text": fake.sentence(),
             "rating": 5,
             'product': product.id,
             'shop': shop.id,
-
         }
         response = self.client.post('/comments/', content_type='application/json', data=data)
         self.assertEqual(response.status_code, 201)
@@ -244,8 +238,12 @@ class TaskApiTestCase(TestCase):
             specification='Test',
             languages='Test'
         )
-        shop = Shop.objects.create(title=fake.sentence(), description=fake.sentence())
-        comment = Comment.objects.create(text='Title', rating=0, product=product, shop=shop)
+        shop = Shop.objects.create(title=fake.sentence(),
+                                   description=fake.sentence())
+        comment = Comment.objects.create(text=fake.sentence(),
+                                         rating=0,
+                                         product=product,
+                                         shop=shop)
         response = self.client.get(f'/comments/{comment.id}/')
         self.assertEqual(response.status_code, HTTP_200_OK)
 
@@ -260,14 +258,17 @@ class TaskApiTestCase(TestCase):
             verified='True',
             specification='Test'
         )
-        shop = Shop.objects.create(title=fake.sentence(), description=fake.sentence())
-        comment = Comment.objects.create(text='Title', rating=0, product=product, shop=shop)
+        shop = Shop.objects.create(title=fake.sentence(),
+                                   description=fake.sentence())
+        comment = Comment.objects.create(text=fake.sentence(),
+                                         rating=0,
+                                         product=product,
+                                         shop=shop)
         data = {
             "text": fake.sentence(),
             "rating": 5,
             'product': product.id,
             'shop': shop.id,
-
         }
         response = self.client.put(f'/comments/{comment.id}/', content_type='application/json', data=data)
         self.assertEqual(response.status_code, HTTP_200_OK)
@@ -283,14 +284,18 @@ class TaskApiTestCase(TestCase):
             verified='True',
             specification='Test'
         )
-        shop = Shop.objects.create(title=fake.sentence(), description=fake.sentence())
-        comment = Comment.objects.create(text='Title', rating=0, product=product, shop=shop)
+        shop = Shop.objects.create(
+            title=fake.sentence(),
+            description=fake.sentence())
+        comment = Comment.objects.create(text=fake.sentence(),
+                                         rating=0,
+                                         product=product,
+                                         shop=shop)
         data = {
             "text": fake.sentence(),
             "rating": 5,
             'product': product.id,
             'shop': shop.id,
-
         }
         response = self.client.patch(f'/comments/{comment.id}/', content_type='application/json', data=data)
         self.assertEqual(response.status_code, HTTP_200_OK)
@@ -305,7 +310,6 @@ class TaskApiTestCase(TestCase):
             rating=0,
             verified='True',
             specification='Test',
-
         )
         shop = Shop.objects.create(title=fake.sentence(), description=fake.sentence())
         comment = Comment.objects.create(text=fake.sentence(), rating=0, product=product, shop=shop)
@@ -320,7 +324,6 @@ class TaskApiTestCase(TestCase):
         data = {
             "title": fake.sentence(),
             "description": fake.sentence(),
-
         }
         response = self.client.post('/shops/', content_type='application/json', data=data)
         self.assertEqual(response.status_code, 201)
@@ -359,11 +362,11 @@ class TaskApiTestCase(TestCase):
         self.assertEqual(response.status_code, HTTP_200_OK)
 
     def test_shop_products_create(self):
-        category = Category.objects.create(title='Test')
+        category = Category.objects.create(title=fake.sentence())
         product = Product.objects.create(
-            title='Test',
+            title=fake.sentence(),
             category=category,
-            description='Test',
+            description=fake.sentence(),
             price=10,
             rating=0,
             verified=True,
@@ -419,7 +422,6 @@ class TaskApiTestCase(TestCase):
             "product": product.id,
             "shop_category": shop_category.id,
             "attachments": [attachment.id],
-
         }
 
         response = self.client.put(f'/shop_products/{shop_product.id}/', content_type='application/json', data=data)
