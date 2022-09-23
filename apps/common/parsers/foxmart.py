@@ -83,7 +83,7 @@ class FoxmartParser:
 
                     data[category].append(dictionary)
                 self.logging(
-                    message=f'Added subcategory',
+                    message='Added subcategory',
                     data=f'| Page: {page}',
                     execution_time=time.process_time() - start
                 )

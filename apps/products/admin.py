@@ -42,7 +42,7 @@ class ShopAdmin(admin.ModelAdmin):
         'description',
         'shop_detail',
         'languages',
-        'attachment',
+        'attachments',
         'created_at',
         'modified_at'
     )
@@ -60,7 +60,6 @@ class ProductAdmin(admin.ModelAdmin):
     list_display = (
         'id',
         'title',
-        'category',
         'price',
         'rating',
         'verified',
@@ -101,7 +100,7 @@ class ProductAdmin(admin.ModelAdmin):
 @admin.register(ShopProduct)
 class ProductShopAdmin(admin.ModelAdmin):
     list_display = (
-        'id',
+        'pk',
         'title',
         'price',
         'available',
@@ -125,7 +124,7 @@ class ProductShopAdmin(admin.ModelAdmin):
         'description',
         'price',
         'available',
-        'attachment',
+        'attachments',
         'shop',
         'languages',
         'product',
@@ -199,7 +198,7 @@ class CategoryAdmin(admin.ModelAdmin):
     fields = (
         'title',
         'parent',
-        'attachment',
+        'attachments',
         'languages',
         'created_at',
         'modified_at',

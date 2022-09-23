@@ -1,4 +1,3 @@
-import os
 from pathlib import Path
 
 from dotenv import dotenv_values
@@ -30,6 +29,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'auditlog',
     'django_json_widget',
+    'django_extensions',
 
     # Project apps
     'apps.common',
@@ -135,7 +135,6 @@ if DEBUG:
 
     INTERNAL_IPS = [
         '127.0.0.1',
-
     ]
 
     DEBUG_TOOLBAR_PANELS = [

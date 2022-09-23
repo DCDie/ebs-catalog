@@ -1,19 +1,23 @@
-name: test
+name: Django tests
 
 on:
   push:
-    branches: [ "master" ]
+    branches:
+      - master
+      - development
   pull_request:
-    branches: [ "master" ]
+    branches:
+      - master
+      - development
 
 env:
-  SECRET_KEY: "{{ secrets.SECRET_KEY }}"
-  DEBUG: "{{ secrets.DEBUG }}"
-  NAME: "{{ secrets.NAME }}"
-  USER: "{{ secrets.USER }}"
-  PASSWORD: "{{ secrets.PASSWORD }}"
-  HOST: "{{ secrets.HOST }}"
-  PORT: "{{ secrets.PORT }}"
+  SECRET_KEY: ${{ secrets.SECRET_KEY }}
+  DEBUG: ${{ secrets.DEBUG }}
+  NAME: ${{ secrets.NAME }}
+  USER: ${{ secrets.USER }}
+  PASSWORD: ${{ secrets.PASSWORD }}
+  HOST: ${{ secrets.HOST }}
+  PORT: ${{ secrets.PORT }}
 
 jobs:
   test:
@@ -75,4 +79,5 @@ jobs:
       - name: Run tests
         run: |
           source .venv/bin/activate
-          python manage.py test
+          coverage run --source='apps.products.views'
+          coverage report --fail-under=100
