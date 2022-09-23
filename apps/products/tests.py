@@ -378,9 +378,10 @@ class TaskApiTestCase(TestCase):
         self.assertEqual(response.status_code, HTTP_200_OK)
 
     def test_shop_delete(self):
-        shop = Shop.objects.create(title=fake.sentence(),
-                                   description=fake.sentence()
-                                   )
+        shop = Shop.objects.create(
+            title=fake.sentence(),
+            description=fake.sentence()
+        )
 
         response = self.client.delete(f'/shops/{shop.id}/', content_type='application/json')
         self.assertEqual(response.status_code, HTTP_204_NO_CONTENT)
@@ -399,9 +400,9 @@ class TaskApiTestCase(TestCase):
             rating=0,
             verified=True,
         )
-        shop = Shop.objects.create(title='Test')
+        shop = Shop.objects.create(title=fake.sentence())
         shop_category = ShopCategory.objects.create(
-            name='Test',
+            name=fake.sentence(),
             shop=shop
         )
 
@@ -411,7 +412,7 @@ class TaskApiTestCase(TestCase):
             file_url=File(open(Path("apps\\products\\fixtures\\test.pdf").as_posix(), 'rb'))
         )
         data = {
-            "title": 'test',
+            "title": fake.sentence(),
             "price": 7,
             "available": True,
             "shop": shop.id,
