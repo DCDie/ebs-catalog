@@ -42,7 +42,7 @@ class ShopAdmin(admin.ModelAdmin):
         'description',
         'shop_detail',
         'languages',
-        'attachment',
+        'attachments',
         'created_at',
         'modified_at'
     )
@@ -84,7 +84,7 @@ class ProductAdmin(admin.ModelAdmin):
         'languages',
         'price',
         'rating',
-        'attachment',
+        'attachments',
         'verified',
         'created_at',
         'modified_at'
@@ -125,7 +125,7 @@ class ProductShopAdmin(admin.ModelAdmin):
         'description',
         'price',
         'available',
-        'attachment',
+        'attachments',
         'shop',
         'languages',
         'product',
@@ -199,7 +199,7 @@ class CategoryAdmin(admin.ModelAdmin):
     fields = (
         'title',
         'parent',
-        'attachment',
+        'attachments',
         'languages',
         'created_at',
         'modified_at',
