@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'auditlog',
     'django_json_widget',
+    'django_extensions',
 
     # Project apps
     'apps.common',
