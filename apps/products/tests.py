@@ -103,23 +103,23 @@ class TaskApiTestCase(TestCase):
 
     def test_products_retriew(self):
         category = Category.objects.create(title='Test')
-        product = Product.objects.create(title='Test', category=category, description='Test', price=10, rating=0,
-                                         verified=True)
+        product = Product.objects.create(title='Test', description='Test', price=10, rating=0, verified=True)
+        product.category.add(category)
         response = self.client.get(f'/products/{product.id}/')
         self.assertEqual(HTTP_200_OK, response.status_code)
 
     def test_products_products(self):
         category = Category.objects.create(title='Test')
-        product = Product.objects.create(title='Test', category=category, description='Test', price=10, rating=0,
-                                         verified='True',
+        product = Product.objects.create(title='Test', description='Test', price=10, rating=0, verified='True',
                                          specification='Test', languages='Test')
+        product.category.add(category)
         data = {
             'title': 'sdfsdg',
             "description": "dgfgfddddd",
             "price": 10,
             "rating": 5,
             "verified": True,
-            "category": category.id,
+            "category": [category.id],
 
         }
         response = self.client.put(f'/products/{product.id}/', content_type='application/json', data=data)
@@ -133,23 +133,23 @@ class TaskApiTestCase(TestCase):
             "price": 10,
             "rating": 5,
             "verified": True,
-            "category": category.id,
+            "category": [category.id],
         }
         response = self.client.post('/products/', content_type='application/json', data=data)
         self.assertEqual(response.status_code, 201)
 
     def test_products_partial_update(self):
         category = Category.objects.create(title='Test')
-        product = Product.objects.create(title='Test', category=category, description='Test', price=10, rating=0,
-                                         verified='True',
+        product = Product.objects.create(title='Test', description='Test', price=10, rating=0, verified='True',
                                          specification='Test', languages='Test')
+        product.category.add(category)
         data = {
             'title': 'sdfsdg',
             "description": "dgfgfddddd",
             "price": 10,
             "rating": 5,
             "verified": True,
-            "category": category.id,
+            "category": [category.id],
 
         }
         response = self.client.patch(f'/products/{product.id}/', content_type='application/json', data=data)
@@ -157,9 +157,9 @@ class TaskApiTestCase(TestCase):
 
     def test_delete_product(self):
         category = Category.objects.create(title='Test')
-        product = Product.objects.create(title='Test', category=category, description='Test', price=10, rating=0,
-                                         verified='True',
+        product = Product.objects.create(title='Test', description='Test', price=10, rating=0, verified='True',
                                          specification='Test', languages='Test')
+        product.category.add(category)
         response = self.client.delete(f'/products/{product.id}/')
         self.assertEqual(HTTP_204_NO_CONTENT, response.status_code)
 
@@ -169,9 +169,9 @@ class TaskApiTestCase(TestCase):
 
     def test_get_comment_create(self):
         category = Category.objects.create(title='Test')
-        product = Product.objects.create(title='Test', category=category, description='Test', price=10, rating=0,
-                                         verified='True',
+        product = Product.objects.create(title='Test', description='Test', price=10, rating=0,verified='True',
                                          specification='Test', languages='Test')
+        product.category.add(category)
         shop = Shop.objects.create(title='Test', description='Test')
 
         data = {
@@ -187,9 +187,9 @@ class TaskApiTestCase(TestCase):
 
     def test_comments_retriew(self):
         category = Category.objects.create(title='Test')
-        product = Product.objects.create(title='Test', category=category, description='Test', price=10, rating=0,
-                                         verified='True',
+        product = Product.objects.create(title='Test',description='Test', price=10, rating=0, verified='True',
                                          specification='Test', languages='Test')
+        product.category.add(category)
         shop = Shop.objects.create(title='Test', description='Test')
         comment = Comment.objects.create(text='Title', rating=0, product=product, shop=shop)
         response = self.client.get(f'/comments/{comment.id}/')
@@ -197,9 +197,9 @@ class TaskApiTestCase(TestCase):
 
     def test_comments_update(self):
         category = Category.objects.create(title='Test')
-        product = Product.objects.create(title='Test', category=category, description='Test', price=10, rating=0,
-                                         verified='True',
+        product = Product.objects.create(title='Test', description='Test', price=10, rating=0, verified='True',
                                          specification='Test', languages='Test')
+        product.category.add(category)
         shop = Shop.objects.create(title='Test', description='Test')
         comment = Comment.objects.create(text='Title', rating=0, product=product, shop=shop)
         data = {
@@ -214,9 +214,9 @@ class TaskApiTestCase(TestCase):
 
     def test_comments_patrical_update(self):
         category = Category.objects.create(title='Test')
-        product = Product.objects.create(title='Test', category=category, description='Test', price=10, rating=0,
-                                         verified='True',
+        product = Product.objects.create(title='Test', description='Test', price=10, rating=0, verified='True',
                                          specification='Test', languages='Test')
+        product.category.add(category)
         shop = Shop.objects.create(title='Test', description='Test')
         comment = Comment.objects.create(text='Title', rating=0, product=product, shop=shop)
         data = {
@@ -231,9 +231,9 @@ class TaskApiTestCase(TestCase):
 
     def test_comments_delete(self):
         category = Category.objects.create(title='Test')
-        product = Product.objects.create(title='Test', category=category, description='Test', price=10, rating=0,
-                                         verified='True',
+        product = Product.objects.create(title='Test', description='Test', price=10, rating=0, verified='True',
                                          specification='Test', languages='Test')
+        product.category.add(category)
         shop = Shop.objects.create(title='Test', description='Test')
         comment = Comment.objects.create(text='Title', rating=0, product=product, shop=shop)
         response = self.client.delete(f'/comments/{comment.id}/', content_type='application/json')
@@ -288,12 +288,12 @@ class TaskApiTestCase(TestCase):
     def test_shop_products_create(self):
         category = Category.objects.create(title='Test')
         product = Product.objects.create(title='Test',
-                                         category=category,
                                          description='Test',
                                          price=10,
                                          rating=0,
                                          verified=True,
                                          )
+        product.category.add(category)
         shop = Shop.objects.create(title='Test')
         shop_category = ShopCategory.objects.create(name='name',
                                                     shop=shop)
@@ -309,6 +309,7 @@ class TaskApiTestCase(TestCase):
             "available": True,
             "shop": shop.id,
             "product": product.id,
+            "category": [category.id],
             "shop_category": shop_category.id,
             "attachments": [attachment.id],
 
@@ -319,12 +320,12 @@ class TaskApiTestCase(TestCase):
     def test_shop_products_retriew(self):
         category = Category.objects.create(title='Test')
         product = Product.objects.create(title='Test',
-                                         category=category,
                                          description='Test',
                                          price=10,
                                          rating=0,
                                          verified=True,
                                          )
+        product.category.add(category)
         shop = Shop.objects.create(title='Test')
         shop_category = ShopCategory.objects.create(name='name',
                                                     shop=shop)
@@ -342,23 +343,24 @@ class TaskApiTestCase(TestCase):
             "available": True,
             "shop": shop.id,
             "product": product.id,
+            "category": [category.id],
             "shop_category": shop_category.id,
             "attachments": [attachment.id],
 
         }
 
-        response = self.client.put(f'/shop_products/{shop_product.id}/', content_type='application/json', data=data)
+        response = self.client.put(f'/shop_products/{shop_product.pk}/', content_type='application/json', data=data)
         self.assertEqual(response.status_code, HTTP_200_OK)
 
     def test_shop_products_patch(self):
         category = Category.objects.create(title='Test')
         product = Product.objects.create(title='Test',
-                                         category=category,
                                          description='Test',
                                          price=10,
                                          rating=0,
                                          verified=True,
                                          )
+        product.category.add(category)
         shop = Shop.objects.create(title='Test')
         shop_category = ShopCategory.objects.create(name='name',
                                                     shop=shop)
@@ -381,7 +383,7 @@ class TaskApiTestCase(TestCase):
 
         }
 
-        response = self.client.patch(f'/shop_products/{shop_product.id}/', content_type='application/json', data=data)
+        response = self.client.patch(f'/shop_products/{shop_product.pk}/', content_type='application/json', data=data)
         self.assertEqual(response.status_code, HTTP_200_OK)
 
     def test_shop_products_delete(self):
@@ -391,5 +393,5 @@ class TaskApiTestCase(TestCase):
         shop_product = ShopProduct.objects.create(title='Test', price=7, available=True,
                                                   shop=shop, shop_category=shop_category)
 
-        response = self.client.delete(f'/shop_products/{shop_product.id}/', content_type='application/json')
+        response = self.client.delete(f'/shop_products/{shop_product.pk}/', content_type='application/json')
         self.assertEqual(HTTP_204_NO_CONTENT, response.status_code)
