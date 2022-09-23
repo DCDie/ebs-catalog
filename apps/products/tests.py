@@ -169,7 +169,7 @@ class TaskApiTestCase(TestCase):
 
     def test_get_comment_create(self):
         category = Category.objects.create(title='Test')
-        product = Product.objects.create(title='Test', description='Test', price=10, rating=0,verified='True',
+        product = Product.objects.create(title='Test', description='Test', price=10, rating=0, verified='True',
                                          specification='Test', languages='Test')
         product.category.add(category)
         shop = Shop.objects.create(title='Test', description='Test')
@@ -187,7 +187,7 @@ class TaskApiTestCase(TestCase):
 
     def test_comments_retriew(self):
         category = Category.objects.create(title='Test')
-        product = Product.objects.create(title='Test',description='Test', price=10, rating=0, verified='True',
+        product = Product.objects.create(title='Test', description='Test', price=10, rating=0, verified='True',
                                          specification='Test', languages='Test')
         product.category.add(category)
         shop = Shop.objects.create(title='Test', description='Test')
