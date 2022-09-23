@@ -39,9 +39,9 @@ class Category(BaseModel):
         blank=True,
         null=True
     )
-    attachment = models.ManyToManyField(
+    attachments = models.ManyToManyField(
         'Attachment',
-        related_name='category_attachment',
+        related_name='category_attachments',
         blank=True
     )
 
@@ -83,9 +83,9 @@ class Product(BaseModel):
             MinValueValidator(0)
         ]
     )
-    attachment = models.ManyToManyField(
+    attachments = models.ManyToManyField(
         'Attachment',
-        related_name='product_attachment',
+        related_name='product_attachments',
         blank=True
     )
     verified = models.BooleanField(
@@ -160,9 +160,9 @@ class Shop(BaseModel):
         blank=True,
         null=True
     )
-    attachment = models.ManyToManyField(
+    attachments = models.ManyToManyField(
         'Attachment',
-        related_name='shop_attachment',
+        related_name='shop_attachments',
         blank=True
     )
 
@@ -189,9 +189,9 @@ class ShopProduct(BaseModel):
     available = models.BooleanField(
         default=True
     )
-    attachment = models.ManyToManyField(
+    attachments = models.ManyToManyField(
         'Attachment',
-        related_name='product_shop_attachment'
+        related_name='product_shop_attachments'
     )
     shop = models.ForeignKey(
         to=Shop,
