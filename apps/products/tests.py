@@ -1,13 +1,8 @@
-from pathlib import Path
-from faker import Faker
-
 import requests
 from django.core.files import File
-from django.test import TestCase
-from rest_framework.status import (
-    HTTP_200_OK,
-    HTTP_204_NO_CONTENT
-)
+from faker import Faker
+from rest_framework import status
+from rest_framework.test import APITestCase
 
 from apps.products.models import (
     Attachment,
@@ -23,97 +18,192 @@ from apps.products.models import (
 fake = Faker()
 
 
-class TaskApiTestCase(TestCase):
-    @classmethod
-    def setUpTestData(cls):
-        URL = "https://www.orimi.com/pdf-test.pdf"
-        response = requests.get(URL)
-        open(Path("apps\\products\\fixtures\\test.pdf").as_posix(), "wb").write(response.content)
+class BrandTestCase(APITestCase):
 
     def test_get_attachments_list(self):
-        response = self.client.get('/attachments/')
-        self.assertEqual(response.status_code, HTTP_200_OK)
+        response = self.client.get(
+            '/attachments/'
+        )
+        self.assertEqual(
+            response.status_code,
+            status.HTTP_200_OK
+        )
 
     def test_get_brands_list(self):
-        response = self.client.get('/brands/')
-        self.assertEqual(response.status_code, HTTP_200_OK)
+        response = self.client.get(
+            '/brands/'
+        )
+        self.assertEqual(
+            response.status_code,
+            status.HTTP_200_OK
+        )
 
     def test_retrieve_brands(self):
-        brand = Brand.objects.create(title=fake.sentence())
-        response = self.client.get(f'/brands/{brand.id}/')
-        self.assertEqual(response.status_code, HTTP_200_OK)
+        brand = Brand.objects.create(
+            title=fake.sentence()
+        )
+        response = self.client.get(
+            f'/brands/{brand.id}/'
+        )
+        self.assertEqual(
+            response.status_code,
+            status.HTTP_200_OK
+        )
 
     def test_create_brands(self):
         data = {
             'title': fake.sentence()
         }
-        response = self.client.post('/brands/', content_type='application/json', data=data)
-        self.assertEqual(response.status_code, 201)
+        response = self.client.post(
+            '/brands/',
+            data=data
+        )
+        self.assertEqual(
+            response.status_code,
+            status.HTTP_201_CREATED
+        )
 
     def test_update_brands(self):
-        brand = Brand.objects.create(title=fake.sentence())
+        brand = Brand.objects.create(
+            title=fake.sentence()
+        )
         data = {
             "title": fake.sentence(),
         }
-        response = self.client.put(f'/brands/{brand.id}/', content_type='application/json', data=data)
-        self.assertEqual(response.status_code, HTTP_200_OK)
+        response = self.client.put(
+            f'/brands/{brand.id}/',
+            data=data
+        )
+        self.assertEqual(
+            response.status_code,
+            status.HTTP_200_OK
+        )
 
     def test_delete_brands(self):
-        brand = Brand.objects.create(title=fake.sentence())
-        response = self.client.delete(f'/brands/{brand.id}/')
-        self.assertEqual(response.status_code, HTTP_204_NO_CONTENT)
+        brand = Brand.objects.create(
+            title=fake.sentence()
+        )
+        response = self.client.delete(
+            f'/brands/{brand.id}/'
+        )
+        self.assertEqual(
+            response.status_code,
+            status.HTTP_204_NO_CONTENT
+        )
 
-    def test_partical_update_brands(self):
-        brand = Brand.objects.create(title=fake.sentence())
+    def test_partial_update_brands(self):
+        brand = Brand.objects.create(
+            title=fake.sentence()
+        )
         data = {
             "title": fake.sentence()
         }
-        response = self.client.patch(f'/brands/{brand.id}/', content_type='application/json', data=data)
-        self.assertEqual(response.status_code, HTTP_200_OK)
+        response = self.client.patch(
+            f'/brands/{brand.id}/',
+            data=data
+        )
+        self.assertEqual(
+            response.status_code,
+            status.HTTP_200_OK
+        )
+
+
+class CategoryTestCase(APITestCase):
 
     def test_get_category_list(self):
-        response = self.client.get('/categories/')
-        self.assertEqual(response.status_code, HTTP_200_OK, )
+        response = self.client.get(
+            '/categories/'
+        )
+        self.assertEqual(
+            response.status_code,
+            status.HTTP_200_OK
+        )
 
     def test_get_category_create(self):
         data = {
             "title": fake.sentence()
         }
-        response = self.client.post('/categories/', content_type='application/json', data=data)
-        self.assertEqual(response.status_code, 201)
+        response = self.client.post(
+            '/categories/',
+            data=data
+        )
+        self.assertEqual(
+            response.status_code,
+            status.HTTP_201_CREATED
+        )
 
     def test_retrieve_category(self):
-        category = Category.objects.create(title=fake.sentence())
-        response = self.client.get(f'/categories/{category.id}/')
-        self.assertEqual(response.status_code, HTTP_200_OK)
+        category = Category.objects.create(
+            title=fake.sentence()
+        )
+        response = self.client.get(
+            f'/categories/{category.id}/'
+        )
+        self.assertEqual(
+            response.status_code,
+            status.HTTP_200_OK
+        )
 
     def test_update_category(self):
-        category = Category.objects.create(title=fake.sentence())
+        category = Category.objects.create(
+            title=fake.sentence()
+        )
         data = {
             "title": fake.sentence()
         }
-        response = self.client.put(f'/categories/{category.id}/', content_type='application/json', data=data)
-        self.assertEqual(response.status_code, HTTP_200_OK)
+        response = self.client.put(
+            f'/categories/{category.id}/',
+            data=data
+        )
+        self.assertEqual(
+            response.status_code,
+            status.HTTP_200_OK
+        )
 
-    def test_partical_update_category(self):
-        category = Category.objects.create(title=fake.sentence())
+    def test_partial_update_category(self):
+        category = Category.objects.create(
+            title=fake.sentence()
+        )
         data = {
             "title": fake.sentence()
         }
-        response = self.client.patch(f'/categories/{category.id}/', content_type='application/json', data=data)
-        self.assertEqual(response.status_code, HTTP_200_OK)
+        response = self.client.patch(
+            f'/categories/{category.id}/',
+            data=data
+        )
+        self.assertEqual(
+            response.status_code,
+            status.HTTP_200_OK
+        )
 
     def test_delete_category(self):
-        category = Category.objects.create(title=fake.sentence())
-        response = self.client.delete(f'/categories/{category.id}/')
-        self.assertEqual(HTTP_204_NO_CONTENT, response.status_code)
+        category = Category.objects.create(
+            title=fake.sentence()
+        )
+        response = self.client.delete(
+            f'/categories/{category.id}/'
+        )
+        self.assertEqual(
+            response.status_code,
+            status.HTTP_204_NO_CONTENT
+        )
+
+
+class ProductTestCase(APITestCase):
 
     def test_get_products_list(self):
-        response = self.client.get('/products/')
-        self.assertEqual(response.status_code, HTTP_200_OK)
+        response = self.client.get(
+            '/products/'
+        )
+        self.assertEqual(
+            response.status_code,
+            status.HTTP_200_OK
+        )
 
-    def test_products_retriew(self):
-        category = Category.objects.create(title=fake.sentence())
+    def test_products_retrieve(self):
+        category = Category.objects.create(
+            title=fake.sentence()
+        )
         product = Product.objects.create(
             title=fake.sentence(),
             description=fake.sentence(),
@@ -122,11 +212,18 @@ class TaskApiTestCase(TestCase):
             verified=True
         )
         product.category.add(category)
-        response = self.client.get(f'/products/{product.id}/')
-        self.assertEqual(response.status_code, HTTP_200_OK)
+        response = self.client.get(
+            f'/products/{product.id}/'
+        )
+        self.assertEqual(
+            response.status_code,
+            status.HTTP_200_OK
+        )
 
     def test_products_products(self):
-        category = Category.objects.create(title=fake.sentence())
+        category = Category.objects.create(
+            title=fake.sentence()
+        )
         product = Product.objects.create(
             title=fake.sentence(),
             description=fake.sentence(),
@@ -144,11 +241,19 @@ class TaskApiTestCase(TestCase):
             "verified": True,
             "category": [category.id],
         }
-        response = self.client.put(f'/products/{product.id}/', content_type='application/json', data=data)
-        self.assertEqual(response.status_code, HTTP_200_OK)
+        response = self.client.put(
+            f'/products/{product.id}/',
+            data=data
+        )
+        self.assertEqual(
+            response.status_code,
+            status.HTTP_200_OK
+        )
 
     def test_create_products(self):
-        category = Category.objects.create(title='Test')
+        category = Category.objects.create(
+            title='Test'
+        )
         data = {
             "title": fake.sentence(),
             "description": fake.sentence(),
@@ -157,11 +262,18 @@ class TaskApiTestCase(TestCase):
             "verified": True,
             "category": [category.id],
         }
-        response = self.client.post('/products/', content_type='application/json', data=data)
-        self.assertEqual(response.status_code, 201)
+        response = self.client.post(
+            '/products/', data=data
+        )
+        self.assertEqual(
+            response.status_code,
+            status.HTTP_201_CREATED
+        )
 
     def test_products_partial_update(self):
-        category = Category.objects.create(title=fake.sentence())
+        category = Category.objects.create(
+            title=fake.sentence()
+        )
         product = Product.objects.create(
             title=fake.sentence(),
             description=fake.sentence(),
@@ -179,11 +291,19 @@ class TaskApiTestCase(TestCase):
             "verified": True,
             "category": [category.id],
         }
-        response = self.client.patch(f'/products/{product.id}/', content_type='application/json', data=data)
-        self.assertEqual(response.status_code, HTTP_200_OK)
+        response = self.client.patch(
+            f'/products/{product.id}/',
+            data=data
+        )
+        self.assertEqual(
+            response.status_code,
+            status.HTTP_200_OK
+        )
 
     def test_delete_product(self):
-        category = Category.objects.create(title=fake.sentence())
+        category = Category.objects.create(
+            title=fake.sentence()
+        )
         product = Product.objects.create(
             title=fake.sentence(),
             description='Test',
@@ -193,15 +313,28 @@ class TaskApiTestCase(TestCase):
             specification='Test',
         )
         product.category.add(category)
-        response = self.client.delete(f'/products/{product.id}/')
-        self.assertEqual(response.status_code, HTTP_204_NO_CONTENT)
+        response = self.client.delete(
+            f'/products/{product.id}/'
+        )
+        self.assertEqual(
+            response.status_code,
+            status.HTTP_204_NO_CONTENT
+        )
+
+
+class CommentTestCase(APITestCase):
 
     def test_get_comment_list(self):
         response = self.client.get('/comments/')
-        self.assertEqual(response.status_code, HTTP_200_OK)
+        self.assertEqual(
+            response.status_code,
+            status.HTTP_200_OK
+        )
 
     def test_get_comment_create(self):
-        category = Category.objects.create(title=fake.sentence())
+        category = Category.objects.create(
+            title=fake.sentence()
+        )
         product = Product.objects.create(
             title=fake.sentence(),
             description=fake.sentence(),
@@ -222,11 +355,19 @@ class TaskApiTestCase(TestCase):
             'product': product.id,
             'shop': shop.id,
         }
-        response = self.client.post('/comments/', content_type='application/json', data=data)
-        self.assertEqual(response.status_code, 201)
+        response = self.client.post(
+            '/comments/',
+            data=data
+        )
+        self.assertEqual(
+            response.status_code,
+            status.HTTP_201_CREATED
+        )
 
-    def test_comments_retriew(self):
-        category = Category.objects.create(title=fake.sentence())
+    def test_comments_retrieve(self):
+        category = Category.objects.create(
+            title=fake.sentence()
+        )
         product = Product.objects.create(
             title=fake.sentence(),
             description=fake.sentence(),
@@ -247,11 +388,18 @@ class TaskApiTestCase(TestCase):
             product=product,
             shop=shop
         )
-        response = self.client.get(f'/comments/{comment.id}/')
-        self.assertEqual(response.status_code, HTTP_200_OK)
+        response = self.client.get(
+            f'/comments/{comment.id}/'
+        )
+        self.assertEqual(
+            response.status_code,
+            status.HTTP_200_OK
+        )
 
     def test_comments_update(self):
-        category = Category.objects.create(title=fake.sentence())
+        category = Category.objects.create(
+            title=fake.sentence()
+        )
         product = Product.objects.create(
             title=fake.sentence(),
             description=fake.sentence(),
@@ -277,11 +425,19 @@ class TaskApiTestCase(TestCase):
             'product': product.id,
             'shop': shop.id,
         }
-        response = self.client.put(f'/comments/{comment.id}/', content_type='application/json', data=data)
-        self.assertEqual(response.status_code, HTTP_200_OK)
+        response = self.client.put(
+            f'/comments/{comment.id}/',
+            data=data
+        )
+        self.assertEqual(
+            response.status_code,
+            status.HTTP_200_OK
+        )
 
-    def test_comments_patrical_update(self):
-        category = Category.objects.create(title=fake.sentence())
+    def test_comments_partial_update(self):
+        category = Category.objects.create(
+            title=fake.sentence()
+        )
         product = Product.objects.create(
             title=fake.sentence(),
             description=fake.sentence(),
@@ -306,11 +462,19 @@ class TaskApiTestCase(TestCase):
             'product': product.id,
             'shop': shop.id,
         }
-        response = self.client.patch(f'/comments/{comment.id}/', content_type='application/json', data=data)
-        self.assertEqual(response.status_code, HTTP_200_OK)
+        response = self.client.patch(
+            f'/comments/{comment.id}/',
+            data=data
+        )
+        self.assertEqual(
+            response.status_code,
+            status.HTTP_200_OK
+        )
 
     def test_comments_delete(self):
-        category = Category.objects.create(title=fake.sentence())
+        category = Category.objects.create(
+            title=fake.sentence()
+        )
         product = Product.objects.create(
             title=fake.sentence(),
             description=fake.sentence(),
@@ -330,28 +494,52 @@ class TaskApiTestCase(TestCase):
             product=product,
             shop=shop
         )
-        response = self.client.delete(f'/comments/{comment.id}/', content_type='application/json')
-        self.assertEqual(response.status_code, HTTP_204_NO_CONTENT, )
+        response = self.client.delete(
+            f'/comments/{comment.id}/'
+        )
+        self.assertEqual(
+            response.status_code,
+            status.HTTP_204_NO_CONTENT
+        )
+
+
+class ShopTestCase(APITestCase):
 
     def test_shop_list(self):
-        response = self.client.get('/shops/')
-        self.assertEqual(HTTP_200_OK, response.status_code)
+        response = self.client.get(
+            '/shops/'
+        )
+        self.assertEqual(
+            response.status_code,
+            status.HTTP_200_OK
+        )
 
     def test_shop_create(self):
         data = {
             "title": fake.sentence(),
             "description": fake.sentence(),
         }
-        response = self.client.post('/shops/', content_type='application/json', data=data)
-        self.assertEqual(response.status_code, 201)
+        response = self.client.post(
+            '/shops/',
+            data=data
+        )
+        self.assertEqual(
+            response.status_code,
+            status.HTTP_201_CREATED
+        )
 
-    def test_shop_retriew(self):
+    def test_shop_retrieve(self):
         shop = Shop.objects.create(
             title=fake.sentence(),
             description=fake.sentence()
         )
-        response = self.client.get(f'/shops/{shop.id}/')
-        self.assertEqual(response.status_code, HTTP_200_OK)
+        response = self.client.get(
+            f'/shops/{shop.id}/'
+        )
+        self.assertEqual(
+            response.status_code,
+            status.HTTP_200_OK
+        )
 
     def test_shop_update(self):
         shop = Shop.objects.create(
@@ -362,10 +550,16 @@ class TaskApiTestCase(TestCase):
             "title": fake.sentence(),
             "description": fake.sentence(),
         }
-        response = self.client.put(f'/shops/{shop.id}/', content_type='application/json', data=data)
-        self.assertEqual(response.status_code, HTTP_200_OK)
+        response = self.client.put(
+            f'/shops/{shop.id}/',
+            data=data
+        )
+        self.assertEqual(
+            response.status_code,
+            status.HTTP_200_OK
+        )
 
-    def test_shop__upddate(self):
+    def test_shop__update(self):
         shop = Shop.objects.create(
             title=fake.sentence(),
             description=fake.sentence()
@@ -374,8 +568,14 @@ class TaskApiTestCase(TestCase):
             "title": fake.sentence(),
             "description": fake.sentence(),
         }
-        response = self.client.patch(f'/shops/{shop.id}/', content_type='application/json', data=data)
-        self.assertEqual(response.status_code, HTTP_200_OK)
+        response = self.client.patch(
+            f'/shops/{shop.id}/',
+            data=data
+        )
+        self.assertEqual(
+            response.status_code,
+            status.HTTP_200_OK
+        )
 
     def test_shop_delete(self):
         shop = Shop.objects.create(
@@ -383,15 +583,39 @@ class TaskApiTestCase(TestCase):
             description=fake.sentence()
         )
 
-        response = self.client.delete(f'/shops/{shop.id}/', content_type='application/json')
-        self.assertEqual(response.status_code, HTTP_204_NO_CONTENT)
+        response = self.client.delete(
+            f'/shops/{shop.id}/'
+        )
+        self.assertEqual(
+            response.status_code,
+            status.HTTP_204_NO_CONTENT
+        )
+
+
+class ShopProductTestCase(APITestCase):
+    def setUp(self) -> None:
+        url = 'https://www.orimi.com/pdf-test.pdf'
+        response = requests.get(url)
+        open(
+            file=r'apps\products\fixtures\test.pdf',
+            mode='wb'
+        ).write(
+            response.content
+        )
 
     def test_shop_products_list(self):
-        response = self.client.get('/shop_products/')
-        self.assertEqual(response.status_code, HTTP_200_OK)
+        response = self.client.get(
+            '/shop_products/'
+        )
+        self.assertEqual(
+            response.status_code,
+            status.HTTP_200_OK
+        )
 
     def test_shop_products_create(self):
-        category = Category.objects.create(title=fake.sentence())
+        category = Category.objects.create(
+            title=fake.sentence()
+        )
         product = Product.objects.create(
             title=fake.sentence(),
             description=fake.sentence(),
@@ -400,7 +624,9 @@ class TaskApiTestCase(TestCase):
             verified=True,
         )
         product.category.add(category)
-        shop = Shop.objects.create(title=fake.sentence())
+        shop = Shop.objects.create(
+            title=fake.sentence()
+        )
         shop_category = ShopCategory.objects.create(
             name=fake.sentence(),
             shop=shop
@@ -409,7 +635,12 @@ class TaskApiTestCase(TestCase):
         attachment = Attachment.objects.create(
             title=fake.sentence(),
             extension='.pdf',
-            file_url=File(open(Path("apps\\products\\fixtures\\test.pdf").as_posix(), 'rb'))
+            file_url=File(
+                open(
+                    r"apps\products\fixtures\test.pdf",
+                    mode='rb'
+                )
+            )
         )
         data = {
             "title": fake.sentence(),
@@ -421,11 +652,19 @@ class TaskApiTestCase(TestCase):
             "shop_category": shop_category.id,
             "attachments": [attachment.id],
         }
-        response = self.client.post('/shop_products/', content_type='application/json', data=data)
-        self.assertEqual(response.status_code, 201)
+        response = self.client.post(
+            '/shop_products/',
+            data=data
+        )
+        self.assertEqual(
+            response.status_code,
+            status.HTTP_201_CREATED
+        )
 
-    def test_shop_products_retriew(self):
-        category = Category.objects.create(title=fake.sentence())
+    def test_shop_products_retrieve(self):
+        category = Category.objects.create(
+            title=fake.sentence()
+        )
         product = Product.objects.create(
             title=fake.sentence(),
             description=fake.sentence(),
@@ -434,14 +673,23 @@ class TaskApiTestCase(TestCase):
             verified=True,
         )
         product.category.add(category)
-        shop = Shop.objects.create(title=fake.sentence())
-        shop_category = ShopCategory.objects.create(name=fake.sentence(),
-                                                    shop=shop)
+        shop = Shop.objects.create(
+            title=fake.sentence()
+        )
+        shop_category = ShopCategory.objects.create(
+            name=fake.sentence(),
+            shop=shop
+        )
 
         attachment = Attachment.objects.create(
             title=fake.sentence(),
             extension='.pdf',
-            file_url=File(open((Path("apps\\products\\fixtures\\test.pdf")).as_posix(), 'rb'))
+            file_url=File(
+                open(
+                    r"apps\products\fixtures\test.pdf",
+                    mode='rb'
+                )
+            )
         )
         shop_product = ShopProduct.objects.create(
             title=fake.sentence(),
@@ -461,11 +709,19 @@ class TaskApiTestCase(TestCase):
             "attachments": [attachment.id],
         }
 
-        response = self.client.put(f'/shop_products/{shop_product.pk}/', content_type='application/json', data=data)
-        self.assertEqual(response.status_code, HTTP_200_OK)
+        response = self.client.put(
+            f'/shop_products/{shop_product.pk}/',
+            data=data
+        )
+        self.assertEqual(
+            response.status_code,
+            status.HTTP_200_OK
+        )
 
     def test_shop_products_patch(self):
-        category = Category.objects.create(title=fake.sentence())
+        category = Category.objects.create(
+            title=fake.sentence()
+        )
         product = Product.objects.create(
             title=fake.sentence(),
             description=fake.sentence(),
@@ -474,7 +730,9 @@ class TaskApiTestCase(TestCase):
             verified=True,
         )
         product.category.add(category)
-        shop = Shop.objects.create(title=fake.sentence())
+        shop = Shop.objects.create(
+            title=fake.sentence()
+        )
         shop_category = ShopCategory.objects.create(
             name=fake.sentence(),
             shop=shop
@@ -483,7 +741,12 @@ class TaskApiTestCase(TestCase):
         attachment = Attachment.objects.create(
             title=fake.sentence(),
             extension='.pdf',
-            file_url=File(open(Path("apps\\products\\fixtures\\test.pdf").as_posix(), 'rb'))
+            file_url=File(
+                open(
+                    r"apps\products\fixtures\test.pdf",
+                    mode='rb'
+                )
+            )
         )
         shop_product = ShopProduct.objects.create(
             title=fake.sentence(),
@@ -502,11 +765,19 @@ class TaskApiTestCase(TestCase):
             "attachments": [attachment.id],
         }
 
-        response = self.client.patch(f'/shop_products/{shop_product.pk}/', content_type='application/json', data=data)
-        self.assertEqual(response.status_code, HTTP_200_OK)
+        response = self.client.patch(
+            f'/shop_products/{shop_product.pk}/',
+            data=data
+        )
+        self.assertEqual(
+            response.status_code,
+            status.HTTP_200_OK
+        )
 
     def test_shop_products_delete(self):
-        shop = Shop.objects.create(title=fake.sentence())
+        shop = Shop.objects.create(
+            title=fake.sentence()
+        )
         shop_category = ShopCategory.objects.create(
             name=fake.sentence(),
             shop=shop
@@ -519,5 +790,10 @@ class TaskApiTestCase(TestCase):
             shop_category=shop_category
         )
 
-        response = self.client.delete(f'/shop_products/{shop_product.pk}/', content_type='application/json')
-        self.assertEqual(response.status_code, HTTP_204_NO_CONTENT)
+        response = self.client.delete(
+            f'/shop_products/{shop_product.pk}/'
+        )
+        self.assertEqual(
+            response.status_code,
+            status.HTTP_204_NO_CONTENT
+        )
