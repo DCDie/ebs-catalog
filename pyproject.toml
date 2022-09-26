@@ -25,6 +25,7 @@ Faker = "^14.2.1"
 coverage = "^6.4.4"
 django-extensions = "^3.2.1"
 python-slugify = "^6.1.2"
+django-rest-framework-nested = "^0.0.1"
 
 
 [build-system]
