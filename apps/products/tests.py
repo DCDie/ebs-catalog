@@ -22,7 +22,7 @@ class BrandTestCase(APITestCase):
 
     def test_get_attachments_list(self):
         response = self.client.get(
-            '/attachments/'
+            '/attachments'
         )
         self.assertEqual(
             response.status_code,
@@ -31,7 +31,7 @@ class BrandTestCase(APITestCase):
 
     def test_get_brands_list(self):
         response = self.client.get(
-            '/brands/'
+            '/brands'
         )
         self.assertEqual(
             response.status_code,
@@ -43,7 +43,7 @@ class BrandTestCase(APITestCase):
             title=fake.sentence()
         )
         response = self.client.get(
-            f'/brands/{brand.id}/'
+            f'/brands/{brand.id}'
         )
         self.assertEqual(
             response.status_code,
@@ -55,7 +55,7 @@ class BrandTestCase(APITestCase):
             'title': fake.sentence()
         }
         response = self.client.post(
-            '/brands/',
+            '/brands',
             data=data
         )
         self.assertEqual(
@@ -71,7 +71,7 @@ class BrandTestCase(APITestCase):
             "title": fake.sentence(),
         }
         response = self.client.put(
-            f'/brands/{brand.id}/',
+            f'/brands/{brand.id}',
             data=data
         )
         self.assertEqual(
@@ -84,7 +84,7 @@ class BrandTestCase(APITestCase):
             title=fake.sentence()
         )
         response = self.client.delete(
-            f'/brands/{brand.id}/'
+            f'/brands/{brand.id}'
         )
         self.assertEqual(
             response.status_code,
@@ -99,7 +99,7 @@ class BrandTestCase(APITestCase):
             "title": fake.sentence()
         }
         response = self.client.patch(
-            f'/brands/{brand.id}/',
+            f'/brands/{brand.id}',
             data=data
         )
         self.assertEqual(
@@ -112,7 +112,7 @@ class CategoryTestCase(APITestCase):
 
     def test_get_category_list(self):
         response = self.client.get(
-            '/categories/'
+            '/categories'
         )
         self.assertEqual(
             response.status_code,
@@ -124,7 +124,7 @@ class CategoryTestCase(APITestCase):
             "title": fake.sentence()
         }
         response = self.client.post(
-            '/categories/',
+            '/categories',
             data=data
         )
         self.assertEqual(
@@ -137,7 +137,7 @@ class CategoryTestCase(APITestCase):
             title=fake.sentence()
         )
         response = self.client.get(
-            f'/categories/{category.id}/'
+            f'/categories/{category.id}'
         )
         self.assertEqual(
             response.status_code,
@@ -152,7 +152,7 @@ class CategoryTestCase(APITestCase):
             "title": fake.sentence()
         }
         response = self.client.put(
-            f'/categories/{category.id}/',
+            f'/categories/{category.id}',
             data=data
         )
         self.assertEqual(
@@ -168,7 +168,7 @@ class CategoryTestCase(APITestCase):
             "title": fake.sentence()
         }
         response = self.client.patch(
-            f'/categories/{category.id}/',
+            f'/categories/{category.id}',
             data=data
         )
         self.assertEqual(
@@ -181,7 +181,7 @@ class CategoryTestCase(APITestCase):
             title=fake.sentence()
         )
         response = self.client.delete(
-            f'/categories/{category.id}/'
+            f'/categories/{category.id}'
         )
         self.assertEqual(
             response.status_code,
@@ -193,7 +193,7 @@ class ProductTestCase(APITestCase):
 
     def test_get_products_list(self):
         response = self.client.get(
-            '/products/'
+            '/products'
         )
         self.assertEqual(
             response.status_code,
@@ -213,7 +213,7 @@ class ProductTestCase(APITestCase):
         )
         product.category.add(category)
         response = self.client.get(
-            f'/products/{product.id}/'
+            f'/products/{product.id}'
         )
         self.assertEqual(
             response.status_code,
@@ -242,7 +242,7 @@ class ProductTestCase(APITestCase):
             "category": [category.id],
         }
         response = self.client.put(
-            f'/products/{product.id}/',
+            f'/products/{product.id}',
             data=data
         )
         self.assertEqual(
@@ -263,7 +263,8 @@ class ProductTestCase(APITestCase):
             "category": [category.id],
         }
         response = self.client.post(
-            '/products/', data=data
+            '/products',
+            data=data
         )
         self.assertEqual(
             response.status_code,
@@ -292,7 +293,7 @@ class ProductTestCase(APITestCase):
             "category": [category.id],
         }
         response = self.client.patch(
-            f'/products/{product.id}/',
+            f'/products/{product.id}',
             data=data
         )
         self.assertEqual(
@@ -314,7 +315,7 @@ class ProductTestCase(APITestCase):
         )
         product.category.add(category)
         response = self.client.delete(
-            f'/products/{product.id}/'
+            f'/products/{product.id}'
         )
         self.assertEqual(
             response.status_code,
@@ -325,7 +326,9 @@ class ProductTestCase(APITestCase):
 class CommentTestCase(APITestCase):
 
     def test_get_comment_list(self):
-        response = self.client.get('/comments/')
+        response = self.client.get(
+            '/comments'
+        )
         self.assertEqual(
             response.status_code,
             status.HTTP_200_OK
@@ -356,7 +359,7 @@ class CommentTestCase(APITestCase):
             'shop': shop.id,
         }
         response = self.client.post(
-            '/comments/',
+            '/comments',
             data=data
         )
         self.assertEqual(
@@ -389,7 +392,7 @@ class CommentTestCase(APITestCase):
             shop=shop
         )
         response = self.client.get(
-            f'/comments/{comment.id}/'
+            f'/comments/{comment.id}'
         )
         self.assertEqual(
             response.status_code,
@@ -426,7 +429,7 @@ class CommentTestCase(APITestCase):
             'shop': shop.id,
         }
         response = self.client.put(
-            f'/comments/{comment.id}/',
+            f'/comments/{comment.id}',
             data=data
         )
         self.assertEqual(
@@ -463,7 +466,7 @@ class CommentTestCase(APITestCase):
             'shop': shop.id,
         }
         response = self.client.patch(
-            f'/comments/{comment.id}/',
+            f'/comments/{comment.id}',
             data=data
         )
         self.assertEqual(
@@ -495,7 +498,7 @@ class CommentTestCase(APITestCase):
             shop=shop
         )
         response = self.client.delete(
-            f'/comments/{comment.id}/'
+            f'/comments/{comment.id}'
         )
         self.assertEqual(
             response.status_code,
@@ -507,7 +510,7 @@ class ShopTestCase(APITestCase):
 
     def test_shop_list(self):
         response = self.client.get(
-            '/shops/'
+            '/shops'
         )
         self.assertEqual(
             response.status_code,
@@ -520,7 +523,7 @@ class ShopTestCase(APITestCase):
             "description": fake.sentence(),
         }
         response = self.client.post(
-            '/shops/',
+            '/shops',
             data=data
         )
         self.assertEqual(
@@ -534,7 +537,7 @@ class ShopTestCase(APITestCase):
             description=fake.sentence()
         )
         response = self.client.get(
-            f'/shops/{shop.id}/'
+            f'/shops/{shop.id}'
         )
         self.assertEqual(
             response.status_code,
@@ -551,7 +554,7 @@ class ShopTestCase(APITestCase):
             "description": fake.sentence(),
         }
         response = self.client.put(
-            f'/shops/{shop.id}/',
+            f'/shops/{shop.id}',
             data=data
         )
         self.assertEqual(
@@ -569,7 +572,7 @@ class ShopTestCase(APITestCase):
             "description": fake.sentence(),
         }
         response = self.client.patch(
-            f'/shops/{shop.id}/',
+            f'/shops/{shop.id}',
             data=data
         )
         self.assertEqual(
@@ -584,7 +587,7 @@ class ShopTestCase(APITestCase):
         )
 
         response = self.client.delete(
-            f'/shops/{shop.id}/'
+            f'/shops/{shop.id}'
         )
         self.assertEqual(
             response.status_code,
@@ -605,7 +608,7 @@ class ShopProductTestCase(APITestCase):
 
     def test_shop_products_list(self):
         response = self.client.get(
-            '/shop_products/'
+            '/shop_products'
         )
         self.assertEqual(
             response.status_code,
@@ -653,7 +656,7 @@ class ShopProductTestCase(APITestCase):
             "attachments": [attachment.id],
         }
         response = self.client.post(
-            '/shop_products/',
+            '/shop_products',
             data=data
         )
         self.assertEqual(
@@ -710,7 +713,7 @@ class ShopProductTestCase(APITestCase):
         }
 
         response = self.client.put(
-            f'/shop_products/{shop_product.pk}/',
+            f'/shop_products/{shop_product.pk}',
             data=data
         )
         self.assertEqual(
@@ -766,7 +769,7 @@ class ShopProductTestCase(APITestCase):
         }
 
         response = self.client.patch(
-            f'/shop_products/{shop_product.pk}/',
+            f'/shop_products/{shop_product.pk}',
             data=data
         )
         self.assertEqual(
@@ -791,7 +794,7 @@ class ShopProductTestCase(APITestCase):
         )
 
         response = self.client.delete(
-            f'/shop_products/{shop_product.pk}/'
+            f'/shop_products/{shop_product.pk}'
         )
         self.assertEqual(
             response.status_code,
