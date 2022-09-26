@@ -577,7 +577,7 @@ class ShopProductTestCase(APITestCase):
         attachment = Attachment.objects.create(
             title=fake.sentence(),
             extension='.pdf',
-            file_url=File(open(r"apps\\products\\fixtures\\test.pdf", mode='rb'))
+            file_url=File(open(r"apps\products\fixtures\test.pdf", mode='rb'))
         )
         shop_product = ShopProduct.objects.create(
             title=fake.sentence(),
