@@ -139,7 +139,7 @@ class TaskApiTestCase(TestCase):
         data = {
             'title': fake.sentence(),
             "description": fake.sentence(),
-            "price": fake.random_number(),
+            "price": fake.random_number(7),
             "rating": 5,
             "verified": True,
             "category": [category.id],
@@ -174,7 +174,7 @@ class TaskApiTestCase(TestCase):
         data = {
             'title': fake.sentence(),
             "description": fake.sentence(),
-            "price": fake.random_number(),
+            "price": fake.random_number(7),
             "rating": 5,
             "verified": True,
             "category": [category.id],
