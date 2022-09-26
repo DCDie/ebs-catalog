@@ -1,9 +1,8 @@
 from rest_framework.viewsets import (
     ModelViewSet,
-
+    GenericViewSet
 )
 
-from apps.common.views import BaseViewSet
 from apps.products.models import (
     Category,
     Shop,
@@ -21,13 +20,6 @@ from apps.products.serializers import (
     CommentSerializer,
     CategorySerializer,
     BrandSerializer,
-    AttachmentRetrieveSerializer,
-    CommentRetrieveSerializer,
-    ProductRetrieveSerializer,
-    ProductShopRetrieveSerializer,
-    ShopRetrieveSerializer,
-    CategoryRetrieveSerializer,
-    BrandRetrieveSerializer,
 )
 
 __all__ = [
@@ -43,79 +35,60 @@ __all__ = [
 
 class CategoryViewSet(
     ModelViewSet,
-    BaseViewSet
-
+    GenericViewSet
 ):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
-    serializer_by_action = dict(
-        retrieve=CategoryRetrieveSerializer
-    )
 
 
 class ShopViewSet(
     ModelViewSet,
-
-    BaseViewSet
+    GenericViewSet
 ):
     queryset = Shop.objects.all()
     serializer_class = ShopSerializer
-    serializer_by_action = dict(
-        retrieve=ShopRetrieveSerializer
-    )
 
 
 class ProductShopViewSet(
     ModelViewSet,
-
-    BaseViewSet
+    GenericViewSet
 ):
     queryset = ShopProduct.objects.all()
     serializer_class = ProductShopSerializer
-    serializer_by_action = dict(
-        retrieve=ProductShopRetrieveSerializer
-    )
 
 
 class ProductViewSet(
     ModelViewSet,
-    BaseViewSet
+    GenericViewSet
 ):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
-    serializer_by_action = dict(
-        retrieve=ProductRetrieveSerializer
-    )
 
 
 class AttachmentViewSet(
     ModelViewSet,
-    BaseViewSet
+    GenericViewSet
 ):
     queryset = Attachment.objects.all()
     serializer_class = AttachmentSerializer
-    serializer_by_action = dict(
-        retrieve=AttachmentRetrieveSerializer
-    )
 
 
 class CommentViewSet(
     ModelViewSet,
-    BaseViewSet
+    GenericViewSet
 ):
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
-    serializer_by_action = dict(
-        retrieve=CommentRetrieveSerializer
-    )
 
 
 class BrandViewSet(
     ModelViewSet,
-    BaseViewSet
+    GenericViewSet
 ):
     queryset = Brand.objects.all()
     serializer_class = BrandSerializer
-    serializer_by_action = dict(
-        retrieve=BrandRetrieveSerializer
-    )
+
+    # def test_comments_retriew(self):
+    #     comment = Comment.objects.create()
+    #     response = self.client.get(f'/products/{product.id}/')
+    #     self.assertEqual(HTTP_200_OK, response.status_code)
