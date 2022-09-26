@@ -70,13 +70,16 @@ class BrandRetrieveSerializer(ModelSerializer):
 
 
 class CategoryRetrieveSerializer(ModelSerializer):
+    attachments = AttachmentSerializer(many=True)
+
     class Meta:
         model = Category
         fields = "__all__"
 
 
 class ProductRetrieveSerializer(ModelSerializer):
-    category = CategorySerializer()
+    category = CategorySerializer(many=True)
+    attachments = AttachmentSerializer(many=True)
 
     class Meta:
         model = Product
@@ -84,8 +87,8 @@ class ProductRetrieveSerializer(ModelSerializer):
 
 
 class ProductShopRetrieveSerializer(ModelSerializer):
-    category = CategorySerializer()
-    attachment = AttachmentSerializer()
+    category = CategorySerializer(many=True)
+    attachments = AttachmentSerializer(many=True)
     shop = ShopSerializer()
     product = ProductSerializer()
     shop_category = ProductShopSerializer
@@ -111,7 +114,7 @@ class CommentRetrieveSerializer(ModelSerializer):
 
 
 class ShopRetrieveSerializer(ModelSerializer):
-
+    attachments = AttachmentSerializer(many=True)
 
     class Meta:
         model = Shop
