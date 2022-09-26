@@ -1,22 +1,23 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
+from django.utils.translation import gettext_lazy as _
+
 __all__ = [
     'CustomUser'
 ]
 
 
 class CustomUser(AbstractUser):
-    email = models.EmailField(
-        'email address',
+
+    username = models.EmailField(
+        _('email address'),
         blank=False,
         unique=True
     )
 
+    USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = []
-    USERNAME_FIELDS = 'email'
 
     class Meta:
-        verbose_name = 'User'
-        verbose_name_plural = 'Users'
         app_label = 'users'
