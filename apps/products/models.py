@@ -322,7 +322,6 @@ class Attachment(BaseModel):
         super(Attachment, self).save(force_insert, force_update, using, update_fields)
 
 
-# Register models to auditlog
 auditlog.register(Brand)
 auditlog.register(ShopProduct)
 auditlog.register(Shop)
