@@ -29,7 +29,7 @@ class CategorySerializer(ModelSerializer):
 
 class CategoryRetrieveSerializer(ModelSerializer):
     class Meta:
-        model = Attachment
+        model = Category
         fields = "__all__"
 
 
@@ -47,7 +47,7 @@ class ShopSerializer(ModelSerializer):
 
 class ShopRetrieveSerializer(ModelSerializer):
     class Meta:
-        model = Attachment
+        model = Shop
         fields = "__all__"
 
 
@@ -65,7 +65,7 @@ class AttachmentRetrieveSerializer(ModelSerializer):
 
 class CommentRetrieveSerializer(ModelSerializer):
     class Meta:
-        model = Attachment
+        model = Comment
         fields = "__all__"
 
 
@@ -77,7 +77,7 @@ class ProductShopSerializer(ModelSerializer):
 
 class ProductShopRetrieveSerializer(ModelSerializer):
     class Meta:
-        model = Attachment
+        model = ShopProduct
         fields = "__all__"
 
 
@@ -89,7 +89,7 @@ class ProductSerializer(ModelSerializer):
 
 class ProductRetrieveSerializer(ModelSerializer):
     class Meta:
-        model = Attachment
+        model = Product
         fields = "__all__"
 
 
