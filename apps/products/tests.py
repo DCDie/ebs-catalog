@@ -407,7 +407,7 @@ class TaskApiTestCase(TestCase):
         )
 
         attachment = Attachment.objects.create(
-            title='Test',
+            title=fake.sentence(),
             extension='.pdf',
             file_url=File(open(Path("apps\\products\\fixtures\\test.pdf").as_posix(), 'rb'))
         )
