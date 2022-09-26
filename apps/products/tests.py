@@ -633,7 +633,7 @@ class ShopProductTestCase(APITestCase):
         )
 
         attachment = Attachment.objects.create(
-            title='Test',
+            title=fake.sentence(),
             extension='.pdf',
             file_url=File(
                 open(
