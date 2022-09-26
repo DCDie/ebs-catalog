@@ -5,6 +5,7 @@ import time
 from typing import Optional
 
 from django.conf import settings
+from slugify import slugify
 
 from apps.products.models import (
     ShopCategory,
@@ -68,14 +69,16 @@ class InsertDataBase:
                                 ).values_list(
                                     'id',
                                     'category_id',
-                                    'shop_id'
+                                    'shop_id',
+                                    'shop__title'
                                 ))
-                                for object_id, category_id, shop_id in shop_category_queryset:
+                                for object_id, category_id, shop_id, shop_title in shop_category_queryset:
                                     price = ''.join((category_data.get('price')).split()[:-1])
-
+                                    title = category_data.get('title')
                                     data.append(
                                         ShopProduct(
-                                            title=category_data.get('title'),
+                                            label=slugify(f'{shop_title}, {title}'),
+                                            title=title,
                                             description=category_data.get('description'),
                                             price=price,
                                             available=category_data.get('available'),
@@ -84,13 +87,10 @@ class InsertDataBase:
                                             category_id=category_id
                                         )
                                     )
-                        ShopProduct.objects.bulk_create(
-                            objs=data,
-                            ignore_conflicts=True
-                        )
-                        ShopProduct.objects.bulk_update(
-                            objs=data,
-                            fields=['available', 'price'],
+                        ShopProduct.objects.bulk_update_or_create(
+                            data,
+                            ['available', 'price'],
+                            match_field='label'
                         )
                         self.logging(
                             message='New file data - added',
