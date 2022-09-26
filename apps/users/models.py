@@ -9,7 +9,6 @@ __all__ = [
 
 
 class CustomUser(AbstractUser):
-
     username = models.EmailField(
         _('email address'),
         blank=False,
