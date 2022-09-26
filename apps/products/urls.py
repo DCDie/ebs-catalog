@@ -10,7 +10,9 @@ from apps.products.views import (
     BrandViewSet
 )
 
-base_router = DefaultRouter()
+base_router = DefaultRouter(
+    trailing_slash=False
+)
 base_router.register('categories', CategoryViewSet)
 base_router.register('products', ProductViewSet)
 base_router.register('shop_products', ProductShopViewSet)
