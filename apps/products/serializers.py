@@ -44,10 +44,12 @@ class ShopSerializer(ModelSerializer):
         model = Shop
         fields = '__all__'
 
+
 class ShopRetrieveSerializer(ModelSerializer):
     class Meta:
         model = Attachment
         fields = "__all__"
+
 
 class AttachmentSerializer(ModelSerializer):
     class Meta:
@@ -71,6 +73,8 @@ class ProductShopSerializer(ModelSerializer):
     class Meta:
         model = ShopProduct
         fields = '__all__'
+
+
 class ProductShopRetrieveSerializer(ModelSerializer):
     class Meta:
         model = Attachment

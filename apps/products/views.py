@@ -1,7 +1,6 @@
-from requests import Response
 from rest_framework.viewsets import (
     ModelViewSet,
-    GenericViewSet
+
 )
 
 from apps.common.views import BaseViewSet
@@ -21,8 +20,14 @@ from apps.products.serializers import (
     ProductSerializer,
     CommentSerializer,
     CategorySerializer,
-    BrandSerializer, AttachmentRetrieveSerializer, CommentRetrieveSerializer, ProductRetrieveSerializer,
-    ProductShopRetrieveSerializer, ShopRetrieveSerializer, CategoryRetrieveSerializer, BrandRetrieveSerializer,
+    BrandSerializer,
+    AttachmentRetrieveSerializer,
+    CommentRetrieveSerializer,
+    ProductRetrieveSerializer,
+    ProductShopRetrieveSerializer,
+    ShopRetrieveSerializer,
+    CategoryRetrieveSerializer,
+    BrandRetrieveSerializer,
 )
 
 __all__ = [
@@ -71,6 +76,7 @@ class ProductShopViewSet(
         retrieve=ProductShopRetrieveSerializer
     )
 
+
 class ProductViewSet(
     ModelViewSet,
     BaseViewSet
@@ -80,6 +86,7 @@ class ProductViewSet(
     serializer_by_action = dict(
         retrieve=ProductRetrieveSerializer
     )
+
 
 class AttachmentViewSet(
     ModelViewSet,
@@ -112,4 +119,3 @@ class BrandViewSet(
     serializer_by_action = dict(
         retrieve=BrandRetrieveSerializer
     )
-
