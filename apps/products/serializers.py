@@ -64,11 +64,7 @@ class ProductSerializer(ModelSerializer):
 
 
 class BrandRetrieveSerializer(ModelSerializer):
-    category = CategorySerializer()
-    atachment = AttachmentSerializer()
-    product_shop = ProductShopSerializer()
-    shop = ShopSerializer()
-    product = ProductSerializer()
+
 
     class Meta:
         model = Brand
@@ -76,12 +72,8 @@ class BrandRetrieveSerializer(ModelSerializer):
 
 
 class CategoryRetrieveSerializer(ModelSerializer):
-    comment = CommentSerializer(many=True)
     atachment = AttachmentSerializer()
-    product_shop = ProductShopSerializer()
-    shop = ShopSerializer()
-    product = ProductSerializer()
-    brand = BrandSerializer()
+
 
     class Meta:
         model = Category
@@ -111,9 +103,6 @@ class ProductShopRetrieveSerializer(ModelSerializer):
 
 class AttachmentRetrieveSerializer(ModelSerializer):
     comment = CommentSerializer(many=True)
-    product = ProductSerializer()
-    brand = BrandSerializer()
-    category = CategorySerializer()
 
     class Meta:
         model = Attachment
@@ -123,8 +112,6 @@ class AttachmentRetrieveSerializer(ModelSerializer):
 class CommentRetrieveSerializer(ModelSerializer):
     atachment = AttachmentSerializer()
     shop = ShopSerializer()
-    brand = BrandSerializer()
-    category = CategorySerializer()
 
     class Meta:
         model = Comment
@@ -132,7 +119,7 @@ class CommentRetrieveSerializer(ModelSerializer):
 
 
 class ShopRetrieveSerializer(ModelSerializer):
-    shop = ShopSerializer()
+
     category = CategorySerializer()
 
     class Meta:
