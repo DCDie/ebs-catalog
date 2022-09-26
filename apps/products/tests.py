@@ -117,9 +117,11 @@ class TaskApiTestCase(TestCase):
         product = Product.objects.create(
             title=fake.sentence(),
             description=fake.sentence(),
-            price=10,
-            rating=0,
-            verified=True
+            price=8,
+            rating=2,
+            verified='True',
+            specification='Test', languages='Test'
+
         )
         product.category.add(category)
         response = self.client.get(f'/products/{product.id}/')
@@ -148,7 +150,7 @@ class TaskApiTestCase(TestCase):
         self.assertEqual(response.status_code, HTTP_200_OK)
 
     def test_create_products(self):
-        category = Category.objects.create(title='Test')
+        category = Category.objects.create(title=fake.sentence())
         data = {
             "title": fake.sentence(),
             "description": fake.sentence(),
@@ -378,9 +380,11 @@ class TaskApiTestCase(TestCase):
         self.assertEqual(response.status_code, HTTP_200_OK)
 
     def test_shop_delete(self):
+
         shop = Shop.objects.create(
             title=fake.sentence(),
-            description=fake.sentence()
+            description=fake.sentence(),
+
         )
 
         response = self.client.delete(f'/shops/{shop.id}/', content_type='application/json')
