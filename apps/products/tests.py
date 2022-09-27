@@ -36,13 +36,11 @@ class BrandTestCase(APITestCase):
             email='simple@test.com',
             first_name='simple_first_name',
             last_name='simple_last_name',
-            username='simple@test.com',
             is_superuser=False,
             is_staff=False,
         )
 
     def test_get_attachments_list(self):
-        # print(self.user.username)
         response = self.client.get(
             '/attachments',
             **auth(self.user)
@@ -145,7 +143,6 @@ class CategoryTestCase(APITestCase):
             email='simple@test.com',
             first_name='simple_first_name',
             last_name='simple_last_name',
-            username='simple@test.com',
             is_superuser=False,
             is_staff=False,
         )
@@ -241,7 +238,6 @@ class ProductTestCase(APITestCase):
             email='simple@test.com',
             first_name='simple_first_name',
             last_name='simple_last_name',
-            username='simple@test.com',
             is_superuser=False,
             is_staff=False,
         )
@@ -392,7 +388,6 @@ class CommentTestCase(APITestCase):
             email='simple@test.com',
             first_name='simple_first_name',
             last_name='simple_last_name',
-            username='simple@test.com',
             is_superuser=False,
             is_staff=False,
         )
@@ -591,7 +586,6 @@ class ShopTestCase(APITestCase):
             email='simple@test.com',
             first_name='simple_first_name',
             last_name='simple_last_name',
-            username='simple@test.com',
             is_superuser=False,
             is_staff=False,
         )
@@ -705,7 +699,6 @@ class ShopProductTestCase(APITestCase):
             email='simple@test.com',
             first_name='simple_first_name',
             last_name='simple_last_name',
-            username='simple@test.com',
             is_superuser=False,
             is_staff=False,
         )

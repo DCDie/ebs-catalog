@@ -39,7 +39,7 @@ class UserViewSet(
         serializer.is_valid(raise_exception=True)
 
         user: User = serializer.save(
-            username=serializer.validated_data['email']
+            email=serializer.validated_data['email']
         )
 
         user.set_password(serializer.validated_data['password'])

@@ -14,7 +14,6 @@ class UserTestCase(APITestCase):
             email='simple@test.com',
             first_name='simple_first_name',
             last_name='simple_last_name',
-            username='simple@test.com',
             is_superuser=False,
             is_staff=False,
         )
@@ -26,7 +25,7 @@ class UserTestCase(APITestCase):
     # User get access token
     def test_user_login(self):
         data = {
-            'username': self.user.email,
+            'email': self.user.email,
             'password': self.user_password
         }
         response = self.client.post(
