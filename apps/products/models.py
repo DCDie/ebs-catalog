@@ -125,6 +125,11 @@ class Comment(BaseModel):
         blank=True,
         null=True
     )
+    attachments = models.ManyToManyField(
+        'Attachment',
+        related_name='comment_attachments',
+        blank=True
+    )
     rating = models.IntegerField(
         default=0,
         blank=True,
@@ -246,6 +251,11 @@ class Brand(BaseModel):
     languages = models.JSONField(
         blank=True,
         null=True
+    )
+    attachments = models.ManyToManyField(
+        'Attachment',
+        related_name='brand_attachments',
+        blank=True
     )
 
     class Meta:
