@@ -1,7 +1,6 @@
 import json
 import pathlib
 import time
-from datetime import datetime
 from typing import Optional
 
 import requests
@@ -82,6 +81,7 @@ class EnterParser:
                                 break
                                 # Get goods values
                             for good in goods:
+                                # noinspection PyUnusedLocal
                                 price = 0
                                 if price := good.select_one('.grid-price-cart > .grid-price > .price'):
                                     price = price.text
