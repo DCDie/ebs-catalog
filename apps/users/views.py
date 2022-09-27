@@ -23,7 +23,6 @@ class UserViewSet(
     serializer_class = UserSerializer
     queryset = User.objects.all()
     permission_classes = (AllowAny,)
-
     authentication_classes = [JWTAuthentication]
 
     @action(
