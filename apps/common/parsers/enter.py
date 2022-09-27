@@ -1,4 +1,3 @@
-import datetime
 import json
 import pathlib
 import time
@@ -24,7 +23,7 @@ class EnterParser:
         pathlib.Path(self.path).mkdir(parents=True, exist_ok=True)
 
     @staticmethod
-    def logging(message: str, data: Optional[str] = None, execution_time: Optional[datetime] = None) -> None:
+    def logging(message: str, data: Optional[str] = None, execution_time: Optional[float] = None) -> None:
         print(f"{message} | Data: {data} | Time: {execution_time} sec.")
 
     def get_categories(self) -> None:
