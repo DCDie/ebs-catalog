@@ -1,7 +1,7 @@
-import datetime
 import json
 import pathlib
 import time
+from datetime import datetime
 from typing import Optional
 
 import requests
@@ -52,8 +52,8 @@ class FoxmartParser:
     def get_products(self) -> None:
         with open(f"{self.path}/foxmart_categories.json", "rb") as read_file:
             categories = json.load(read_file)
-            data = {}
         for subcategory in categories:
+            data = {}
             subcategory_id = subcategory.get('id')
             category = subcategory.get('title')
             page = 1
