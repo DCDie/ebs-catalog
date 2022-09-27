@@ -1,8 +1,10 @@
 import requests
+from django.contrib.auth import get_user_model
 from django.core.files import File
 from faker import Faker
 from rest_framework import status
 from rest_framework.test import APITestCase
+from rest_framework_simplejwt.tokens import RefreshToken
 
 from apps.products.models import (
     Attachment,
@@ -15,14 +17,35 @@ from apps.products.models import (
     ShopProduct
 )
 
+User = get_user_model()
 fake = Faker()
 
 
+def auth(user):
+    refresh = RefreshToken.for_user(user)
+    return {
+        'HTTP_AUTHORIZATION': f'Bearer {refresh.access_token}'
+    }
+
+
+# noinspection DuplicatedCode
 class BrandTestCase(APITestCase):
 
+    def setUp(self) -> None:
+        self.user = User.objects.create(
+            email='simple@test.com',
+            first_name='simple_first_name',
+            last_name='simple_last_name',
+            username='simple@test.com',
+            is_superuser=False,
+            is_staff=False,
+        )
+
     def test_get_attachments_list(self):
+        # print(self.user.username)
         response = self.client.get(
-            '/attachments'
+            '/attachments',
+            **auth(self.user)
         )
         self.assertEqual(
             response.status_code,
@@ -31,7 +54,8 @@ class BrandTestCase(APITestCase):
 
     def test_get_brands_list(self):
         response = self.client.get(
-            '/brands'
+            '/brands',
+            **auth(self.user)
         )
         self.assertEqual(
             response.status_code,
@@ -43,7 +67,8 @@ class BrandTestCase(APITestCase):
             title=fake.sentence()
         )
         response = self.client.get(
-            f'/brands/{brand.id}'
+            f'/brands/{brand.id}',
+            **auth(self.user)
         )
         self.assertEqual(
             response.status_code,
@@ -56,7 +81,8 @@ class BrandTestCase(APITestCase):
         }
         response = self.client.post(
             '/brands',
-            data=data
+            data=data,
+            **auth(self.user)
         )
         self.assertEqual(
             response.status_code,
@@ -72,7 +98,8 @@ class BrandTestCase(APITestCase):
         }
         response = self.client.put(
             f'/brands/{brand.id}',
-            data=data
+            data=data,
+            **auth(self.user)
         )
         self.assertEqual(
             response.status_code,
@@ -84,7 +111,8 @@ class BrandTestCase(APITestCase):
             title=fake.sentence()
         )
         response = self.client.delete(
-            f'/brands/{brand.id}'
+            f'/brands/{brand.id}',
+            **auth(self.user)
         )
         self.assertEqual(
             response.status_code,
@@ -100,7 +128,8 @@ class BrandTestCase(APITestCase):
         }
         response = self.client.patch(
             f'/brands/{brand.id}',
-            data=data
+            data=data,
+            **auth(self.user)
         )
         self.assertEqual(
             response.status_code,
@@ -108,11 +137,23 @@ class BrandTestCase(APITestCase):
         )
 
 
+# noinspection DuplicatedCode
 class CategoryTestCase(APITestCase):
+
+    def setUp(self) -> None:
+        self.user = User.objects.create(
+            email='simple@test.com',
+            first_name='simple_first_name',
+            last_name='simple_last_name',
+            username='simple@test.com',
+            is_superuser=False,
+            is_staff=False,
+        )
 
     def test_get_category_list(self):
         response = self.client.get(
-            '/categories'
+            '/categories',
+            **auth(self.user)
         )
         self.assertEqual(
             response.status_code,
@@ -125,7 +166,8 @@ class CategoryTestCase(APITestCase):
         }
         response = self.client.post(
             '/categories',
-            data=data
+            data=data,
+            **auth(self.user)
         )
         self.assertEqual(
             response.status_code,
@@ -137,7 +179,8 @@ class CategoryTestCase(APITestCase):
             title=fake.sentence()
         )
         response = self.client.get(
-            f'/categories/{category.id}'
+            f'/categories/{category.id}',
+            **auth(self.user)
         )
         self.assertEqual(
             response.status_code,
@@ -153,7 +196,8 @@ class CategoryTestCase(APITestCase):
         }
         response = self.client.put(
             f'/categories/{category.id}',
-            data=data
+            data=data,
+            **auth(self.user)
         )
         self.assertEqual(
             response.status_code,
@@ -169,7 +213,8 @@ class CategoryTestCase(APITestCase):
         }
         response = self.client.patch(
             f'/categories/{category.id}',
-            data=data
+            data=data,
+            **auth(self.user)
         )
         self.assertEqual(
             response.status_code,
@@ -181,7 +226,8 @@ class CategoryTestCase(APITestCase):
             title=fake.sentence()
         )
         response = self.client.delete(
-            f'/categories/{category.id}'
+            f'/categories/{category.id}',
+            **auth(self.user)
         )
         self.assertEqual(
             response.status_code,
@@ -190,10 +236,20 @@ class CategoryTestCase(APITestCase):
 
 
 class ProductTestCase(APITestCase):
+    def setUp(self) -> None:
+        self.user = User.objects.create(
+            email='simple@test.com',
+            first_name='simple_first_name',
+            last_name='simple_last_name',
+            username='simple@test.com',
+            is_superuser=False,
+            is_staff=False,
+        )
 
     def test_get_products_list(self):
         response = self.client.get(
-            '/products'
+            '/products',
+            **auth(self.user)
         )
         self.assertEqual(
             response.status_code,
@@ -213,7 +269,8 @@ class ProductTestCase(APITestCase):
         )
         product.category.add(category)
         response = self.client.get(
-            f'/products/{product.id}'
+            f'/products/{product.id}',
+            **auth(self.user)
         )
         self.assertEqual(
             response.status_code,
@@ -243,7 +300,8 @@ class ProductTestCase(APITestCase):
         }
         response = self.client.put(
             f'/products/{product.id}',
-            data=data
+            data=data,
+            **auth(self.user)
         )
         self.assertEqual(
             response.status_code,
@@ -264,7 +322,8 @@ class ProductTestCase(APITestCase):
         }
         response = self.client.post(
             '/products',
-            data=data
+            data=data,
+            **auth(self.user)
         )
         self.assertEqual(
             response.status_code,
@@ -294,7 +353,8 @@ class ProductTestCase(APITestCase):
         }
         response = self.client.patch(
             f'/products/{product.id}',
-            data=data
+            data=data,
+            **auth(self.user)
         )
         self.assertEqual(
             response.status_code,
@@ -315,7 +375,8 @@ class ProductTestCase(APITestCase):
         )
         product.category.add(category)
         response = self.client.delete(
-            f'/products/{product.id}'
+            f'/products/{product.id}',
+            **auth(self.user)
         )
         self.assertEqual(
             response.status_code,
@@ -323,11 +384,23 @@ class ProductTestCase(APITestCase):
         )
 
 
+# noinspection DuplicatedCode
 class CommentTestCase(APITestCase):
+
+    def setUp(self) -> None:
+        self.user = User.objects.create(
+            email='simple@test.com',
+            first_name='simple_first_name',
+            last_name='simple_last_name',
+            username='simple@test.com',
+            is_superuser=False,
+            is_staff=False,
+        )
 
     def test_get_comment_list(self):
         response = self.client.get(
-            '/comments'
+            '/comments',
+            **auth(self.user)
         )
         self.assertEqual(
             response.status_code,
@@ -360,7 +433,8 @@ class CommentTestCase(APITestCase):
         }
         response = self.client.post(
             '/comments',
-            data=data
+            data=data,
+            **auth(self.user)
         )
         self.assertEqual(
             response.status_code,
@@ -392,7 +466,8 @@ class CommentTestCase(APITestCase):
             shop=shop
         )
         response = self.client.get(
-            f'/comments/{comment.id}'
+            f'/comments/{comment.id}',
+            **auth(self.user)
         )
         self.assertEqual(
             response.status_code,
@@ -430,7 +505,8 @@ class CommentTestCase(APITestCase):
         }
         response = self.client.put(
             f'/comments/{comment.id}',
-            data=data
+            data=data,
+            **auth(self.user)
         )
         self.assertEqual(
             response.status_code,
@@ -467,7 +543,8 @@ class CommentTestCase(APITestCase):
         }
         response = self.client.patch(
             f'/comments/{comment.id}',
-            data=data
+            data=data,
+            **auth(self.user)
         )
         self.assertEqual(
             response.status_code,
@@ -498,7 +575,8 @@ class CommentTestCase(APITestCase):
             shop=shop
         )
         response = self.client.delete(
-            f'/comments/{comment.id}'
+            f'/comments/{comment.id}',
+            **auth(self.user)
         )
         self.assertEqual(
             response.status_code,
@@ -508,9 +586,20 @@ class CommentTestCase(APITestCase):
 
 class ShopTestCase(APITestCase):
 
+    def setUp(self) -> None:
+        self.user = User.objects.create(
+            email='simple@test.com',
+            first_name='simple_first_name',
+            last_name='simple_last_name',
+            username='simple@test.com',
+            is_superuser=False,
+            is_staff=False,
+        )
+
     def test_shop_list(self):
         response = self.client.get(
-            '/shops'
+            '/shops',
+            **auth(self.user)
         )
         self.assertEqual(
             response.status_code,
@@ -524,7 +613,8 @@ class ShopTestCase(APITestCase):
         }
         response = self.client.post(
             '/shops',
-            data=data
+            data=data,
+            **auth(self.user)
         )
         self.assertEqual(
             response.status_code,
@@ -537,7 +627,8 @@ class ShopTestCase(APITestCase):
             description=fake.sentence()
         )
         response = self.client.get(
-            f'/shops/{shop.id}'
+            f'/shops/{shop.id}',
+            **auth(self.user)
         )
         self.assertEqual(
             response.status_code,
@@ -555,7 +646,8 @@ class ShopTestCase(APITestCase):
         }
         response = self.client.put(
             f'/shops/{shop.id}',
-            data=data
+            data=data,
+            **auth(self.user)
         )
         self.assertEqual(
             response.status_code,
@@ -573,7 +665,8 @@ class ShopTestCase(APITestCase):
         }
         response = self.client.patch(
             f'/shops/{shop.id}',
-            data=data
+            data=data,
+            **auth(self.user)
         )
         self.assertEqual(
             response.status_code,
@@ -587,7 +680,8 @@ class ShopTestCase(APITestCase):
         )
 
         response = self.client.delete(
-            f'/shops/{shop.id}'
+            f'/shops/{shop.id}',
+            **auth(self.user)
         )
         self.assertEqual(
             response.status_code,
@@ -595,7 +689,9 @@ class ShopTestCase(APITestCase):
         )
 
 
+# noinspection DuplicatedCode
 class ShopProductTestCase(APITestCase):
+
     def setUp(self) -> None:
         url = 'https://www.orimi.com/pdf-test.pdf'
         response = requests.get(url)
@@ -605,10 +701,19 @@ class ShopProductTestCase(APITestCase):
         ).write(
             response.content
         )
+        self.user = User.objects.create(
+            email='simple@test.com',
+            first_name='simple_first_name',
+            last_name='simple_last_name',
+            username='simple@test.com',
+            is_superuser=False,
+            is_staff=False,
+        )
 
     def test_shop_products_list(self):
         response = self.client.get(
-            '/shop_products'
+            '/shop-products',
+            **auth(self.user)
         )
         self.assertEqual(
             response.status_code,
@@ -656,8 +761,9 @@ class ShopProductTestCase(APITestCase):
             "attachments": [attachment.id],
         }
         response = self.client.post(
-            '/shop_products',
-            data=data
+            '/shop-products',
+            data=data,
+            **auth(self.user)
         )
         self.assertEqual(
             response.status_code,
@@ -713,8 +819,9 @@ class ShopProductTestCase(APITestCase):
         }
 
         response = self.client.put(
-            f'/shop_products/{shop_product.pk}',
-            data=data
+            f'/shop-products/{shop_product.pk}',
+            data=data,
+            **auth(self.user)
         )
         self.assertEqual(
             response.status_code,
@@ -769,8 +876,9 @@ class ShopProductTestCase(APITestCase):
         }
 
         response = self.client.patch(
-            f'/shop_products/{shop_product.pk}',
-            data=data
+            f'/shop-products/{shop_product.pk}',
+            data=data,
+            **auth(self.user)
         )
         self.assertEqual(
             response.status_code,
@@ -794,7 +902,8 @@ class ShopProductTestCase(APITestCase):
         )
 
         response = self.client.delete(
-            f'/shop_products/{shop_product.pk}'
+            f'/shop-products/{shop_product.pk}',
+            **auth(self.user)
         )
         self.assertEqual(
             response.status_code,
