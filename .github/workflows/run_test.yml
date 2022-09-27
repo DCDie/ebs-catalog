@@ -80,4 +80,5 @@ jobs:
         run: |
           source .venv/bin/activate
           coverage run --source='apps.products.views'
+          coverage run --source='apps.users.views'
           coverage report --fail-under=100
