@@ -1,7 +1,7 @@
-import datetime
 import json
 import pathlib
 import time
+from datetime import datetime
 from typing import Optional
 
 import requests
