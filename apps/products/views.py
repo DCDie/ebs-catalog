@@ -52,10 +52,15 @@ class CategoryViewSet(
         retrieve=CategoryRetrieveSerializer
     )
 
+    def get_queryset(self):
+        queryset = super(CategoryViewSet, self).get_queryset()
+        if self.action == 'retrieve':
+            queryset.select_related()
+        return queryset
+
 
 class ShopViewSet(
     ModelViewSet,
-
     BaseViewSet
 ):
     queryset = Shop.objects.all()
@@ -64,10 +69,15 @@ class ShopViewSet(
         retrieve=ShopRetrieveSerializer
     )
 
+    def get_queryset(self):
+        queryset = super(ShopViewSet, self).get_queryset()
+        if self.action == 'retrieve':
+            queryset.select_related()
+        return queryset
+
 
 class ProductShopViewSet(
     ModelViewSet,
-
     BaseViewSet
 ):
     queryset = ShopProduct.objects.all()
@@ -75,6 +85,12 @@ class ProductShopViewSet(
     serializer_by_action = dict(
         retrieve=ProductShopRetrieveSerializer
     )
+
+    def get_queryset(self):
+        queryset = super(ProductShopViewSet, self).get_queryset()
+        if self.action == 'retrieve':
+            queryset.select_related()
+        return queryset
 
 
 class ProductViewSet(
@@ -87,6 +103,12 @@ class ProductViewSet(
         retrieve=ProductRetrieveSerializer
     )
 
+    def get_queryset(self):
+        queryset = super(ProductViewSet, self).get_queryset()
+        if self.action == 'retrieve':
+            queryset.select_related()
+        return queryset
+
 
 class AttachmentViewSet(
     ModelViewSet,
@@ -97,6 +119,12 @@ class AttachmentViewSet(
     serializer_by_action = dict(
         retrieve=AttachmentRetrieveSerializer
     )
+
+    def get_queryset(self):
+        queryset = super(AttachmentViewSet, self).get_queryset()
+        if self.action == 'retrieve':
+            queryset.select_related()
+        return queryset
 
 
 class CommentViewSet(
@@ -109,6 +137,12 @@ class CommentViewSet(
         retrieve=CommentRetrieveSerializer
     )
 
+    def get_queryset(self):
+        queryset = super(CommentViewSet, self).get_queryset()
+        if self.action == 'retrieve':
+            queryset.select_related()
+        return queryset
+
 
 class BrandViewSet(
     ModelViewSet,
@@ -119,3 +153,9 @@ class BrandViewSet(
     serializer_by_action = dict(
         retrieve=BrandRetrieveSerializer
     )
+
+    def get_queryset(self):
+        queryset = super(BrandViewSet, self).get_queryset()
+        if self.action == 'retrieve':
+            queryset.select_related()
+        return queryset
