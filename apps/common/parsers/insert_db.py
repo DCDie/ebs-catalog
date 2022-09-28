@@ -12,6 +12,10 @@ from apps.products.models import (
     Shop
 )
 
+__all__ = [
+    "InsertDataBase"
+]
+
 
 class InsertDataBase:
 
@@ -92,6 +96,6 @@ class InsertDataBase:
                             match_field='label'
                         )
                         self.logging(
-                            message='New file data - added',
+                            message=f'Shop: {shop_name} - File: {filename} - added',
                             execution_time=time.process_time() - start
                         )
