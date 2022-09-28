@@ -241,6 +241,7 @@ class CommentAdmin(admin.ModelAdmin):
         'shop',
         'user',
         'languages',
+        'attachments',
         'rating',
         'created_at',
         'modified_at'
@@ -269,6 +270,7 @@ class BrandAdmin(admin.ModelAdmin):
     fields = (
         'title',
         'parent',
+        'attachments',
         'created_at',
         'modified_at'
     )

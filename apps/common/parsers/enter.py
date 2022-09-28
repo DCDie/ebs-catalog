@@ -1,7 +1,6 @@
 import json
 import pathlib
 import time
-from datetime import datetime
 from typing import Optional
 
 import requests
@@ -24,7 +23,7 @@ class EnterParser:
         pathlib.Path(self.path).mkdir(parents=True, exist_ok=True)
 
     @staticmethod
-    def logging(message: str, data: Optional[str] = None, execution_time: Optional[datetime] = None) -> None:
+    def logging(message: str, data: Optional[str] = None, execution_time: Optional[float] = None) -> None:
         print(f"{message} | Data: {data} | Time: {execution_time} sec.")
 
     def get_categories(self) -> None:
@@ -82,6 +81,7 @@ class EnterParser:
                                 break
                                 # Get goods values
                             for good in goods:
+                                # noinspection PyUnusedLocal
                                 price = 0
                                 if price := good.select_one('.grid-price-cart > .grid-price > .price'):
                                     price = price.text

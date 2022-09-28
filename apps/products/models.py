@@ -50,6 +50,7 @@ class Category(BaseModel):
     class Meta:
         verbose_name = 'Category'
         verbose_name_plural = 'Categories'
+        ordering = ['-id']
 
     def __str__(self):
         return self.title
@@ -59,7 +60,9 @@ class Product(BaseModel):
     title = models.CharField(
         max_length=155
     )
-    category = models.ManyToManyField(Category)
+    category = models.ManyToManyField(
+        Category
+    )
     description = models.TextField()
     specification = models.JSONField(
         blank=True,
@@ -96,6 +99,7 @@ class Product(BaseModel):
     class Meta:
         verbose_name = 'Product'
         verbose_name_plural = 'Products'
+        ordering = ['-id']
 
     def __str__(self):
         return self.title
@@ -125,6 +129,11 @@ class Comment(BaseModel):
         blank=True,
         null=True
     )
+    attachments = models.ManyToManyField(
+        'Attachment',
+        related_name='comment_attachments',
+        blank=True
+    )
     rating = models.IntegerField(
         default=0,
         blank=True,
@@ -138,6 +147,7 @@ class Comment(BaseModel):
     class Meta:
         verbose_name = 'Comment'
         verbose_name_plural = 'Comments'
+        ordering = ['-id']
 
     def __str__(self):
         return f'{self.id}'
@@ -168,6 +178,7 @@ class Shop(BaseModel):
     class Meta:
         verbose_name = 'Shop'
         verbose_name_plural = 'Shops'
+        ordering = ['-id']
 
     def __str__(self):
         return self.title
@@ -215,9 +226,11 @@ class ShopProduct(BaseModel):
     )
     shop_category = models.ForeignKey(
         to='ShopCategory',
-        on_delete=models.CASCADE,
+        on_delete=models.CASCADE
     )
-    category = models.ManyToManyField(Category)
+    category = models.ManyToManyField(
+        Category
+    )
     verified = models.BooleanField(
         blank=True,
         null=True,
@@ -247,10 +260,16 @@ class Brand(BaseModel):
         blank=True,
         null=True
     )
+    attachments = models.ManyToManyField(
+        'Attachment',
+        related_name='brand_attachments',
+        blank=True
+    )
 
     class Meta:
         verbose_name = 'Brand'
         verbose_name_plural = 'Brands'
+        ordering = ['-id']
 
     def __str__(self):
         return self.title
@@ -282,6 +301,7 @@ class ShopCategory(BaseModel):
         verbose_name = 'Shop category'
         verbose_name_plural = 'Shop categories'
         unique_together = ['shop', 'name']
+        ordering = ['-id']
 
     def __str__(self):
         return self.name
@@ -311,6 +331,7 @@ class Attachment(BaseModel):
     class Meta:
         verbose_name = 'Attachment'
         verbose_name_plural = 'Attachments'
+        ordering = ['-id']
 
     def __str__(self):
         return self.title
