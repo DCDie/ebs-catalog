@@ -53,7 +53,7 @@ class CategoryViewSet(
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
     permission_classes = (IsAuthenticated,)
-    ordering_fields = ['id','title']
+    ordering_fields = ['id', 'title']
     filter_backends = [filters.SearchFilter]
     search_fields = ['title']
     serializer_by_action = dict(
