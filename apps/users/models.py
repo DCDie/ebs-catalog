@@ -42,3 +42,4 @@ class CustomUser(AbstractUser):
 
     class Meta:
         app_label = 'users'
+        ordering = ['id']
