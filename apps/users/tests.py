@@ -1,10 +1,16 @@
-from rest_framework.test import APITestCase
 from django.contrib.auth import get_user_model
-
-from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework import status
+from rest_framework.test import APITestCase
+from rest_framework_simplejwt.tokens import RefreshToken
 
 User = get_user_model()
+
+
+def auth(user):
+    refresh = RefreshToken.for_user(user)
+    return {
+        'HTTP_AUTHORIZATION': f'Bearer {refresh.access_token}'
+    }
 
 
 class UserTestCase(APITestCase):
@@ -66,7 +72,8 @@ class UserTestCase(APITestCase):
 
     def test_user_list(self):
         response = self.client.get(
-            '/users'
+            '/users',
+            **auth(self.user)
         )
         self.assertEqual(
             response.status_code,
