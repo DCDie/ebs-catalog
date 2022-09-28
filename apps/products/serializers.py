@@ -7,7 +7,8 @@ from apps.products.models import (
     Attachment,
     ShopProduct,
     Product,
-    Brand
+    Brand,
+    ShopCategory,
 )
 
 __all__ = [
@@ -18,6 +19,14 @@ __all__ = [
     'AttachmentSerializer',
     'ProductShopSerializer',
     'BrandSerializer',
+    'ShopCategorySerializer',
+    'BrandRetrieveSerializer',
+    'CategoryRetrieveSerializer',
+    'CommentRetrieveSerializer',
+    'ProductRetrieveSerializer',
+    'ProductShopRetrieveSerializer',
+    'ShopRetrieveSerializer',
+    'ShopCategoryRetrieveSerializer'
 ]
 
 
@@ -63,7 +72,24 @@ class ProductSerializer(ModelSerializer):
         fields = '__all__'
 
 
+class ShopCategorySerializer(ModelSerializer):
+    class Meta:
+        model = ShopCategory
+        fields = '__all__'
+
+
+class ShopCategoryRetrieveSerializer(ModelSerializer):
+    shop = ShopSerializer()
+    category = CategorySerializer()
+
+    class Meta:
+        model = ShopCategory
+        fields = '__all__'
+
+
 class BrandRetrieveSerializer(ModelSerializer):
+    attachments = AttachmentSerializer(many=True)
+
     class Meta:
         model = Brand
         fields = '__all__'
@@ -91,22 +117,17 @@ class ProductShopRetrieveSerializer(ModelSerializer):
     attachments = AttachmentSerializer(many=True)
     shop = ShopSerializer()
     product = ProductSerializer()
-    shop_category = ProductShopSerializer
+    shop_category = ShopCategorySerializer()
 
     class Meta:
         model = ShopProduct
         fields = "__all__"
 
 
-class AttachmentRetrieveSerializer(ModelSerializer):
-    class Meta:
-        model = Attachment
-        fields = "__all__"
-
-
 class CommentRetrieveSerializer(ModelSerializer):
     product = ProductSerializer()
     shop = ShopSerializer()
+    attachments = AttachmentSerializer(many=True)
 
     class Meta:
         model = Comment
