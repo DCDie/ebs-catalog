@@ -811,8 +811,8 @@ class ShopProductTestCase(APITestCase):
             "attachments": [attachment.id],
         }
 
-        response = self.client.put(
-            f'/shop-products/{shop_product.pk}',
+        response = self.client.get(
+            f'/shop-products/{shop_product.label}',
             data=data,
             **auth(self.user)
         )
@@ -869,7 +869,7 @@ class ShopProductTestCase(APITestCase):
         }
 
         response = self.client.patch(
-            f'/shop-products/{shop_product.pk}',
+            f'/shop-products/{shop_product.label}',
             data=data,
             **auth(self.user)
         )
@@ -895,10 +895,87 @@ class ShopProductTestCase(APITestCase):
         )
 
         response = self.client.delete(
-            f'/shop-products/{shop_product.pk}',
+            f'/shop-products/{shop_product.label}',
             **auth(self.user)
         )
         self.assertEqual(
             response.status_code,
             status.HTTP_204_NO_CONTENT
         )
+
+    def test_shop_category_list(self):
+        response = self.client.get(
+            '/shop-categories',
+            **auth(self.user)
+        )
+        self.assertEqual(
+            response.status_code,
+            status.HTTP_200_OK
+        )
+
+    def test_shop_category_create(self):
+        shop = Shop.objects.create(
+            title=fake.sentence()
+        )
+        data = {
+            'name': fake.sentence(),
+            'shop': shop.id
+        }
+        response = self.client.post(
+            '/shop-categories',
+            data=data,
+            **auth(self.user)
+        )
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+
+    def test_shop_category_update(self):
+        shop = Shop.objects.create(
+            title=fake.sentence()
+        )
+        data = {
+            'name': fake.sentence(),
+            'shop': shop.id
+        }
+        shop_category = ShopCategory.objects.create(
+            name=fake.sentence(),
+            shop=shop
+        )
+        response = self.client.put(
+            f'/shop-categories/{shop_category.id}',
+            data=data,
+            **auth(self.user)
+        )
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+    def test_shop_category_partial_update(self):
+        shop = Shop.objects.create(
+            title=fake.sentence()
+        )
+        data = {
+            'name': fake.sentence(),
+            'shop': shop.id
+        }
+        shop_category = ShopCategory.objects.create(
+            name=fake.sentence(),
+            shop=shop
+        )
+        response = self.client.patch(
+            f'/shop-categories/{shop_category.id}',
+            data=data,
+            **auth(self.user)
+        )
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+    def test_shop_category_retrieve(self):
+        shop = Shop.objects.create(
+            title=fake.sentence()
+        )
+        shop_category = ShopCategory.objects.create(
+            name=fake.sentence(),
+            shop=shop
+        )
+        response = self.client.get(
+            f'/shop-categories/{shop_category.id}',
+            **auth(self.user)
+        )
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
