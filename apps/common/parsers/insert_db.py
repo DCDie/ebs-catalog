@@ -1,4 +1,3 @@
-import datetime
 import json
 import os
 import time
@@ -20,7 +19,7 @@ class InsertDataBase:
         self.directory = f'{settings.BASE_DIR}/media'
 
     @staticmethod
-    def logging(message: str, data: Optional[str] = None, execution_time: Optional[datetime] = None) -> None:
+    def logging(message: str, data: Optional[str] = None, execution_time: Optional[float] = None) -> None:
         print(f"{message} | Data: {data} | Time: {execution_time} sec.")
 
     def add_shop_category(self) -> None:
