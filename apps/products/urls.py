@@ -7,7 +7,8 @@ from apps.products.views import (
     AttachmentViewSet,
     ShopViewSet,
     CommentViewSet,
-    BrandViewSet
+    BrandViewSet,
+    ShopCategoryViewSet,
 )
 
 base_router = DefaultRouter(
@@ -47,6 +48,11 @@ base_router.register(
     prefix='brands',
     viewset=BrandViewSet,
     basename='brands'
+)
+base_router.register(
+    prefix='shop-categories',
+    viewset=ShopCategoryViewSet,
+    basename='shop-categories'
 )
 
 urlpatterns = base_router.urls
