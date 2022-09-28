@@ -3,7 +3,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.viewsets import (
     ModelViewSet
 )
-
+from rest_framework import filters
 from apps.common.views import BaseViewSet
 from apps.products.models import (
     Category,
@@ -53,6 +53,9 @@ class CategoryViewSet(
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
     permission_classes = (IsAuthenticated,)
+    ordering_fields = ['id']
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['title']
     serializer_by_action = dict(
         retrieve=CategoryRetrieveSerializer
     )
@@ -74,6 +77,9 @@ class ShopViewSet(
     serializer_by_action = dict(
         retrieve=ShopRetrieveSerializer
     )
+    ordering_fields = ['id']
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['title', ]
 
     def get_queryset(self):
         queryset = super(ShopViewSet, self).get_queryset()
@@ -92,6 +98,9 @@ class ProductShopViewSet(
     serializer_by_action = dict(
         retrieve=ProductShopRetrieveSerializer
     )
+    ordering_fields = ['id', 'title', 'created_at', 'modified_at', 'price', 'attachmXents', 'shop', 'shop_category']
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['title', 'description']
 
     def get_queryset(self):
         queryset = super(ProductShopViewSet, self).get_queryset()
@@ -117,6 +126,9 @@ class ProductViewSet(
     serializer_by_action = dict(
         retrieve=ProductRetrieveSerializer
     )
+    ordering_fields = ['id', 'title', 'created_at', 'modified_at', 'price']
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['title', 'description']
 
     def get_queryset(self):
         queryset = super(ProductViewSet, self).get_queryset()
@@ -136,6 +148,9 @@ class AttachmentViewSet(
     serializer_class = AttachmentSerializer
     parser_classes = (MultiPartParser,)
     permission_classes = (IsAuthenticated,)
+    ordering_fields = ['id', 'title', 'created_at', 'modified_at']
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['title', 'file_url']
 
 
 class CommentViewSet(
@@ -148,6 +163,9 @@ class CommentViewSet(
     serializer_by_action = dict(
         retrieve=CommentRetrieveSerializer
     )
+    ordering_fields = ['id', 'product', 'created_at', 'modified_at', 'shop', 'user']
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['text']
 
     def get_queryset(self):
         queryset = super(CommentViewSet, self).get_queryset()
@@ -171,6 +189,9 @@ class BrandViewSet(
     serializer_by_action = dict(
         retrieve=BrandRetrieveSerializer
     )
+    ordering_fields = ['id', 'product', 'created_at', 'modified_at', 'shop', 'user']
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['text']
 
     def get_queryset(self):
         queryset = super(BrandViewSet, self).get_queryset()
@@ -191,6 +212,9 @@ class ShopCategoryViewSet(
     serializer_by_action = dict(
         retrieve=ShopCategoryRetrieveSerializer
     )
+    ordering_fields = ['id', 'shop', 'created_at', 'modified_at', 'category']
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['name']
 
     def get_queryset(self):
         queryset = super(ShopCategoryViewSet, self).get_queryset()
