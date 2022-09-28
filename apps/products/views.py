@@ -137,12 +137,6 @@ class AttachmentViewSet(
     parser_classes = (MultiPartParser,)
     permission_classes = (IsAuthenticated,)
 
-    def get_queryset(self):
-        queryset = super(AttachmentViewSet, self).get_queryset()
-        if self.action == 'retrieve':
-            queryset.select_related()
-        return queryset
-
 
 class CommentViewSet(
     ModelViewSet,
