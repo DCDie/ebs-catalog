@@ -16,7 +16,7 @@ from apps.products.models import (
     Shop,
     Comment,
     ShopCategory,
-    ShopProduct
+    ShopProduct,
 )
 
 User = get_user_model()
@@ -30,7 +30,6 @@ def auth(user):
     }
 
 
-# noinspection DuplicatedCode
 class BrandTestCase(APITestCase):
 
     def setUp(self) -> None:
@@ -127,7 +126,6 @@ class BrandTestCase(APITestCase):
         )
 
 
-# noinspection DuplicatedCode
 class CategoryTestCase(APITestCase):
 
     def setUp(self) -> None:
