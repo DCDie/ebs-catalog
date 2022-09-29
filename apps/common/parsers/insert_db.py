@@ -12,6 +12,10 @@ from apps.products.models import (
     Shop
 )
 
+__all__ = [
+    "InsertDataBase"
+]
+
 
 class InsertDataBase:
 
@@ -51,6 +55,9 @@ class InsertDataBase:
                         message='Categories added',
                         execution_time=time.process_time() - start
                     )
+        self.logging(
+            message='Ended successfully'
+        )
 
     def add_shop_products(self) -> None:
         for file in os.listdir(self.directory):
@@ -72,26 +79,36 @@ class InsertDataBase:
                                     'shop__title'
                                 ))
                                 for object_id, category_id, shop_id, shop_title in shop_category_queryset:
-                                    price = ''.join((category_data.get('price')).split()[:-1])
+                                    description = category_data.get('description')
                                     title = category_data.get('title')
+                                    available = category_data.get('available')
+                                    price = category_data.get('price')
+                                    if isinstance(price, str):
+                                        price = ''.join(price.split()[:-1])
                                     data.append(
                                         ShopProduct(
                                             label=slugify(f'{shop_title}, {title}'),
                                             title=title,
-                                            description=category_data.get('description'),
+                                            description=description,
                                             price=price,
-                                            available=category_data.get('available'),
+                                            available=available,
                                             shop_category_id=object_id,
                                             shop_id=shop_id,
-                                            category_id=category_id
+                                            # category_id=category_id # Will be added in the future
                                         )
                                     )
-                        ShopProduct.objects.bulk_update_or_create(
-                            data,
-                            ['available', 'price'],
-                            match_field='label'
-                        )
+                            ShopProduct.objects.bulk_create(
+                                objs=data,
+                                ignore_conflicts=True
+                            )
+                            ShopProduct.objects.bulk_update(
+                                objs=data,
+                                fields=['available', 'price'],
+                            )
                         self.logging(
-                            message='New file data - added',
+                            message=f'Shop: {shop_name} - File: {filename} - added',
                             execution_time=time.process_time() - start
                         )
+        self.logging(
+            message='Ended successfully'
+        )

@@ -30,6 +30,7 @@ __all__ = [
 ]
 
 
+# noinspection DuplicatedCode
 class CategorySerializer(ModelSerializer):
     class Meta:
         model = Category
@@ -54,6 +55,7 @@ class ShopSerializer(ModelSerializer):
         fields = '__all__'
 
 
+# noinspection DuplicatedCode
 class AttachmentSerializer(ModelSerializer):
     class Meta:
         model = Attachment
