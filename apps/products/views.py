@@ -55,7 +55,6 @@ class CategoryViewSet(
     serializer_class = CategorySerializer
     permission_classes = (IsAuthenticated,)
     ordering_fields = ['id', 'title']
-    filter_backends = [filters.SearchFilter]
     search_fields = ['title']
     filterset_fields = ['parent']
 
@@ -102,7 +101,6 @@ class ProductShopViewSet(
         retrieve=ProductShopRetrieveSerializer
     )
     ordering_fields = ['id', 'title', 'created_at', 'modified_at', 'price', 'attachmXents', 'shop', 'shop_category']
-    filter_backends = [filters.SearchFilter]
     search_fields = ['title', 'description']
     filterset_fields = ['shop', 'shop_category', 'product']
 
@@ -131,7 +129,6 @@ class ProductViewSet(
         retrieve=ProductRetrieveSerializer
     )
     ordering_fields = ['id', 'title', 'created_at', 'modified_at', 'price']
-    filter_backends = [filters.SearchFilter]
     search_fields = ['title', 'description']
     filterset_fields = ['price']
 
@@ -154,7 +151,6 @@ class AttachmentViewSet(
     parser_classes = (MultiPartParser,)
     permission_classes = (IsAuthenticated,)
     ordering_fields = ['id', 'title', 'created_at', 'modified_at']
-    filter_backends = [filters.SearchFilter]
     search_fields = ['title', 'file_url']
     filterset_fields = ['price']
 
@@ -170,7 +166,6 @@ class CommentViewSet(
         retrieve=CommentRetrieveSerializer
     )
     ordering_fields = ['id', 'product', 'created_at', 'modified_at', 'shop', 'user']
-    filter_backends = [filters.SearchFilter]
     search_fields = ['text']
     filterset_fields = ['shop', 'shop_category']
 
@@ -197,7 +192,6 @@ class BrandViewSet(
         retrieve=BrandRetrieveSerializer
     )
     ordering_fields = ['id', 'product', 'created_at', 'modified_at', 'shop', 'user']
-    filter_backends = [filters.SearchFilter]
     search_fields = ['text']
     filterset_fields = ['parent']
 
@@ -221,7 +215,6 @@ class ShopCategoryViewSet(
         retrieve=ShopCategoryRetrieveSerializer
     )
     ordering_fields = ['id', 'shop', 'created_at', 'modified_at', 'category']
-    filter_backends = [filters.SearchFilter]
     search_fields = ['name']
     filterset_fields = ['category', 'shop', 'parent']
 
