@@ -18,7 +18,6 @@ django-json-widget = "^1.1.1"
 beautifulsoup4 = "^4.11.1"
 fake-useragent = "^0.1.11"
 django-debug-toolbar = "^3.6.0"
-django-bulk-update-or-create = "^0.3.0"
 urllib3 = "^1.26.12"
 chardet = "^5.0.0"
 Faker = "^14.2.1"
@@ -28,6 +27,7 @@ python-slugify = "^6.1.2"
 django-rest-framework-nested = "^0.0.1"
 djangorestframework-simplejwt = "^5.2.0"
 slugify = "^0.0.1"
+deepdiff = "^5.8.1"
 
 
 [build-system]
