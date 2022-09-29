@@ -3,6 +3,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.viewsets import (
     ModelViewSet
 )
+
 from rest_framework import filters
 from apps.common.views import BaseViewSet
 from apps.products.models import (
@@ -56,6 +57,8 @@ class CategoryViewSet(
     ordering_fields = ['id', 'title']
     filter_backends = [filters.SearchFilter]
     search_fields = ['title']
+    filterset_fields = ['parent']
+
     serializer_by_action = dict(
         retrieve=CategoryRetrieveSerializer
     )
@@ -101,6 +104,7 @@ class ProductShopViewSet(
     ordering_fields = ['id', 'title', 'created_at', 'modified_at', 'price', 'attachmXents', 'shop', 'shop_category']
     filter_backends = [filters.SearchFilter]
     search_fields = ['title', 'description']
+    filterset_fields = ['shop', 'shop_category', 'product']
 
     def get_queryset(self):
         queryset = super(ProductShopViewSet, self).get_queryset()
@@ -129,6 +133,7 @@ class ProductViewSet(
     ordering_fields = ['id', 'title', 'created_at', 'modified_at', 'price']
     filter_backends = [filters.SearchFilter]
     search_fields = ['title', 'description']
+    filterset_fields = ['price']
 
     def get_queryset(self):
         queryset = super(ProductViewSet, self).get_queryset()
@@ -151,6 +156,7 @@ class AttachmentViewSet(
     ordering_fields = ['id', 'title', 'created_at', 'modified_at']
     filter_backends = [filters.SearchFilter]
     search_fields = ['title', 'file_url']
+    filterset_fields = ['price']
 
 
 class CommentViewSet(
@@ -166,6 +172,7 @@ class CommentViewSet(
     ordering_fields = ['id', 'product', 'created_at', 'modified_at', 'shop', 'user']
     filter_backends = [filters.SearchFilter]
     search_fields = ['text']
+    filterset_fields = ['shop', 'shop_category']
 
     def get_queryset(self):
         queryset = super(CommentViewSet, self).get_queryset()
@@ -192,6 +199,7 @@ class BrandViewSet(
     ordering_fields = ['id', 'product', 'created_at', 'modified_at', 'shop', 'user']
     filter_backends = [filters.SearchFilter]
     search_fields = ['text']
+    filterset_fields = ['parent']
 
     def get_queryset(self):
         queryset = super(BrandViewSet, self).get_queryset()
@@ -215,6 +223,7 @@ class ShopCategoryViewSet(
     ordering_fields = ['id', 'shop', 'created_at', 'modified_at', 'category']
     filter_backends = [filters.SearchFilter]
     search_fields = ['name']
+    filterset_fields = ['category','shop','parent']
 
     def get_queryset(self):
         queryset = super(ShopCategoryViewSet, self).get_queryset()

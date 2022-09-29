@@ -28,6 +28,7 @@ python-slugify = "^6.1.2"
 django-rest-framework-nested = "^0.0.1"
 djangorestframework-simplejwt = "^5.2.0"
 slugify = "^0.0.1"
+djangorestframework-filters = "^0.11.1"
 
 
 [build-system]
