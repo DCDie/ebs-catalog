@@ -208,7 +208,8 @@ class ShopProduct(BaseModel):
     )
     attachments = models.ManyToManyField(
         'Attachment',
-        related_name='product_shop_attachments'
+        related_name='product_shop_attachments',
+        blank=True
     )
     shop = models.ForeignKey(
         to=Shop,
