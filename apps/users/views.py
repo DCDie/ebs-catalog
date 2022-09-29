@@ -52,3 +52,4 @@ class UserViewSet(
             'refresh': str(refresh),
             'access': str(refresh.access_token)
         })
+

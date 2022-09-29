@@ -100,9 +100,9 @@ class ProductShopViewSet(
     serializer_by_action = dict(
         retrieve=ProductShopRetrieveSerializer
     )
-    ordering_fields = ['id', 'title', 'created_at', 'modified_at', 'price', 'attachmXents', 'shop', 'shop_category']
-    search_fields = ['title', 'description']
-    filterset_fields = ['shop', 'shop_category', 'product']
+    ordering_fields = ['id', 'title', 'created_at', 'modified_at', 'attachments', 'shop', 'shop_category']
+    search_fields = ['title', 'price']
+    filterset_fields = ['shop', 'shop_category']
 
     def get_queryset(self):
         queryset = super(ProductShopViewSet, self).get_queryset()
