@@ -55,6 +55,9 @@ class InsertDataBase:
                         message='Categories added',
                         execution_time=time.process_time() - start
                     )
+        self.logging(
+            message='Ended successfully'
+        )
 
     def add_shop_products(self) -> None:
         for file in os.listdir(self.directory):
@@ -107,5 +110,5 @@ class InsertDataBase:
                             execution_time=time.process_time() - start
                         )
         self.logging(
-            message='Insert ended'
+            message='Ended successfully'
         )
