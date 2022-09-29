@@ -1,7 +1,6 @@
 from pathlib import Path
 
 from auditlog.registry import auditlog
-from bulk_update_or_create import BulkUpdateOrCreateQuerySet
 from django.contrib.auth import get_user_model
 from django.core.validators import (
     MaxValueValidator,
@@ -185,7 +184,6 @@ class Shop(BaseModel):
 
 
 class ShopProduct(BaseModel):
-    objects = BulkUpdateOrCreateQuerySet.as_manager()
 
     label = AutoSlugField(
         primary_key=True,
