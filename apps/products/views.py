@@ -55,8 +55,8 @@ class CategoryViewSet(
     serializer_class = CategorySerializer
     permission_classes = (IsAuthenticated,)
     ordering_fields = ['id', 'title']
-    search_fields = ['title']
-    filterset_fields = ['parent']
+    search_fields = ['title', ]
+    filterset_fields = ['parent', ]
 
     serializer_by_action = dict(
         retrieve=CategoryRetrieveSerializer
@@ -152,7 +152,7 @@ class AttachmentViewSet(
     permission_classes = (IsAuthenticated,)
     ordering_fields = ['id', 'title', 'created_at', 'modified_at']
     search_fields = ['title', 'file_url']
-    filterset_fields = ['price']
+    filterset_fields = ['extension']
 
 
 class CommentViewSet(
@@ -166,8 +166,8 @@ class CommentViewSet(
         retrieve=CommentRetrieveSerializer
     )
     ordering_fields = ['id', 'product', 'created_at', 'modified_at', 'shop', 'user']
-    search_fields = ['text']
-    filterset_fields = ['shop', 'shop_category']
+    search_fields = ['text', ]
+    filterset_fields = ['shop', ]
 
     def get_queryset(self):
         queryset = super(CommentViewSet, self).get_queryset()
@@ -192,8 +192,8 @@ class BrandViewSet(
         retrieve=BrandRetrieveSerializer
     )
     ordering_fields = ['id', 'product', 'created_at', 'modified_at', 'shop', 'user']
-    search_fields = ['text']
-    filterset_fields = ['parent']
+    search_fields = ['text', ]
+    filterset_fields = ['parent', ]
 
     def get_queryset(self):
         queryset = super(BrandViewSet, self).get_queryset()
