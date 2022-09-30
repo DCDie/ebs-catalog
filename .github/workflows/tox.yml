@@ -77,5 +77,4 @@ jobs:
       #              run test suite
       #----------------------------------------------
       - name: Run tox
-        run: |
-          tox
+        run: tox
