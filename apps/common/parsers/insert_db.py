@@ -153,14 +153,6 @@ class InsertDataBase:
                             match_field='label'
                         )
 
-                        ShopProduct.objects.bulk_create(
-                                objs=data,
-                                ignore_conflicts=True
-                            )
-                        ShopProduct.objects.bulk_update(
-                                objs=data,
-                                fields=['available', 'price'],
-                            )
                         self.logging(
                             message=f'Shop: {shop_name} - File: {filename} - added',
                             execution_time=time.process_time() - start
