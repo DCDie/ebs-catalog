@@ -50,7 +50,7 @@ class InsertDataBase:
             if not old_data:
                 return
 
-            if not old_data==upd_data:
+            if not old_data == upd_data:
                 upd_data_set = set(upd_data.items())
                 old_data_set = set(old_data.items())
                 value = upd_data_set - old_data_set
