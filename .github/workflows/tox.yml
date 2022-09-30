@@ -22,9 +22,6 @@ env:
 jobs:
   test:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        max-parallel: 1
     steps:
       #----------------------------------------------
       #       check-out repo and set-up python
