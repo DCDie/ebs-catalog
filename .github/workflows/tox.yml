@@ -19,6 +19,9 @@ env:
   HOST: ${{ secrets.HOST }}
   PORT: ${{ secrets.PORT }}
 
+concurrency:
+  group: test
+
 jobs:
   test:
     runs-on: ubuntu-latest
