@@ -6,36 +6,64 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('products', '0003_brand_attachments_comment_attachments'),
+        ("products", "0003_brand_attachments_comment_attachments"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='attachment',
-            options={'ordering': ['-id'], 'verbose_name': 'Attachment', 'verbose_name_plural': 'Attachments'},
+            name="attachment",
+            options={
+                "ordering": ["-id"],
+                "verbose_name": "Attachment",
+                "verbose_name_plural": "Attachments",
+            },
         ),
         migrations.AlterModelOptions(
-            name='brand',
-            options={'ordering': ['-id'], 'verbose_name': 'Brand', 'verbose_name_plural': 'Brands'},
+            name="brand",
+            options={
+                "ordering": ["-id"],
+                "verbose_name": "Brand",
+                "verbose_name_plural": "Brands",
+            },
         ),
         migrations.AlterModelOptions(
-            name='category',
-            options={'ordering': ['-id'], 'verbose_name': 'Category', 'verbose_name_plural': 'Categories'},
+            name="category",
+            options={
+                "ordering": ["-id"],
+                "verbose_name": "Category",
+                "verbose_name_plural": "Categories",
+            },
         ),
         migrations.AlterModelOptions(
-            name='comment',
-            options={'ordering': ['-id'], 'verbose_name': 'Comment', 'verbose_name_plural': 'Comments'},
+            name="comment",
+            options={
+                "ordering": ["-id"],
+                "verbose_name": "Comment",
+                "verbose_name_plural": "Comments",
+            },
         ),
         migrations.AlterModelOptions(
-            name='product',
-            options={'ordering': ['-id'], 'verbose_name': 'Product', 'verbose_name_plural': 'Products'},
+            name="product",
+            options={
+                "ordering": ["-id"],
+                "verbose_name": "Product",
+                "verbose_name_plural": "Products",
+            },
         ),
         migrations.AlterModelOptions(
-            name='shop',
-            options={'ordering': ['-id'], 'verbose_name': 'Shop', 'verbose_name_plural': 'Shops'},
+            name="shop",
+            options={
+                "ordering": ["-id"],
+                "verbose_name": "Shop",
+                "verbose_name_plural": "Shops",
+            },
         ),
         migrations.AlterModelOptions(
-            name='shopcategory',
-            options={'ordering': ['-id'], 'verbose_name': 'Shop category', 'verbose_name_plural': 'Shop categories'},
+            name="shopcategory",
+            options={
+                "ordering": ["-id"],
+                "verbose_name": "Shop category",
+                "verbose_name_plural": "Shop categories",
+            },
         ),
     ]

@@ -6,8 +6,9 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         from apps.common.parsers.insert_db import InsertDataBase
+
         inserter = InsertDataBase()
         inserter.add_shop_category()
-        print('Categories are updated')
+        print("Categories are updated")
         inserter.add_shop_products()
-        print('Products are updated')
+        print("Products are updated")

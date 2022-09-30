@@ -1,10 +1,7 @@
 from django.contrib.auth import get_user_model
 from rest_framework.decorators import action
 from rest_framework.mixins import ListModelMixin
-from rest_framework.permissions import (
-    AllowAny,
-    IsAuthenticated
-)
+from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.viewsets import GenericViewSet
 from rest_framework_simplejwt.authentication import JWTAuthentication
@@ -14,41 +11,29 @@ from apps.users.serializers import UserSerializer
 
 User = get_user_model()
 
-__all__ = [
-    'UserViewSet'
-]
+__all__ = ["UserViewSet"]
 
 
-class UserViewSet(
-    ListModelMixin,
-    GenericViewSet
-):
+class UserViewSet(ListModelMixin, GenericViewSet):
     serializer_class = UserSerializer
     queryset = User.objects.all()
     permission_classes = (IsAuthenticated,)
     authentication_classes = [JWTAuthentication]
 
     @action(
-        methods=['post'],
+        methods=["post"],
         detail=False,
-        url_path='register',
+        url_path="register",
         serializer_class=UserSerializer,
-        permission_classes=(AllowAny,)
+        permission_classes=(AllowAny,),
     )
     def register(self, request, *args, **kwargs):
-        serializer = self.get_serializer(
-            data=request.data
-        )
+        serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
 
-        user: User = serializer.save(
-            email=serializer.validated_data['email']
-        )
+        user: User = serializer.save(email=serializer.validated_data["email"])
 
-        user.set_password(serializer.validated_data['password'])
+        user.set_password(serializer.validated_data["password"])
         user.save()
         refresh: RefreshToken = RefreshToken.for_user(user)
-        return Response({
-            'refresh': str(refresh),
-            'access': str(refresh.access_token)
-        })
+        return Response({"refresh": str(refresh), "access": str(refresh.access_token)})
