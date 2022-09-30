@@ -6,6 +6,7 @@ from typing import Optional
 import requests
 from bs4 import BeautifulSoup
 from fake_useragent import UserAgent
+from django.conf import settings
 
 
 class EnterParser:
@@ -19,7 +20,7 @@ class EnterParser:
     def __init__(self) -> None:
         self.table_goods = []
         self.category_name = str
-        self.path = 'media/enter'
+        self.path = settings.ENTER_ROOT
         pathlib.Path(self.path).mkdir(parents=True, exist_ok=True)
 
     @staticmethod

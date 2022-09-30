@@ -149,6 +149,8 @@ STATIC_ROOT = Path(BASE_DIR, 'static')
 
 MEDIA_URL = '/media/files/'
 MEDIA_ROOT = Path(BASE_DIR, 'media/files/')
+ENTER_ROOT = Path(BASE_DIR, 'media/enter/')
+FOXMART_ROOT = Path(BASE_DIR, 'media/foxmart/') # noqa
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
