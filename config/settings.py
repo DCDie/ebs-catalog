@@ -156,6 +156,7 @@ JAZZMIN_SETTINGS = {
         "products.ShopCategory": "fa fa-store",
         "products.Attachment": "fas fa-file-alt",
         "auditlog.LogEntry": "fas fa-clipboard-list",
+        "users.CustomUser": "fas fa-user",
     },
 }
 
