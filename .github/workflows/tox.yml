@@ -1,4 +1,4 @@
-name: Django tests
+name: Tox
 
 on:
   push:
@@ -79,8 +79,6 @@ jobs:
       #----------------------------------------------
       #              run test suite
       #----------------------------------------------
-      - name: Run tests
+      - name: Run tox
         run: |
-          source .venv/bin/activate
-          coverage run --source='apps.products.views,apps.users.views'
-          coverage report --fail-under=100
+          tox
