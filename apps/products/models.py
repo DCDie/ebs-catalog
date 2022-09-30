@@ -187,8 +187,9 @@ class ShopProduct(BaseModel):
 
     label = AutoSlugField(
         primary_key=True,
-        populate_from=('shop__title', 'title'),
-        allow_duplicates=True
+        populate_from=('shop__title', 'title', 'description'),
+        allow_duplicates=True,
+        max_length=255
     )
     title = models.CharField(
         max_length=155
