@@ -6,12 +6,16 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('products', '0005_alter_shopproduct_attachments'),
+        ("products", "0005_alter_shopproduct_attachments"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='shopproduct',
-            options={'ordering': ['-created_at'], 'verbose_name': 'Shop product', 'verbose_name_plural': 'Shop products'},
+            name="shopproduct",
+            options={
+                "ordering": ["-created_at"],
+                "verbose_name": "Shop product",
+                "verbose_name_plural": "Shop products",
+            },
         ),
     ]

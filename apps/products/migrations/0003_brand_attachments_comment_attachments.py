@@ -6,18 +6,22 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('products', '0002_auto_20220926_1116'),
+        ("products", "0002_auto_20220926_1116"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='brand',
-            name='attachments',
-            field=models.ManyToManyField(blank=True, related_name='brand_attachments', to='products.attachment'),
+            model_name="brand",
+            name="attachments",
+            field=models.ManyToManyField(
+                blank=True, related_name="brand_attachments", to="products.attachment"
+            ),
         ),
         migrations.AddField(
-            model_name='comment',
-            name='attachments',
-            field=models.ManyToManyField(blank=True, related_name='comment_attachments', to='products.attachment'),
+            model_name="comment",
+            name="attachments",
+            field=models.ManyToManyField(
+                blank=True, related_name="comment_attachments", to="products.attachment"
+            ),
         ),
     ]
