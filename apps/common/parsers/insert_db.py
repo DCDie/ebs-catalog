@@ -9,8 +9,9 @@ from dictdiffer import diff
 from django.conf import settings
 from django.core.serializers.json import DjangoJSONEncoder
 from django.utils.functional import Promise
-from slugify import slugify
-
+# from deepdiff import DeepDiff # TODO remove package
+# from slugify import slugify # TODO remove package
+from django.template.defaultfilters import slugify
 from apps.products.models import (
     ShopCategory,
     ShopProduct,
@@ -80,7 +81,7 @@ class InsertDataBase:
                     with open(f'media/{shop_name}/{filename}', encoding='utf-8') as fp:
                         category_items = json.load(fp)
                         data = []
-                        label = []
+                        label_data = []
                         data_for_check = {}
                         for category_name, category_data_value in category_items.items():
                             for category_data in category_data_value:
@@ -93,17 +94,18 @@ class InsertDataBase:
                                     'shop__title'
                                 ))
                                 for object_id, category_id, shop_id, shop_title in shop_category_queryset:
-
                                     description = category_data.get('description')
                                     title = category_data.get('title')
                                     available = category_data.get('available')
                                     price = category_data.get('price')
                                     if isinstance(price, str):
                                         price = ''.join(price.split()[:-1])
-                                    data_for_check[slugify(f'{shop_title}, {title}')] = {}
+                                    # noinspection PyArgumentList
+                                    label = slugify(f'{shop_title}, {title}, {description}')
+                                    data_for_check[label] = {}
                                     data.append(
                                         ShopProduct(
-                                            label=slugify(f'{shop_title}, {title}'),
+                                            label=label,
                                             title=title,
                                             description=description,
                                             price=price,
@@ -113,14 +115,14 @@ class InsertDataBase:
                                             # category_id=category_id # Will be added in the future
                                         )
                                     )
-                                    label.append(
-                                        slugify(f'{shop_title}, {title}')
+                                    label_data.append(
+                                        label
                                     )
-                                    data_for_check[slugify(f'{shop_title}, {title}')] = {
-                                        'price': float(price),
+                                    data_for_check[label] = {
+                                        'price': float(str(price)),
                                         'available': available
                                     }
-                            self.auditlog(data_for_check, label)
+                            self.auditlog(data_for_check, label_data)
                             ShopProduct.objects.bulk_create(
                                 objs=data,
                                 ignore_conflicts=True
@@ -147,17 +149,19 @@ class InsertDataBase:
             'price',
             'available',
         ))
-        for data in queryset_data:
-            queryset_dictionary_data[data.get('label')] = {}
-            for _ in data.values():
-                queryset_dictionary_data[data.get('label')] = {
-                    "price": float(data.get('price')),
-                    "available": data.get('available')
-                }
+        if queryset_data:
+            for data in queryset_data:
+                queryset_dictionary_data[data.get('label')] = {}
+                for _ in data.values():
+                    queryset_dictionary_data[data.get('label')] = {
+                        "price": float(data.get('price')),
+                        "available": data.get('available')
+                    }
 
-        # Find difference
-        differ = list(diff(queryset_dictionary_data, api_data))
+            # Find difference
+            differ = list(diff(queryset_dictionary_data, api_data, dot_notation='price'))
+            self.logging(
+                message='Auditlog ended successfully'
+            )
+        self.logging('Auditlog skipped - new data')
 
-        self.logging(
-            message='Ended'
-        )
