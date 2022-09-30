@@ -77,4 +77,6 @@ jobs:
       #              run test suite
       #----------------------------------------------
       - name: Run tox
-        run: tox
+        run: |
+          source .venv/bin/activate
+          tox
