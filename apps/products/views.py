@@ -215,7 +215,7 @@ class ShopCategoryViewSet(
         retrieve=ShopCategoryRetrieveSerializer
     )
     ordering_fields = ['id', 'shop', 'created_at', 'modified_at', 'category']
-    search_fields = ['name','rating']
+    search_fields = ['name', 'rating']
     filterset_fields = ['category', 'shop', 'parent']
 
     def get_queryset(self):
