@@ -1,3 +1,5 @@
+import os
+
 from pathlib import Path
 
 from dotenv import dotenv_values
@@ -108,7 +110,9 @@ STATIC_URL = '/static/'
 STATIC_ROOT = Path(BASE_DIR, 'static')
 
 MEDIA_URL = '/media/files/'
-MEDIA_ROOT = Path(BASE_DIR, 'media/files/')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/files/')
+ENTER_ROOT = os.path.join(BASE_DIR, 'media/enter/')
+FOXMART_ROOT = os.path.join(BASE_DIR, 'media/foxmart/') # noqa
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
