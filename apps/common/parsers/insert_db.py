@@ -159,7 +159,12 @@ class InsertDataBase:
                     }
 
             # Find difference
-            differ = list(diff(queryset_dictionary_data, api_data, dot_notation='price'))
+
+            with open(f'diff1.json', 'w+', encoding='utf-8') as read_file:
+                read_file.write(json.dumps(queryset_dictionary_data, ensure_ascii=False))
+            with open(f'diff2.json', 'w+', encoding='utf-8') as read_file:
+                read_file.write(json.dumps(api_data, ensure_ascii=False))
+            differ = list(diff(queryset_dictionary_data, api_data))
             self.logging(
                 message='Auditlog ended successfully'
             )
