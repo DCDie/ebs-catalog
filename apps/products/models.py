@@ -241,6 +241,7 @@ class ShopProduct(BaseModel):
     class Meta:
         verbose_name = 'Shop product'
         verbose_name_plural = 'Shop products'
+        ordering = ['-created_at']
 
     def __str__(self):
         return self.title
