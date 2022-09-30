@@ -1,4 +1,4 @@
-name: Django tests
+name: Tox
 
 on:
   push:
@@ -18,6 +18,9 @@ env:
   PASSWORD: ${{ secrets.PASSWORD }}
   HOST: ${{ secrets.HOST }}
   PORT: ${{ secrets.PORT }}
+
+concurrency:
+  group: test
 
 jobs:
   test:
@@ -76,8 +79,7 @@ jobs:
       #----------------------------------------------
       #              run test suite
       #----------------------------------------------
-      - name: Run tests
+      - name: Run tox
         run: |
           source .venv/bin/activate
-          coverage run --source='apps.products.views,apps.users.views'
-          coverage report --fail-under=100
+          tox
