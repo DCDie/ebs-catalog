@@ -24,7 +24,8 @@ PORT=
 
 ### 📦️ Commands
 
-```
+```shell
+# Update shop products from parsed jsons
 python manage.py update_products
 ```
 
@@ -39,8 +40,11 @@ tox -e django41
 
 #### Deployment
 
-``` python
+``` shell
+# Create migrations
 python manage.py makemigrations
+# Apply migrations
 python manage.py migrate
+# Run project
 python manage.py runserver
 ```
