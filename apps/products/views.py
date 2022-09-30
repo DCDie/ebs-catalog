@@ -1,8 +1,11 @@
+from rest_framework import filters
+from rest_framework.parsers import MultiPartParser
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.viewsets import (
-    ModelViewSet,
-    GenericViewSet
+    ModelViewSet
 )
 
+from apps.common.views import BaseViewSet
 from apps.products.models import (
     Category,
     Shop,
@@ -10,7 +13,8 @@ from apps.products.models import (
     Product,
     Comment,
     Attachment,
-    Brand
+    Brand,
+    ShopCategory,
 )
 from apps.products.serializers import (
     ProductShopSerializer,
@@ -20,6 +24,14 @@ from apps.products.serializers import (
     CommentSerializer,
     CategorySerializer,
     BrandSerializer,
+    ShopCategorySerializer,
+    CommentRetrieveSerializer,
+    ProductShopRetrieveSerializer,
+    ShopRetrieveSerializer,
+    CategoryRetrieveSerializer,
+    BrandRetrieveSerializer,
+    ProductRetrieveSerializer,
+    ShopCategoryRetrieveSerializer
 )
 
 __all__ = [
@@ -30,65 +42,187 @@ __all__ = [
     'ProductViewSet',
     'ProductShopViewSet',
     'BrandViewSet',
+    'ShopCategoryViewSet',
 ]
 
 
 class CategoryViewSet(
     ModelViewSet,
-    GenericViewSet
+    BaseViewSet
+
 ):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
+    permission_classes = (IsAuthenticated,)
+    ordering_fields = ['id', 'title']
+    search_fields = ['title', ]
+    filterset_fields = ['parent', ]
+
+    serializer_by_action = dict(
+        retrieve=CategoryRetrieveSerializer
+    )
+
+    def get_queryset(self):
+        queryset = super(CategoryViewSet, self).get_queryset()
+        if self.action == 'retrieve':
+            return queryset.prefetch_related('attachments')
+        return queryset
 
 
 class ShopViewSet(
     ModelViewSet,
-    GenericViewSet
+    BaseViewSet
 ):
     queryset = Shop.objects.all()
     serializer_class = ShopSerializer
+    permission_classes = (IsAuthenticated,)
+    serializer_by_action = dict(
+        retrieve=ShopRetrieveSerializer
+    )
+    ordering_fields = ['id']
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['title', ]
+
+    def get_queryset(self):
+        queryset = super(ShopViewSet, self).get_queryset()
+        if self.action == 'retrieve':
+            return queryset.prefetch_related('attachments')
+        return queryset
 
 
 class ProductShopViewSet(
     ModelViewSet,
-    GenericViewSet
+    BaseViewSet
 ):
     queryset = ShopProduct.objects.all()
     serializer_class = ProductShopSerializer
+    permission_classes = (IsAuthenticated,)
+    serializer_by_action = dict(
+        retrieve=ProductShopRetrieveSerializer
+    )
+    ordering_fields = ['id', 'title', 'created_at', 'modified_at', 'attachments', 'shop', 'shop_category']
+    search_fields = ['title', 'price']
+    filterset_fields = ['shop', 'shop_category']
+
+    def get_queryset(self):
+        queryset = super(ProductShopViewSet, self).get_queryset()
+        if self.action == 'retrieve':
+            return queryset.select_related(
+                'shop',
+                'product',
+                'shop_category'
+            ).prefetch_related(
+                'category',
+                'attachments'
+            )
+        return queryset
 
 
 class ProductViewSet(
     ModelViewSet,
-    GenericViewSet
+    BaseViewSet
 ):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
+    permission_classes = (IsAuthenticated,)
+    serializer_by_action = dict(
+        retrieve=ProductRetrieveSerializer
+    )
+    ordering_fields = ['id', 'title', 'created_at', 'modified_at', 'price']
+    search_fields = ['title', 'description']
+    filterset_fields = ['price']
+
+    def get_queryset(self):
+        queryset = super(ProductViewSet, self).get_queryset()
+        if self.action == 'retrieve':
+            return queryset.prefetch_related(
+                'category',
+                'attachments'
+            )
+        return queryset
 
 
 class AttachmentViewSet(
     ModelViewSet,
-    GenericViewSet
+    BaseViewSet
 ):
     queryset = Attachment.objects.all()
     serializer_class = AttachmentSerializer
+    parser_classes = (MultiPartParser,)
+    permission_classes = (IsAuthenticated,)
+    ordering_fields = ['id', 'title', 'created_at', 'modified_at']
+    search_fields = ['title', 'file_url']
+    filterset_fields = ['extension']
 
 
 class CommentViewSet(
     ModelViewSet,
-    GenericViewSet
+    BaseViewSet
 ):
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
+    permission_classes = (IsAuthenticated,)
+    serializer_by_action = dict(
+        retrieve=CommentRetrieveSerializer
+    )
+    ordering_fields = ['id', 'product', 'created_at', 'modified_at', 'shop', 'user']
+    search_fields = ['text', ]
+    filterset_fields = ['shop', ]
+
+    def get_queryset(self):
+        queryset = super(CommentViewSet, self).get_queryset()
+        if self.action == 'retrieve':
+            return queryset.select_related(
+                'product',
+                'shop'
+            ).prefetch_related(
+                'attachments'
+            )
+        return queryset
 
 
 class BrandViewSet(
     ModelViewSet,
-    GenericViewSet
+    BaseViewSet
 ):
     queryset = Brand.objects.all()
     serializer_class = BrandSerializer
+    permission_classes = (IsAuthenticated,)
+    serializer_by_action = dict(
+        retrieve=BrandRetrieveSerializer
+    )
+    ordering_fields = ['id', 'product', 'created_at', 'modified_at', 'shop', 'user']
+    search_fields = ['text', ]
+    filterset_fields = ['parent', ]
 
-    # def test_comments_retriew(self):
-    #     comment = Comment.objects.create()
-    #     response = self.client.get(f'/products/{product.id}/')
-    #     self.assertEqual(HTTP_200_OK, response.status_code)
+    def get_queryset(self):
+        queryset = super(BrandViewSet, self).get_queryset()
+        if self.action == 'retrieve':
+            return queryset.prefetch_related(
+                'attachments'
+            )
+        return queryset
+
+
+class ShopCategoryViewSet(
+    ModelViewSet,
+    BaseViewSet
+):
+    queryset = ShopCategory.objects.all()
+    serializer_class = ShopCategorySerializer
+    permission_classes = (IsAuthenticated,)
+    serializer_by_action = dict(
+        retrieve=ShopCategoryRetrieveSerializer
+    )
+    ordering_fields = ['id', 'shop', 'created_at', 'modified_at', 'category']
+    search_fields = ['name']
+    filterset_fields = ['category', 'shop', 'parent']
+
+    def get_queryset(self):
+        queryset = super(ShopCategoryViewSet, self).get_queryset()
+        if self.action == 'retrieve':
+            return queryset.select_related(
+                'shop',
+                'category'
+            )
+        return queryset

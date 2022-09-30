@@ -1,4 +1,3 @@
-import datetime
 import json
 import pathlib
 import time
@@ -22,7 +21,7 @@ class FoxmartParser:
         pathlib.Path(self.path).mkdir(parents=True, exist_ok=True)
 
     @staticmethod
-    def logging(message: str, data: Optional[str] = None, execution_time: Optional[datetime] = None) -> None:
+    def logging(message: str, data: Optional[str] = None, execution_time: Optional[float] = None) -> None:
         print(f"{message} | Data: {data} | Time: {execution_time} sec.")
 
     def get_categories(self) -> None:
@@ -52,8 +51,8 @@ class FoxmartParser:
     def get_products(self) -> None:
         with open(f"{self.path}/foxmart_categories.json", "rb") as read_file:
             categories = json.load(read_file)
-            data = {}
         for subcategory in categories:
+            data = {}
             subcategory_id = subcategory.get('id')
             category = subcategory.get('title')
             page = 1

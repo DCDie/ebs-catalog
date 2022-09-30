@@ -1,5 +1,6 @@
 import os
 
+from datetime import timedelta
 from pathlib import Path
 
 from dotenv import dotenv_values
@@ -32,10 +33,12 @@ INSTALLED_APPS = [
     'auditlog',
     'django_json_widget',
     'django_extensions',
+    'django_filters',
 
     # Project apps
     'apps.common',
     'apps.products',
+    'apps.users'
 ]
 
 MIDDLEWARE = [
@@ -69,6 +72,43 @@ TEMPLATES = [
         },
     },
 ]
+
+AUTH_USER_MODEL = 'users.CustomUser'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+    'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
+    ),
+    'DEFAULT_FILTER_BACKENDS': (
+        'django_filters.rest_framework.DjangoFilterBackend',
+        'rest_framework.filters.OrderingFilter',
+        'rest_framework.filters.SearchFilter',
+    ),
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10,
+}
+
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+SWAGGER_SETTINGS = {
+    'SECURITY_DEFINITIONS': {
+        'Bearer': {
+            'type': 'apiKey',
+            'name': 'Authorization',
+            'in': 'header'
+        }
+    }
+}
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(days=7),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=30),
+}
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
@@ -110,9 +150,9 @@ STATIC_URL = '/static/'
 STATIC_ROOT = Path(BASE_DIR, 'static')
 
 MEDIA_URL = '/media/files/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/files/')
-ENTER_ROOT = os.path.join(BASE_DIR, 'media/enter/')
-FOXMART_ROOT = os.path.join(BASE_DIR, 'media/foxmart/') # noqa
+MEDIA_ROOT = Path(BASE_DIR, 'media/files/')
+ENTER_ROOT = Path(BASE_DIR, 'media/enter/')
+FOXMART_ROOT = Path(BASE_DIR, 'media/foxmart/') # noqa
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
