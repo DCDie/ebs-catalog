@@ -5,6 +5,7 @@ from typing import Optional
 
 import requests
 from bs4 import BeautifulSoup
+from django.conf import settings
 from django.template.defaultfilters import slugify
 from fake_useragent import UserAgent
 
@@ -19,7 +20,7 @@ class FoxmartParser:
     }
 
     def __init__(self) -> None:
-        self.path = 'media/foxmart'
+        self.path = settings.FOXMART_ROOT
         pathlib.Path(self.path).mkdir(parents=True, exist_ok=True)
 
     @staticmethod
