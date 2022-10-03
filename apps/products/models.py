@@ -33,7 +33,7 @@ class Category(BaseModel):
         on_delete=models.SET_NULL,
         null=True,
         blank=True,
-        related_name='children'
+        related_name='children',
     )
     languages = models.JSONField(
         blank=True,

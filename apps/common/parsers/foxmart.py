@@ -39,7 +39,7 @@ class FoxmartParser:
                     obj = {
                         'title': category.text,
                         'url': subcategory.get('href'),
-                        'id': subcategory.get('href').split('/')[-1]
+                        'id': subcategory.get('href').split('/')[-1],
                     }
                     categories_data.append(obj)
 

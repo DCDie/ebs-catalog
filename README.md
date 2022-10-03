@@ -1,4 +1,4 @@
-# 📱 CATALOG API
+# 🛒 CATALOG API
 
 REST API for Internet Catalog project.
 
@@ -6,7 +6,6 @@ REST API for Internet Catalog project.
 
 1. Python 3.10
 2. PostgreSQL
-3. Celery
 
 ### 🔧 .env
 
@@ -25,20 +24,27 @@ PORT=
 
 ### 📦️ Commands
 
-```
+```shell
+# Update shop products from parsed jsons
 python manage.py update_products
 ```
 
 #### Run tests
 
-```
-python manage.py test
+```shell
+# Run flake8 test
+tox -e flake8
+# Run django tests with coverage
+tox -e django41
 ```
 
 #### Deployment
 
-``` python
+``` shell
+# Create migrations
 python manage.py makemigrations
+# Apply migrations
 python manage.py migrate
+# Run project
 python manage.py runserver
 ```
