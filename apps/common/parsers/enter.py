@@ -5,6 +5,7 @@ from typing import Optional
 
 import requests
 from bs4 import BeautifulSoup
+from django.template.defaultfilters import slugify
 from fake_useragent import UserAgent
 
 
@@ -53,6 +54,7 @@ class EnterParser:
 
     def get_products(self) -> None:
         with open(f"{self.path}/enter_categories.json", "rb") as read_file:
+            shop_title = 'enter'
             categories = json.load(read_file)
             for category, category_data in categories.items():
                 data = {}
@@ -89,9 +91,11 @@ class EnterParser:
                                     price = discount_price.text
                                 title = good.select_one('div > a > .product-title').text
                                 description = good.select_one('div > a > .product-descr').text
+                                label = slugify(f'{shop_title}, {title}, {description}, {price}')
 
                                 # Save goods data in dict
                                 dictionary = {
+                                    'label': label,
                                     'title': title,
                                     'description': description,
                                     'price': price,

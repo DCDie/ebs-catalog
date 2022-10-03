@@ -5,9 +5,11 @@ from typing import Optional
 
 import requests
 from bs4 import BeautifulSoup
+from django.template.defaultfilters import slugify
 from fake_useragent import UserAgent
 
 
+# noinspection SpellCheckingInspection
 class FoxmartParser:
     user = UserAgent()
     agent = user.random
@@ -50,6 +52,7 @@ class FoxmartParser:
 
     def get_products(self) -> None:
         with open(f"{self.path}/foxmart_categories.json", "rb") as read_file:
+            shop_title = 'foxmart'
             categories = json.load(read_file)
         for subcategory in categories:
             data = {}
@@ -68,16 +71,19 @@ class FoxmartParser:
                 products = products_dict.get('products')
 
                 for product in products:
+                    product_id = product.get('productId')
                     title = product.get('product')
                     description = product.get('shortDescription')
                     price = product.get('price')
-                    in_stock = product.get('inStock')
+                    available = product.get('inStock')
+                    label = slugify(f'{shop_title} ,{title}, {description}, {price}, {product_id}')
 
                     dictionary = {
+                        'label': label,
                         'title': title,
                         'description': description,
                         'price': price,
-                        'available': in_stock
+                        'available': available
                     }
 
                     data[category].append(dictionary)
