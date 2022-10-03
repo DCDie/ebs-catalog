@@ -215,7 +215,7 @@ class ProductTestCase(APITestCase):
         category = Category.objects.create(title=fake.sentence())
         product = Product.objects.create(
             title=fake.sentence(),
-            description="Test",
+            description=fake.sentence(),
             price=10,
             rating=0,
             verified="True",
