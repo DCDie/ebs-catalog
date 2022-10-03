@@ -7,7 +7,6 @@ from django.core.validators import (
     MinValueValidator
 )
 from django.db import models
-from django_extensions.db.fields import AutoSlugField
 
 from apps.common.models import BaseModel
 
@@ -184,11 +183,8 @@ class Shop(BaseModel):
 
 
 class ShopProduct(BaseModel):
-
-    label = AutoSlugField(
+    label = models.SlugField(
         primary_key=True,
-        populate_from=('shop__title', 'title', 'description'),
-        allow_duplicates=True,
         max_length=255
     )
     title = models.CharField(
