@@ -1,17 +1,13 @@
-import decimal
 import json
 import os
 import time
-import uuid
-from typing import Optional
+import typing
 
+from auditlog.models import LogEntry
 from dictdiffer import diff
 from django.conf import settings
-from django.core.serializers.json import DjangoJSONEncoder
-from django.utils.functional import Promise
-# from deepdiff import DeepDiff # TODO remove package
-# from slugify import slugify # TODO remove package
-from django.template.defaultfilters import slugify
+from django.contrib.contenttypes.models import ContentType
+
 from apps.products.models import (
     ShopCategory,
     ShopProduct,
@@ -19,15 +15,8 @@ from apps.products.models import (
 )
 
 __all__ = [
-    "InsertDataBase"
+    'InsertDataBase'
 ]
-
-
-class JsonDecimalToFloatEncoder(DjangoJSONEncoder):
-    def default(self, o):
-        if isinstance(o, (decimal.Decimal, uuid.UUID, Promise)):
-            return float(o)
-        return super().default(o)
 
 
 class InsertDataBase:
@@ -36,8 +25,12 @@ class InsertDataBase:
         self.directory = f'{settings.BASE_DIR}/media'
 
     @staticmethod
-    def logging(message: str, data: Optional[str] = None, execution_time: Optional[float] = None) -> None:
-        print(f"{message} | Data: {data} | Time: {execution_time} sec.")
+    def logging(
+            message: str,
+            data: typing.Union[str, list] = None,
+            execution_time: typing.Optional[float] = None
+    ) -> None:
+        print(f'{message} | Data: {data} | Time: {execution_time} sec.')
 
     def add_shop_category(self) -> None:
         for file in os.listdir(self.directory):
@@ -101,7 +94,7 @@ class InsertDataBase:
                                     if isinstance(price, str):
                                         price = ''.join(price.split()[:-1])
                                     # noinspection PyArgumentList
-                                    label = slugify(f'{shop_title}, {title}, {description}')
+                                    label = category_data.get('label')
                                     data_for_check[label] = {}
                                     data.append(
                                         ShopProduct(
@@ -142,31 +135,51 @@ class InsertDataBase:
     def auditlog(self, api_data: dict, label: list) -> None:
         # Get json data from DB
         queryset_dictionary_data = {}
-        queryset_data = list(ShopProduct.objects.filter(
-            label__in=label
-        ).values(
-            'label',
-            'price',
-            'available',
-        ))
+        queryset_data = list(
+            ShopProduct.objects.filter(
+                label__in=label
+            ).values(
+                'label',
+                'price',
+                'available',
+            ))
         if queryset_data:
             for data in queryset_data:
                 queryset_dictionary_data[data.get('label')] = {}
                 for _ in data.values():
                     queryset_dictionary_data[data.get('label')] = {
-                        "price": float(data.get('price')),
-                        "available": data.get('available')
+                        'price': float(data.get('price')),
+                        'available': data.get('available')
                     }
 
             # Find difference
-
-            with open(f'diff1.json', 'w+', encoding='utf-8') as read_file:
-                read_file.write(json.dumps(queryset_dictionary_data, ensure_ascii=False))
-            with open(f'diff2.json', 'w+', encoding='utf-8') as read_file:
-                read_file.write(json.dumps(api_data, ensure_ascii=False))
-            differ = list(diff(queryset_dictionary_data, api_data))
-            self.logging(
-                message='Auditlog ended successfully'
+            differ = list(
+                diff(
+                    queryset_dictionary_data,
+                    api_data
+                )
             )
-        self.logging('Auditlog skipped - new data')
-
+            if differ:
+                # noinspection SpellCheckingInspection
+                products_content = ContentType.objects.filter(
+                    app_label='products',
+                    model='shopproduct'
+                ).last()
+                for data in differ:
+                    label = data[1].partition('.')[0]
+                    field_changed = data[1].partition('.')[-1]
+                    changes = data[2]
+                    log = LogEntry(
+                        object_pk=label,
+                        changes=list(changes),
+                        content_type=products_content,
+                        object_repr=field_changed,
+                        action=1
+                    )
+                    log.save()
+            self.logging(
+                message='Auditlog ended successfully',
+                data=differ
+            )
+        else:
+            self.logging('Auditlog skipped - new data')
