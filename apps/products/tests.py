@@ -498,6 +498,7 @@ class ShopProductTestCase(APITestCase):
             file_url=File(open(r"apps\products\fixtures\test.pdf", mode="rb")),
         )
         shop_product = ShopProduct.objects.create(
+            label='test-test',
             title=fake.sentence(),
             price=7,
             available=True,
@@ -539,6 +540,7 @@ class ShopProductTestCase(APITestCase):
             file_url=File(open(r"apps\products\fixtures\test.pdf", mode="rb")),
         )
         data = {
+            "label": 'test-test',
             "title": fake.sentence(),
             "price": 7,
             "available": True,
@@ -570,6 +572,7 @@ class ShopProductTestCase(APITestCase):
             file_url=File(open(r"apps\products\fixtures\test.pdf", mode="rb")),
         )
         shop_product = ShopProduct.objects.create(
+            label='test-test',
             title=fake.sentence(),
             price=7,
             available=True,
@@ -577,6 +580,7 @@ class ShopProductTestCase(APITestCase):
             shop_category=shop_category,
         )
         data = {
+            "label": 'test-test',
             "title": fake.sentence(),
             "price": 23,
             "available": True,
@@ -611,6 +615,7 @@ class ShopProductTestCase(APITestCase):
             file_url=File(open(r"apps\products\fixtures\test.pdf", mode="rb")),
         )
         shop_product = ShopProduct.objects.create(
+            label='test-test',
             title=fake.sentence(),
             price=7,
             available=True,
@@ -636,6 +641,7 @@ class ShopProductTestCase(APITestCase):
         shop = Shop.objects.create(title=fake.sentence())
         shop_category = ShopCategory.objects.create(name=fake.sentence(), shop=shop)
         shop_product = ShopProduct.objects.create(
+            label='test-test',
             title=fake.sentence(),
             price=7,
             available=True,
