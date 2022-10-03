@@ -177,6 +177,7 @@ class InsertDataBase:
                         action=1
                     )
                     log.save()
+
             self.logging(
                 message='Auditlog ended successfully',
                 data=differ
