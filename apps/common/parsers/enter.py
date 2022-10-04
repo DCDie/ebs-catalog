@@ -65,67 +65,61 @@ class EnterParser:
         with open(f"{self.path}/enter_categories.json", "rb") as read_file:
             shop_title = 'enter'
             categories = json.load(read_file)
-            for category, category_data in categories.items():
-                data = {}
+        for category, category_data in categories.items():
+            data = {}
+            for subcategory in category_data:
 
-                for subcategory in category_data:
-                    data[subcategory] = []
+                data[subcategory] = []
+                page = 1
+                while True:
+                    # Start timer
+                    start = time.process_time()
+                    link = category_data[subcategory]
 
-                    page = 1
-                    try:
-                        while True:
-                            # Start timer
-                            start = time.process_time()
-                            link = category_data[subcategory]
+                    # Request method to goods
+                    response = requests.get(
+                        f'{link}?page={page}',
+                        headers=self.headers,
+                        allow_redirects=False,
+                    )
 
-                            # Request method to goods
-                            response = requests.get(
-                                f'{link}?page={page}',
-                                headers=self.headers,
-                                allow_redirects=False,
-                            )
+                    soup = BeautifulSoup(response.text, 'html.parser')
+                    goods = soup.select('.product-card > div > .grid-item')
 
-                            soup = BeautifulSoup(response.text, 'html.parser')
-                            goods = soup.select('.product-card > div > .grid-item')
+                    if not bool(goods):
+                        break
+                        # Get goods values
+                    for good in goods:
+                        # noinspection PyUnusedLocal
+                        price = 0
+                        if price := good.select_one(
+                                '.grid-price-cart > .grid-price > .price'
+                        ):
+                            price = price.text
+                        elif discount_price := good.select_one(
+                                '.grid-price-cart > .grid-price > .price-new'
+                        ):
+                            price = discount_price.text
+                        title = good.select_one('div > a > .product-title').text
+                        description = good.select_one('div > a > .product-descr').text
+                        label = slugify(f'{shop_title}, {title}, {description}, {price}')
 
-                            if not bool(goods):
-                                break
-                                # Get goods values
-                            for good in goods:
-                                # noinspection PyUnusedLocal
-                                price = 0
-                                if price := good.select_one(
-                                        '.grid-price-cart > .grid-price > .price'
-                                ):
-                                    price = price.text
-                                elif discount_price := good.select_one(
-                                        '.grid-price-cart > .grid-price > .price-new'
-                                ):
-                                    price = discount_price.text
-                                title = good.select_one('div > a > .product-title').text
-                                description = good.select_one('div > a > .product-descr').text
-                                label = slugify(f'{shop_title}, {title}, {description}, {price}')
-
-                                # Save goods data in dict
-                                dictionary = {
-                                    'label': label,
-                                    'title': title,
-                                    'description': description,
-                                    'price': price,
-                                    'available': bool(good.attrs.get('data-stock'))
-                                }
-                            data[subcategory].append(dictionary)
-                            self.logging(
-                                message=f'Added {subcategory}',
-                                data=f'Status code: {response.status_code} | Page: {page} | URL: {response.url}',
-                                execution_time=time.process_time() - start
-                            )
-                            page += 1
-                    except Exception as ex:
+                        # Save goods data in dict
+                        dictionary = {
+                            'label': label,
+                            'title': title,
+                            'description': description,
+                            'price': price,
+                            'available': bool(good.attrs.get('data-stock'))
+                        }
+                        data[subcategory].append(dictionary)
                         self.logging(
-                            message=f'Exception {ex}',
-                            data=f'Status code: {response.status_code} | Page: {page} | URL: {response.url}'
+                            message=f'Added {subcategory}',
+                            data=f'Status code: {response.status_code} | Page: {page} | URL: {response.url}',
+                            execution_time=time.process_time() - start
                         )
+                    page += 1
+
                     with open(
                             f'{self.path}/enter_items_{category}.json',
                             'w+',
