@@ -93,6 +93,8 @@ class InsertDataBase:
                                     price = category_data.get('price')
                                     if isinstance(price, str):
                                         price = ''.join(price.split()[:-1])
+                                    if isinstance(price, type(None)):
+                                        price = 0
                                     # noinspection PyArgumentList
                                     label = category_data.get('label')
                                     data_for_check[label] = {}
