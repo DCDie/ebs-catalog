@@ -26,7 +26,6 @@ INSTALLED_APPS = [
     # Third-party apps
     "drf_yasg",
     "rest_framework",
-    'crispy_forms',
     "auditlog",
     "django_json_widget",
     "django_extensions",
