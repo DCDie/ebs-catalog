@@ -4,6 +4,7 @@ import time
 from typing import Optional
 
 import requests
+from requests.adapters import HTTPAdapter, Retry
 from bs4 import BeautifulSoup
 from django.conf import settings
 from django.template.defaultfilters import slugify
@@ -65,7 +66,16 @@ class FoxmartParser:
                 start = time.process_time()
                 url = f"https://www.foxmart.md/api/client/products/catalog?items=15&" \
                       f"page={page}&category={subcategory_id}&sort=popularity&order=desc"
-                response = requests.get(url=url, headers=self.headers)
+                retries = Retry(
+                    total=5,
+                    backoff_factor=0.1,
+                    status_forcelist=[429, 500, 502, 503, 504]
+                )
+                adapter = HTTPAdapter(max_retries=retries)
+                session = requests.Session()
+                session.mount("https://", adapter)
+                response = session.get(url=url, headers=self.headers)
+
                 if not response.ok:
                     break
                 products_dict = json.loads(response.content.decode())
