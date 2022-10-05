@@ -69,6 +69,7 @@ class EnterParser:
 
             for subcategory in category_data:
                 data = {}
+
                 data[subcategory] = []
                 page = 1
                 while True:
@@ -120,9 +121,5 @@ class EnterParser:
                     )
                     page += 1
 
-                    # with open(
-                    #         f'{self.path}/enter_items_{category}.json',
-                    #         'w+',
-                    #         encoding='utf-8'
-                    # ) as fp:
-                    #     fp.write(json.dumps(data, indent=5, ensure_ascii=False))
+                    with open(f'{self.path}/enter_items_{subcategory}.json', 'w+', encoding='utf-8') as file:
+                        file.write(json.dumps(data, indent=5, ensure_ascii=False))
