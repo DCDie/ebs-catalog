@@ -66,9 +66,9 @@ class EnterParser:
             shop_title = 'enter'
             categories = json.load(read_file)
         for category, category_data in categories.items():
-            data = {}
-            for subcategory in category_data:
 
+            for subcategory in category_data:
+                data = {}
                 data[subcategory] = []
                 page = 1
                 while True:
@@ -113,16 +113,16 @@ class EnterParser:
                             'available': bool(good.attrs.get('data-stock'))
                         }
                         data[subcategory].append(dictionary)
-                        self.logging(
-                            message=f'Added {subcategory}',
-                            data=f'Status code: {response.status_code} | Page: {page} | URL: {response.url}',
-                            execution_time=time.process_time() - start
-                        )
+                    self.logging(
+                        message=f'Added {subcategory}',
+                        data=f'Status code: {response.status_code} | Page: {page} | URL: {response.url}',
+                        execution_time=time.process_time() - start
+                    )
                     page += 1
 
-                    with open(
-                            f'{self.path}/enter_items_{category}.json',
-                            'w+',
-                            encoding='utf-8'
-                    ) as fp:
-                        fp.write(json.dumps(data, indent=5, ensure_ascii=False))
+                    # with open(
+                    #         f'{self.path}/enter_items_{category}.json',
+                    #         'w+',
+                    #         encoding='utf-8'
+                    # ) as fp:
+                    #     fp.write(json.dumps(data, indent=5, ensure_ascii=False))
