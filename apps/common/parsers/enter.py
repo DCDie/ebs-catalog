@@ -8,6 +8,8 @@ from bs4 import BeautifulSoup
 from django.template.defaultfilters import slugify
 from fake_useragent import UserAgent
 from django.conf import settings
+from requests.adapters import HTTPAdapter
+from urllib3 import Retry
 
 
 class EnterParser:
@@ -78,12 +80,21 @@ class EnterParser:
                     link = category_data[subcategory]
 
                     # Request method to goods
-                    response = requests.get(
+                    retries = Retry(
+                        total=5,
+                        backoff_factor=0.1,
+                        status_forcelist=[429, 500, 502, 503, 504]
+                    )
+                    adapter = HTTPAdapter(max_retries=retries)
+                    session = requests.Session()
+                    session.mount("https://", adapter)
+                    response = session.get(
                         f'{link}?page={page}',
                         headers=self.headers,
                         allow_redirects=False,
                     )
 
+                    # Get data from response
                     soup = BeautifulSoup(response.text, 'html.parser')
                     goods = soup.select('.product-card > div > .grid-item')
 
