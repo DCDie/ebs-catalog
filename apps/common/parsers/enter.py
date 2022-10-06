@@ -79,7 +79,7 @@ class EnterParser:
                     start = time.process_time()
                     link = category_data[subcategory]
 
-                    # Request method to goods
+                    # Request method
                     retries = Retry(
                         total=5,
                         backoff_factor=0.1,
@@ -92,8 +92,8 @@ class EnterParser:
                         f'{link}?page={page}',
                         headers=self.headers,
                         allow_redirects=False,
+                        timeout=None
                     )
-
                     # Get data from response
                     soup = BeautifulSoup(response.text, 'html.parser')
                     goods = soup.select('.product-card > div > .grid-item')
