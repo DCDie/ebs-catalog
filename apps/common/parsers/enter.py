@@ -55,7 +55,7 @@ class EnterParser:
         with open(
                 f'{self.path}/enter_categories.json', 'w+', encoding='utf-8'
         ) as read_file:
-            read_file.write(json.dumps(categories_data, ensure_ascii=False))
+            read_file.write(json.dumps(categories_data,indent=5, ensure_ascii=False))
             self.logging(
                 message='File: enter_categories.json - saved',
                 execution_time=time.process_time() - start,
