@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.db.models import JSONField, Q
+from django.db.models import JSONField
 from django.utils.translation import gettext_lazy as _
 from django_json_widget.widgets import JSONEditorWidget
 
@@ -118,35 +118,6 @@ class ProductShopAdmin(admin.ModelAdmin):
     readonly_fields = ("created_at", "modified_at")
 
 
-class ExtensionListFilter(admin.SimpleListFilter):
-    title = 'File extension'
-    parameter_name = 'file_extension'
-
-    def lookups(self, request, model_admin):
-        return (
-            ('.jpg', '.jpg'),
-            ('.png', '.png'),
-            ('.pdf', '.pdf'),
-            ('.xlsx', '.xlsx'),
-            ('.doc', '.doc'),
-            ('.exe', '.exe'),
-            ('.txt', '.txt'),
-            ('.csv', '.csv'),
-            ('other', 'other'),
-        )
-
-    def queryset(self, request, queryset):
-        if self.value():
-            if self.value() == 'other':
-                return queryset.filter(
-                    ~Q(extension='.jpg') & ~Q(extension='.pdf') & ~Q(
-                        extension='.png') & ~Q(extension='.xlsx') & ~Q(
-                        extension='.doc') & ~Q(extension='.exe') & ~Q(
-                        extension='.txt') & ~Q(extension='.csv'))
-            return queryset.filter(extension=self.value())
-        return queryset
-
-
 class SizeListFilter(admin.SimpleListFilter):
     title = 'File size'
     parameter_name = 'file_size'
@@ -185,7 +156,7 @@ class AttachmentAdmin(admin.ModelAdmin):
         "created_at",
         "modified_at",
     )
-    list_filter = (ExtensionListFilter, SizeListFilter)
+    list_filter = (SizeListFilter, 'extension')
     search_fields = ("title", "file_url")
     fields = (
         "title",
