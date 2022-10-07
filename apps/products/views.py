@@ -140,7 +140,14 @@ class CommentViewSet(ModelViewSet, BaseViewSet):
     serializer_class = CommentSerializer
     permission_classes = (IsAuthenticated,)
     serializer_by_action = dict(retrieve=CommentRetrieveSerializer)
-    ordering_fields = ["id", "product", "created_at", "modified_at", "shop", "user"]
+    ordering_fields = [
+        "id",
+        "product",
+        "created_at",
+        "modified_at",
+        "shop",
+        "user"
+    ]
     search_fields = [
         "text",
     ]
