@@ -28,10 +28,7 @@ class UserTestCase(APITestCase):
     # User get access token
     def test_user_login(self):
         data = {"email": self.user.email, "password": self.user_password}
-        response = self.client.post(
-            path="/users/login",
-            data=data,
-        )
+        response = self.client.post(path="/users/login", data=data)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
     def test_user_register(self):
