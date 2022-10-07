@@ -168,21 +168,21 @@ class InsertDataBase:
                     model='shopproduct'
                 ).last()
                 for data in differ:
-                    label = data[1].partition('.')[0]
-                    field_changed = data[1].partition('.')[-1]
-                    changes = data[2]
-                    log = LogEntry(
-                        object_pk=label,
-                        changes=list(changes),
-                        content_type=products_content,
-                        object_repr=field_changed,
-                        action=1
-                    )
-                    log.save()
+                    if data[0] == 'change':
+                        label = data[1].partition('.')[0]
+                        field_changed = data[1].partition('.')[-1]
+                        changes = data[2]
+                        log = LogEntry(
+                            object_pk=label,
+                            changes=list(changes),
+                            content_type=products_content,
+                            object_repr=field_changed,
+                            action=1
+                        )
+                        log.save()
 
             self.logging(
-                message='Auditlog ended successfully',
-                data=differ
+                message='Auditlog ended successfully'
             )
         else:
             self.logging('Auditlog skipped - new data')
