@@ -51,7 +51,7 @@ class EnterParser:
 
                 # If category exists write
                 if subcategory_link:
-                    categories_data[category_name][subcategory.text] = subcategory_link
+                    categories_data[category_name][slugify(subcategory.text)] = subcategory_link
         with open(
                 f'{self.path}/enter_categories.json', 'w+', encoding='utf-8'
         ) as read_file:
