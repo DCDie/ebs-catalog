@@ -69,7 +69,7 @@ class EnterParser:
 
             for subcategory in category_data:
                 data = {}
-
+       
                 data[subcategory] = []
                 page = 1
                 while True:

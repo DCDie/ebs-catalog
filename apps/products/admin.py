@@ -166,8 +166,6 @@ class SizeListFilter(admin.SimpleListFilter):
             return queryset.filter(file_size__gt=1048576, file_size__lte=5242880)
         if self.value() == '10MB> 5Mb':
             return queryset.filter(file_size__gt=5242880)
-        if self.value() == '> 10Mb':
-            return queryset.filter(file_size__gt=52428800)
 
 
 @admin.register(Attachment)
