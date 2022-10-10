@@ -4,7 +4,6 @@ from django.core.management import BaseCommand
 class Command(BaseCommand):
     help = "Update content fields"
 
-    # pylint: disable=unused-argument
     def handle(self, *args, **options):
         from apps.common.parsers.insert_db import InsertDataBase
 
