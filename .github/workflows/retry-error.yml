@@ -1,4 +1,15 @@
 uses: nick-fields/retry@v2
+
+on:
+  push:
+    branches:
+      - master
+      - development
+  pull_request:
+    branches:
+      - master
+      - development
+
 with:
   timeout_seconds: 15
   max_attempts: 1
