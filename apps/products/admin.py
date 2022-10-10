@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.db.models import JSONField, Q
+from django.db.models import JSONField
 from django.utils.translation import gettext_lazy as _
 from django_json_widget.widgets import JSONEditorWidget
 
@@ -118,56 +118,31 @@ class ProductShopAdmin(admin.ModelAdmin):
     readonly_fields = ("created_at", "modified_at")
 
 
-class ExtensionListFilter(admin.SimpleListFilter):
-    title = ('file extension')
-
-    parameter_name = 'extension'
-
-    def lookups(self, request, model_admin):
-        return (
-            ('.jpg', 'jpg'),
-            ('.png', 'png'),
-            ('.pdf', 'pdf'),
-            ('.xlsx', 'xlsx'),
-            ('.doc', 'doc'),
-            ('.exe', 'exe'),
-            ('.txt', 'txt'),
-            ('.csv', 'csv'),
-            ('other', 'other'),
-        )
-
-    def queryset(self, request, queryset):
-        if self.value():
-            if self.value() == 'other':
-                return queryset.filter(
-                    ~Q(file_upload__icontains='.jpg') & ~Q(file_upload__icontains='.pdf') & ~Q(
-                        file_upload__icontains='.png') & ~Q(file_upload__icontains='.xlsx') & ~Q(
-                        file_upload__icontains='.doc') & ~Q(file_upload__icontains='.exe') & ~Q(
-                        file_upload__icontains='.txt') & ~Q(file_upload__icontains='.csv'))
-            return queryset.filter(file_upload__icontains=self.value())
-        return queryset
-
-
 class SizeListFilter(admin.SimpleListFilter):
-    title = ('file size')
+    title = 'File size'
     parameter_name = 'file_size'
 
     def lookups(self, request, model_admin):
         return (
-            ('< 1MB', ('< 1MB')),
-            ('1MB - 5Mb', ('1MB - 5Mb')),
-            ('> 5Mb', ('> 5Mb')),
+            ('<1MB', '<1MB'),
+            ('1MB-5Mb', '1MB - 5Mb'),
+            ('>5Mb', '>5Mb'),
         )
 
     def queryset(self, request, queryset):
-        if self.value() == '< 1MB':
-            return queryset.filter(file_size__lte=1048576)
-        if self.value() == '1MB - 5Mb':
-            return queryset.filter(file_size__gt=1048576, file_size__lte=5242880)
-        if self.value() == '10MB> 5Mb':
-            return queryset.filter(file_size__gt=5242880)
-        if self.value() == '> 10Mb':
-            return queryset.filter(file_size__gt=52428800)
+        if self.value() == '<1MB':
+            return queryset.filter(
+                file_size__lt=1_048_576
+            )
+        if self.value() == '1MB-5Mb':
+            return queryset.filter(
+                file_size__gte=1_048_576,
+                file_size__lte=5_242_880
+            )
+        if self.value() == '>5Mb':
+            return queryset.filter(
+                file_size__gt=5_242_880
+            )
 
 
 @admin.register(Attachment)
@@ -181,7 +156,7 @@ class AttachmentAdmin(admin.ModelAdmin):
         "created_at",
         "modified_at",
     )
-    list_filter = ('extension', SizeListFilter)
+    list_filter = (SizeListFilter, 'extension')
     search_fields = ("title", "file_url")
     fields = (
         "title",

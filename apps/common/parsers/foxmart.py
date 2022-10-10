@@ -66,6 +66,7 @@ class FoxmartParser:
                 start = time.process_time()
                 url = f"https://www.foxmart.md/api/client/products/catalog?items=15&" \
                       f"page={page}&category={subcategory_id}&sort=popularity&order=desc"
+
                 retries = Retry(
                     total=5,
                     backoff_factor=0.1,
