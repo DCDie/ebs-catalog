@@ -125,6 +125,7 @@ jobs:
           virtualenvs-create: true
           virtualenvs-in-project: true
           installer-parallel: true
+          vulture-args: min-confidence 90
       - name: Load cached venv
         id: cached-poetry-dependencies
         uses: actions/cache@v2
