@@ -139,4 +139,4 @@ jobs:
       - name: Run vulture
         run: |
           source .venv/bin/activate
-          vulture --min-confidence 100 --exclude .venv,venv,migrations,__init__.py,.tox apps
+          vulture --exclude .venv,venv,migrations,__init__.py,.tox apps
