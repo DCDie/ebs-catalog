@@ -1,0 +1,9 @@
+uses: nick-fields/retry@v2
+with:
+  timeout_seconds: 15
+  max_attempts: 1
+  retry_on: error
+  command: >-
+    coverage run --source='apps.products.views,apps.users.views'
+    coverage report --fail-under=100
+    flake8 --max-line-length 120 --exclude .venv,venv,migrations,__init__.py,.tox
