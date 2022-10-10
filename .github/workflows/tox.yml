@@ -82,4 +82,23 @@ jobs:
       - name: Run tox
         run: |
           source .venv/bin/activate
-          tox
+          coverage run --source='apps.products.views,apps.users.views'
+          coverage report --fail-under=100
+  flake8-lint:
+    runs-on: ubuntu-latest
+    name: Lint
+    steps:
+      - name: Check out source repository
+        uses: actions/checkout@v2
+      - name: Set up Python environment
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.10"
+      - name: flake8 Lint
+        uses: py-actions/flake8@v2
+        with:
+          exclude: "migrations"
+          max-line-length: "120"
+        run: |
+          source .venv/bin/activate
+          flake8 --max-line-length 120 --exclude .venv,venv,migrations,__init__.py,.tox

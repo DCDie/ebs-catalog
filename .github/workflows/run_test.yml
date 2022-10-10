@@ -81,13 +81,3 @@ jobs:
           source .venv/bin/activate
           coverage run --source='apps.products.views'
           coverage report --fail-under=100
-      #----------------------------------------------
-      #              rerun after failure
-      #----------------------------------------------
-      - name: Retry Step
-        uses: nick-fields/retry@v2
-        with:
-          timeout_seconds: 15
-          max_attempts: 1
-          retry_on: error
-          command: npm run some-typically-fast-script
